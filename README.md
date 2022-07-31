@@ -1,1 +1,1 @@
-# chainwhiz-dapp-v2
+# Chainwhiz dApp
