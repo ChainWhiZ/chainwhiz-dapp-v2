@@ -1,0 +1,13 @@
+@import "styles/variables.scss";
+
+@mixin mobile-breakpoint {
+  @media (max-width: $mobile-breakpoint ){
+    @content;
+  }
+}
+
+@mixin tab-breakpoint {
+  @media (max-width: $tab-breakpoint ){
+    @content;
+  }
+}
