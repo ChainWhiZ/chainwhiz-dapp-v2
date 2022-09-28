@@ -1,5 +1,5 @@
 import { InjectedConnector } from '@web3-react/injected-connector';
-import { PRODUCTION_CHAIN, STAGING_CHAIN } from 'constants';
+import { PRODUCTION_CHAIN, STAGING_CHAIN } from 'constants/index';
 import { ethers } from 'ethers';
 import { IS_DEV } from './utilities';
 
