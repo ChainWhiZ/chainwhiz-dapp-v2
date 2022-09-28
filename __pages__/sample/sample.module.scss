@@ -1,7 +1,11 @@
-@import "styles/variables.scss";
-@import "styles/partials/_mixins.scss";
+@import "styles/variables";
+@import "styles/mixins";
 
 .sample{
     // sample styles
     color: red;
+
+    @include tab-breakpoint(){
+        color: yellow;
+    }
 }
