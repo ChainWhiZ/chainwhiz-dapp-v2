@@ -29,3 +29,22 @@ export function getLibrary(
 export const injected = new InjectedConnector({
   supportedChainIds: SUPPORTED_CHAIN_IDS,
 });
+
+/**
+ * A function used to format an ethereum address into a shorter form
+ * displaying the first n characters of the address and the last n characters
+ *
+ * @param address the string representation of the address we wish to shorten
+ * @param {displayCount}  the number of characters we wish to display on each end
+ * @returns
+ */
+export const formatAddress = (
+  address: string,
+  { displayCount = 5 }: { displayCount?: number } = {}
+) => {
+  const addressLen = address.length;
+  const prefix = address.slice(0, displayCount);
+  const suffix = address.slice(addressLen - displayCount, addressLen);
+
+  return `${prefix}...${suffix}`;
+};

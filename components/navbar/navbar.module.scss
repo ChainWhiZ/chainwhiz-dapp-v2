@@ -1,0 +1,102 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+// define a mixin for the highlight under each navbar
+@mixin highlight {
+  content: '';
+  filter: blur(100px);
+  z-index: 1;
+  position: absolute;
+  width: 168px;
+  height: 168px;
+  background: #d4ff1e;
+  opacity: 0.6;
+  transform: rotate(180deg);
+  z-index: 2;
+  top: 0;
+}
+
+.navbar__wrapper {
+  &::after {
+    @include highlight;
+    right: 110.5px;
+    @include tab-breakpoint() {
+      display: none;
+    }
+  }
+  &::before {
+    @include highlight;
+    left: 152.5px;
+    @include tab-breakpoint() {
+      left: calc(50% - 84px); //center it to the screen. 84 = 168/2
+    }
+
+  }
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(19, 19, 19, 0.8);
+    box-sizing: border-box;
+    padding: 0 96px;
+    z-index: 3;
+    position: relative;
+    font-family: $regular-font;
+
+    width: 100%;
+    height: 111px;
+    @include mobile-breakpoint() {
+      height: 68px;
+      padding: 0 20px;
+    }
+
+    // the first section containing the logo
+    & > section:first-of-type {
+      display: inline-block;
+      position: relative;
+      width: 281px;
+      height: 60px;
+      @include mobile-breakpoint() {
+        width: 126.41px;
+        height: 27px;
+      }
+      cursor: pointer;
+    }
+
+    .navbar__items {
+      display: flex;
+      color: $white;
+      // hide on large screen
+      @include tab-breakpoint() {
+        display: none;
+      }
+
+      span {
+        cursor: pointer;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        &#bounties {
+          gap: 16.5px;
+        }
+        &#leaderboard {
+          margin-left: 56px;
+        }
+        &#notifications {
+          margin-left: 43.25px;
+          margin-right: 41.44px;
+        }
+      }
+
+      button {
+        @include filled-button;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+
+      }
+    }
+  }
+}

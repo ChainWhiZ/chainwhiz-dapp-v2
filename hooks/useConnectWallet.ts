@@ -4,6 +4,7 @@ import { injected } from 'utils';
 import { IS_DEV } from 'utils/utilities';
 import useEagerConnect from './useEagerConnect';
 import { useInactiveListener } from './useInactiveListener';
+import { logError } from 'utils/logger';
 
 export default function useConnectWallet() {
   const { connector, activate, error, active } = useWeb3React();
@@ -20,17 +21,15 @@ export default function useConnectWallet() {
 
   useEffect(() => {
     if (!error) return;
-    let message;
+    let message = "";
     if (error.name === 'UnsupportedChainIdError') {
       message = `Unsupported network, please connect to the ${
         IS_DEV ? 'polygon test' : 'polygon'
-      } network`;
+      } network.`;
     } else {
       message = error.message;
     }
-    // TODO change the console.log to a global visual logger
-    console.log({ message });
-    // alert(message);
+    logError(message);
   }, [error]);
 
   // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already

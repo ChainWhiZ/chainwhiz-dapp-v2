@@ -4,6 +4,7 @@
 .sample{
     // sample styles
     color: red;
+    background-color: black;
 
     @include tab-breakpoint(){
         color: yellow;
