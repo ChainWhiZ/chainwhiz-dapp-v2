@@ -49,11 +49,13 @@
         margin: auto;
 
         h2 {
+          font-family: $secondary-font;
           font-size: 30px;
           cursor: pointer;
           text-align: center;
           line-height: unset;
           margin-bottom: 17px;
+          font-weight: 700;
 
           &:first-of-type {
             color: $neon-green;

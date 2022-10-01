@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import SampleView from "__pages__/sample";
-import Navbar from "components/navbar";
 
 export default function Sample() {
   //perform component level transformations and pass th eprops to the sample view
@@ -14,7 +13,6 @@ export default function Sample() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
 
       <SampleView />
     </div>

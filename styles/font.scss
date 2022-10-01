@@ -1,3 +1,4 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,100,700,400,300,200,900&display=swap');
 
 @font-face {
   font-family: 'Poppins-Light';
@@ -6,6 +7,7 @@
   font-display: swap;
   font-style: normal;
 }
+
 
 @font-face {
   font-family: 'Poppins-Regular';
@@ -38,3 +40,5 @@
   font-display: swap;
   font-style: normal;
 }
+
+// <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,100,700,400,300,200,900&display=swap" rel="stylesheet">

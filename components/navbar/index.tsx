@@ -19,23 +19,25 @@ export default function Navbar() {
           <RenderImage src="/images/logo.svg" alt="" />
         </section>
 
-        {/* menu items for large screens*/}
-        <section className={styles.navbar__items}>
-          <span id={styles.bounties}>
-            Bounties <DownArrow />
-          </span>
-          <span id={styles.leaderboard}>Leaderboard</span>
-          <span id={styles.notifications}>
-            <BellIcon />
-          </span>
-          <button onClick={connectWalletPressed} id={styles.button}>
-            {active && account ? formatAddress(account) : 'Connect wallet'}
-          </button>
-        </section>
+        <div>
+          {/* menu items for large screens*/}
+          <section className={styles.navbar__items}>
+            <span id={styles.bounties}>
+              Bounties <DownArrow />
+            </span>
+            <span id={styles.leaderboard}>Leaderboard</span>
+            <span id={styles.notifications}>
+              <BellIcon />
+            </span>
+            <button onClick={connectWalletPressed} id={styles.button}>
+              {active && account ? formatAddress(account) : 'Connect wallet'}
+            </button>
+          </section>
 
-        {/* menu items for  mobile menu items*/}
-        <MobileMenu />
-        {/* menu items for  mobile menu items*/}
+          {/* menu items for  mobile menu items*/}
+          <MobileMenu />
+          {/* menu items for  mobile menu items*/}
+        </div>
       </nav>
     </section>
   );
