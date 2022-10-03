@@ -9,12 +9,12 @@ html,
   margin: 0;
   font-size: 16px;
 
-  // // on tablets
+  // on tablets
   @media (max-width: $tab-breakpoint) {
     font-size: 14px;
   }
 
-  // // on phones
+  // on phones
   @media (max-width: $mobile-breakpoint) {
     font-size: 13px;
   }

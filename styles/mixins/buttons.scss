@@ -1,0 +1,15 @@
+// define the base styles for a filled button
+@mixin filled-button {
+  background-color: $neon-green;
+  color: $dark-grey;
+  border: 2px solid $neon-green;
+  font-family: Poppins-SemiBold;
+  transition: $fast-transition-speed;
+
+  &:hover{
+    color: $white;
+    border: 2px solid $white;
+    background-color: transparent;
+  }
+
+}

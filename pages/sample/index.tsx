@@ -13,6 +13,7 @@ export default function Sample() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
       <SampleView />
     </div>
   );
