@@ -35,6 +35,11 @@
 ## Folder structure
 In order to begin development on the application, one needs to be familiar with how the files, folders, and elements are created.
 
+#### VS Code extensions
+ES LInt
+Prettier
+px to rem & rpx (cssrem)
+
 #### A unit :
 A uint  is defined by a folder with the following structure:
 ```
