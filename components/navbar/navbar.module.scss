@@ -37,13 +37,13 @@
     align-items: center;
     background: rgba(19, 19, 19, 0.8);
     box-sizing: border-box;
-    padding: 0 96px;
+    padding: 0 5vw /* 96px -> 5vw */;
     z-index: 3;
     position: relative;
     font-family: $regular-font;
 
     width: 100%;
-    height: 111px;
+    height: 5.7813vw /* 111px -> 5.7813vw */;
     @include mobile-breakpoint() {
       height: 68px;
       padding: 0 20px;
@@ -53,7 +53,7 @@
     & > section:first-of-type {
       display: inline-block;
       position: relative;
-      width: 281px;
+      width: 14.6354vw /* 281px -> 14.6354vw */;
       height: 60px;
       @include mobile-breakpoint() {
         width: 126.41px;
@@ -72,26 +72,26 @@
 
       span {
         cursor: pointer;
-        font-size: 20px;
+        font-size: 1.0417vw /* 20px -> 1.0417vw */;
         display: flex;
         align-items: center;
         &#bounties {
           gap: 16.5px;
         }
         &#leaderboard {
-          margin-left: 56px;
+          margin-left: 2.9167vw /* 56px -> 2.9167vw */;
         }
         &#notifications {
-          margin-left: 43.25px;
-          margin-right: 41.44px;
+          margin-left: 2.2526vw /* 43.25px -> 2.2526vw */;
+          margin-right: 2.1583vw /* 41.44px -> 2.1583vw */;
         }
       }
 
       button {
         @include filled-button;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 20px;
+        padding: .5208vw /* 10px -> .5208vw */ 1.0417vw /* 20px -> 1.0417vw */;
+        border-radius: .5208vw /* 10px -> .5208vw */;
+        font-size: 1.0417vw /* 20px -> 1.0417vw */;
         cursor: pointer;
         position: relative;
 
