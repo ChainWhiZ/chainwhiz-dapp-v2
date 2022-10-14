@@ -1,0 +1,196 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.hero {
+  // background-image:
+  background-image: url('/images/landing/herobg.svg');
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 8.5417vw /* 164px -> 8.5417vw */ 0 2.3438vw /* 45px -> 2.3438vw */;
+  height: 60.0521vw /* 1153px -> 60.0521vw */ /* 1264px -> 65.8333vw */;
+  width: 100%;
+  background-color: #0a0811;
+  box-sizing: border-box;
+
+  @include mobile-breakpoint {
+    padding: 124px 20px 0;
+    height: unset;
+    background-image: url('/images/landing/herobgmobile.svg');
+    background-size: contain;
+  }
+
+  section.hero__text {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9.4271vw /* 181px -> 9.4271vw */;
+    @include mobile-breakpoint {
+      padding-bottom: 68px;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-family: $secondary-font;
+      font-weight: 700;
+      font-size: 3.3854vw /* 65px -> 3.3854vw */;
+      line-height: 4.2188vw /* 81px -> 4.2188vw */;
+      margin-bottom: 1.4063vw /* 27px -> 1.4063vw */;
+      color: white;
+      span {
+        color: $neon-green;
+      }
+      @include mobile-breakpoint {
+        max-width: 320px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 30px;
+      }
+    }
+    p {
+      color: $light-grey;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 2.0833vw /* 40px -> 2.0833vw */;
+      line-height: 3.125vw /* 60px -> 3.125vw */;
+      text-align: center;
+      margin-bottom: 2.2396vw /* 43px -> 2.2396vw */;
+      @include mobile-breakpoint {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+        text-align: center;
+        max-width: 298px;
+        margin-bottom: 45px;
+      }
+    }
+
+    & > div {
+      display: flex;
+      gap: 1.9271vw /* 37px -> 1.9271vw */;
+      @include mobile-breakpoint {
+        gap: 31px;
+        flex-direction: column;
+      }
+
+      button {
+        @include filled-button;
+        width: 10.4688vw /* 201px -> 10.4688vw */;
+        height: 3.6458vw /* 70px -> 3.6458vw */;
+        border-radius: 1.0417vw /* 20px -> 1.0417vw */;
+        font-family: $primary-font-semibold;
+        font-weight: 600;
+        font-size: 1.0417vw /* 20px -> 1.0417vw */;
+        line-height: 1.5625vw /* 30px -> 1.5625vw */;
+        /* identical to box height */
+        transition: 0;
+        color: black;
+        @include mobile-breakpoint {
+          width: 125px;
+          height: 41px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 21px;
+          border-radius: 10px;
+        }
+      }
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 20px /* 20px -> 1.0417vw */;
+        @include mobile-breakpoint {
+          gap: 11.38px;
+        }
+
+        .svg__wrapper {
+          height: 3.125vw /* 60px -> 3.125vw */;
+          width: 3.125vw /* 60px -> 3.125vw */;
+          @include mobile-breakpoint {
+            width: 34.15px;
+            height: 34.15px;
+          }
+        }
+
+        span {
+          font-size: 1.0417vw /* 20px -> 1.0417vw */;
+          line-height: 1.5625vw /* 30px -> 1.5625vw */;
+          color: white;
+          @include mobile-breakpoint {
+            font-weight: 400;
+            font-size: 11.3821px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  section.latest__bounties {
+    max-width: 78.0208vw /* 1498px -> 78.0208vw */;
+    margin: auto;
+    @include mobile-breakpoint {
+      max-width: unset;
+      padding-bottom: 40px; //todo maybe later remove
+    }
+    .latest__bounties__text {
+      margin-bottom: 4.2188vw /* 81px -> 4.2188vw */;
+      @include mobile-breakpoint {
+        margin-bottom: 46px;
+      }
+      h4 {
+        font-weight: 400;
+        font-size: 2.0833vw /* 40px -> 2.0833vw */;
+        line-height: 3.125vw /* 60px -> 3.125vw */;
+        margin-bottom: 0.5208vw /* 10px -> .5208vw */;
+        color: white;
+        @include mobile-breakpoint {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 10px;
+        }
+      }
+      p {
+        font-weight: 400;
+        font-size: 1.1458vw /* 22px -> 1.1458vw */;
+        line-height: 1.7188vw /* 33px -> 1.7188vw */;
+        color: #898989;
+        @include mobile-breakpoint {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+    .latest__bounties__contaniner {
+      display: flex;
+      gap: 2.6042vw /* 50px -> 2.6042vw */;
+      margin-bottom: 1.9792vw /* 38px -> 1.9792vw */;
+      @include mobile-breakpoint {
+        flex-direction: column;
+        gap: 36px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .latest__bounties__action {
+      width: 12.9688vw /* 249px -> 12.9688vw */;
+      height: 3.6458vw /* 70px -> 3.6458vw */;
+      border-radius: 1.0417vw /* 20px -> 1.0417vw */;
+      margin: auto;
+      font-size: 1.0417vw /* 20px -> 1.0417vw */;
+      @include hollow-button;
+      @include mobile-breakpoint {
+        width: 157px;
+        height: 41px;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
