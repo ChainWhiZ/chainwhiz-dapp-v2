@@ -36,7 +36,7 @@ export default function Segment1() {
           <h4>Ready to level up and earn crypto?</h4>
           <p>Discover the latest bounties</p>
         </div>
-        <div className={styles.latest__bounties__contaniner}>
+        <div className={styles.latest__bounties__container}>
           {BOUNTIES.slice(0, BOUNTIES_LIMIT).map((bounty, index) => (
             <Bounty bounty={bounty} key={index} />
           ))}

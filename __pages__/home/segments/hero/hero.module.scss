@@ -139,7 +139,9 @@
     .latest__bounties__text {
       margin-bottom: 4.2188vw /* 81px -> 4.2188vw */;
       @include mobile-breakpoint {
+        margin: auto;
         margin-bottom: 46px;
+        width: fit-content;
       }
       h4 {
         font-weight: 400;
@@ -166,7 +168,7 @@
         }
       }
     }
-    .latest__bounties__contaniner {
+    .latest__bounties__container {
       display: flex;
       gap: 2.6042vw /* 50px -> 2.6042vw */;
       margin-bottom: 1.9792vw /* 38px -> 1.9792vw */;
@@ -174,6 +176,7 @@
         flex-direction: column;
         gap: 36px;
         margin-bottom: 20px;
+        align-items: center;
       }
     }
 
