@@ -23,7 +23,9 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: calc(100vh - 68px + 3px); //68px is the width of the navbar and we add 3px for some extra allowance
+    height: calc(
+      100vh - 68px + 3px
+    ); //68px is the width of the navbar and we add 3px for some extra allowance
     display: none;
 
     @include tab-breakpoint() {
@@ -71,7 +73,7 @@
           margin-bottom: 17px;
           font-size: 22px;
           line-height: unset;
-          font-family: $regular-font;
+          font-family: $primary-font-regular;
           text-align: center;
           color: $light-grey;
           cursor: pointer;

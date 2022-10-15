@@ -5,11 +5,30 @@
   border: 2px solid $neon-green;
   font-family: Poppins-SemiBold;
   transition: $fast-transition-speed;
+  cursor: pointer;
 
-  &:hover{
+  &:hover {
     color: $white;
     border: 2px solid $white;
     background-color: transparent;
   }
+}
 
+// define style for hollow button
+@mixin hollow-button {
+  background: #161422;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: $fast-transition-speed;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
 }

@@ -6,26 +6,27 @@ $mobile-breakpoint: 800px;
 $tab-breakpoint: 1200px;
 // define the mobile responsiveness breakdown
 
-
 // define the several functions which we use
-$neon-green: #D4FF1E;
+$neon-green: #d4ff1e;
 $dark-grey: #131313;
 $dark-blue: #292929;
 $light-grey: #898989;
-$white: #FFFFFF;
+$white: #ffffff;
 // define the several functions which we use
 
 // define font names
-$light-font: Poppins-Light;
-$regular-font: Poppins-Regular;
-$medium-font: Poppins-Medium;
-$semibold-font: Poppins-SemiBold;
-$bold-font: Poppins-Bold;
+$primary-font: Poppins-Regular;
+$primary-font-light: Poppins-Light;
+$primary-font-regular: Poppins-Regular;
+$primary-font-medium: Poppins-Medium;
+$primary-font-semibold: Poppins-SemiBold;
+$primary-font-bold: Poppins-Bold;
+
 // define font names
 
 // define secondary font
-$secondary-font: "Cabinet Grotesk";
+$secondary-font: 'Cabinet Grotesk';
 
 // transition speeds
-$fast-transition-speed: 500ms;
+$fast-transition-speed: 200ms;
 // transition speeds

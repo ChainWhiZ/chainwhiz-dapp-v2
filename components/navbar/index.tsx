@@ -1,6 +1,6 @@
 import { useWeb3React } from '@web3-react/core';
 import MobileMenu from './components/mobilemenu';
-import RenderImage from 'components/renderimage';
+import RenderImage from 'components/image/renderimage';
 import useConnectWallet from 'hooks/useConnectWallet';
 import { formatAddress } from 'utils';
 

@@ -6,13 +6,19 @@
   content: '';
   filter: blur(100px);
   position: absolute;
-  width: 168px;
-  height: 168px;
-  background: #d4ff1e;
-  opacity: 0.6;
+  width: 8.75vw /* 168px -> 8.75vw */;
+  height: 8.75vw /* 168px -> 8.75vw */;
+  background: $neon-green;
+  opacity: 0.5;
   transform: rotate(180deg);
   z-index: 2;
   top: 0;
+
+  @include mobile-breakpoint{
+    width: 168px /* 168px -> 8.75vw */;
+    height: 168px /* 168px -> 8.75vw */;
+
+  }
 }
 
 .navbar__wrapper {
@@ -29,7 +35,6 @@
     @include tab-breakpoint() {
       left: calc(50% - 84px); //center it to the screen. 84 = 168/2
     }
-
   }
   #navbar {
     display: flex;
@@ -40,7 +45,7 @@
     padding: 0 5vw /* 96px -> 5vw */;
     z-index: 3;
     position: relative;
-    font-family: $regular-font;
+    font-family: $primary-font-regular;
 
     width: 100%;
     height: 5.7813vw /* 111px -> 5.7813vw */;
@@ -54,7 +59,7 @@
       display: inline-block;
       position: relative;
       width: 14.6354vw /* 281px -> 14.6354vw */;
-      height: 60px;
+      height: 3.125vw /* 60px -> 3.125vw */;
       @include mobile-breakpoint() {
         width: 126.41px;
         height: 27px;
@@ -89,12 +94,11 @@
 
       button {
         @include filled-button;
-        padding: .5208vw /* 10px -> .5208vw */ 1.0417vw /* 20px -> 1.0417vw */;
-        border-radius: .5208vw /* 10px -> .5208vw */;
+        padding: 0.5208vw /* 10px -> .5208vw */ 1.0417vw /* 20px -> 1.0417vw */;
+        border-radius: 0.5208vw /* 10px -> .5208vw */;
         font-size: 1.0417vw /* 20px -> 1.0417vw */;
         cursor: pointer;
         position: relative;
-
       }
     }
   }
