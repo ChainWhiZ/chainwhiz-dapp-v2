@@ -10,11 +10,12 @@
   padding: 8.5417vw /* 164px -> 8.5417vw */ 0 2.3438vw /* 45px -> 2.3438vw */;
   height: 60.0521vw /* 1153px -> 60.0521vw */ /* 1264px -> 65.8333vw */;
   width: 100%;
-  background-color: #0a0811;
+  background-color: $home-background;
   box-sizing: border-box;
 
   @include mobile-breakpoint {
     padding: 124px 20px 0;
+    font-size: 14px;
     height: unset;
     background-image: url('/images/landing/herobgmobile.svg');
     background-size: contain;
@@ -181,11 +182,12 @@
     }
 
     .latest__bounties__action {
-      width: 12.9688vw /* 249px -> 12.9688vw */;
+      width: 12.9688vw /* 249px -> 12.9688vw */ /* 193px -> 10.0521vw */;
       height: 3.6458vw /* 70px -> 3.6458vw */;
       border-radius: 1.0417vw /* 20px -> 1.0417vw */;
       margin: auto;
       font-size: 1.0417vw /* 20px -> 1.0417vw */;
+      line-height: 1.5625vw /* 30px -> 1.5625vw */;
       @include hollow-button;
       @include mobile-breakpoint {
         width: 157px;

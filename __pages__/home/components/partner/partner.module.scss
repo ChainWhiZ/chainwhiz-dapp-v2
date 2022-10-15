@@ -1,0 +1,72 @@
+@import 'styles/mixins';
+@import 'styles/variables.scss';
+
+.partner__wrapper {
+  background: rgba(30, 28, 48, 0.5);
+  border-radius: 1.0417vw /* 20px -> 1.0417vw */;
+  width: 24.8438vw /* 477px -> 24.8438vw */;
+  height: 10.5729vw /* 203px -> 10.5729vw */;
+  padding: 33px 2.1875vw /* 42px -> 2.1875vw */;
+  box-sizing: border-box;
+  @include mobile-breakpoint {
+    width: 320px;
+    height: 292px;
+    padding: 27px 20px;
+    border-radius: 20px;
+  }
+
+  .partner {
+    display: flex;
+    align-items: center;
+    gap: 1.9792vw /* 38px -> 1.9792vw */;
+    @include mobile-breakpoint {
+      gap: 18px;
+      flex-direction: column;
+    }
+
+    aside {
+      width: 6.25vw /* 120px -> 6.25vw */;
+      height: 6.25vw /* 120px -> 6.25vw */;
+      position: relative;
+      @include mobile-breakpoint {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    main {
+      text-align: left;
+      @include mobile-breakpoint {
+        text-align: center;
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 1.1458vw /* 22px -> 1.1458vw */;
+        line-height: 1.7188vw /* 33px -> 1.7188vw */;
+        color: white;
+        margin-bottom: 0.5208vw /* 10px -> .5208vw */;
+        @include truncate-lines(1);
+        @include mobile-breakpoint {
+          font-size: 22px;
+          line-height: 33px;
+          margin-bottom: 0;
+        }
+      }
+      p {
+        max-width: 12.1354vw /* 233px -> 12.1354vw */;
+        height: 4.6875vw /* 90px -> 4.6875vw */;
+        @include truncate-lines(3);
+        font-weight: 400;
+        font-size: 0.8333vw /* 16px -> .8333vw */;
+        line-height: 1.5625vw /* 30px -> 1.5625vw */;
+        color: $light-grey;
+        @include mobile-breakpoint {
+          max-width: 281px;
+          font-size: 16px;
+          line-height: 30px;
+          height: unset;
+        }
+      }
+    }
+  }
+}
