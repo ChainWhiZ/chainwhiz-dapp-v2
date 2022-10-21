@@ -7,7 +7,6 @@ import styles from './partners.module.scss';
 export default function Partners() {
   return (
     <section className={styles.partners__wrapper}>
-
       <div className={styles.partners}>
         <div className={styles.partners__text}>
           <p>Our Partners</p>
@@ -38,9 +37,10 @@ export default function Partners() {
         <aside>
           <h4>Sneak peek!</h4>
           <p>
-            Our newsletter lets you immerse yourself into the world of Chainwhiz<br />
-            Freshly cooked bounties, new partnerships, rewarding contests or
-            first looks at upcoming features We got you covered!
+            Our newsletter lets you immerse yourself into the world of Chainwhiz <br />
+            Freshly cooked bounties, new partnerships, and first looks of
+            upcoming features.<br />
+            We got you covered!
           </p>
         </aside>
       </div>

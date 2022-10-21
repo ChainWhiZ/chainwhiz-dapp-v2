@@ -3,6 +3,6 @@
   "fixedDigits": 4,
   "addMark": true,
   "vw": true,
-  "vwHover": true,
+  "vwHover": false,
   "vwDesign": 1920
 }

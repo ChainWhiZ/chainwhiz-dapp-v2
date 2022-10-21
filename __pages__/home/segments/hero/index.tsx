@@ -14,6 +14,7 @@ const viewAllBounties = () => {
 export default function Segment1() {
   return (
     <div className={styles.hero}>
+
       <section className={styles.hero__text}>
         <h2>
           One stop destination to get <span>work</span> done
@@ -31,23 +32,25 @@ export default function Segment1() {
         </div>
       </section>
 
-      <section className={styles.latest__bounties}>
-        <div className={styles.latest__bounties__text}>
-          <h4>Ready to level up and earn crypto?</h4>
-          <p>Discover the latest bounties</p>
-        </div>
-        <div className={styles.latest__bounties__container}>
-          {BOUNTIES.slice(0, BOUNTIES_LIMIT).map((bounty, index) => (
-            <Bounty bounty={bounty} key={index} />
-          ))}
-        </div>
-        <div
-          onClick={viewAllBounties}
-          className={styles.latest__bounties__action}
-        >
-          View all bounties
-        </div>
-      </section>
+      <div className={styles.latest__bounties__wrapper}>
+        <section className={styles.latest__bounties}>
+          <div className={styles.latest__bounties__text}>
+            <h4>Ready to level up and earn crypto?</h4>
+            <p>Discover the latest bounties</p>
+          </div>
+          <div className={styles.latest__bounties__container}>
+            {BOUNTIES.slice(0, BOUNTIES_LIMIT).map((bounty, index) => (
+              <Bounty bounty={bounty} key={index} />
+            ))}
+          </div>
+          <div
+            onClick={viewAllBounties}
+            className={styles.latest__bounties__action}
+          >
+            View all bounties
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

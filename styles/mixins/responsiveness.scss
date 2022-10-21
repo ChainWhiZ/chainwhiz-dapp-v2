@@ -12,3 +12,8 @@
   }
 }
 
+@mixin xlarge-screen {
+  @media (min-width: $max-breakpoint ){
+    @content;
+  }
+}
