@@ -1,0 +1,155 @@
+@import '/styles/variables';
+@import '/styles/mixins';
+
+.community__wrapper {
+  padding-top: 5.625rem /* 90px -> 5.625rem */;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-image: url('/images/landing/community/leftimage.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 41.25rem /* 660px -> 41.25rem */;
+    height: 27.3125rem /* 437px -> 27.3125rem */;
+
+    @include mobile-breakpoint {
+      width: 190px;
+      height: 125.8px;
+      background-image: url('/images/landing/community/leftimagemobile.svg');
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 33.125rem /* 530px -> 33.125rem */;
+    height: 27.3125rem /* 437px -> 27.3125rem */;
+    background-image: url('/images/landing/community/rightimage.png');
+    top: 0;
+    right: 0;
+
+    @include mobile-breakpoint {
+      width: 81px;
+      height: 125.8px;
+      background-image: url('/images/landing/community/rightimagemobile.svg');
+    }
+  }
+
+  .community {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+
+    &::before {
+      background: #ffffff;
+      opacity: 0.2;
+      filter: blur(6.25rem /* 100px -> 6.25rem */);
+      width: 18.5rem /* 296px -> 18.5rem */;
+      height: 18.5rem /* 296px -> 18.5rem */;
+      content: '';
+      position: absolute;
+      left: -9.375rem /* -150px -> -9.375rem */;
+      top: 3.125rem /* 50px -> 3.125rem */;
+      @include mobile-breakpoint {
+        display: none;
+      }
+    }
+    &::after {
+      background: #ffffff;
+      opacity: 0.2;
+      filter: blur(6.25rem /* 100px -> 6.25rem */);
+      width: 18.5rem /* 296px -> 18.5rem */;
+      height: 18.5rem /* 296px -> 18.5rem */;
+      content: '';
+      position: absolute;
+      right: -15.625rem /* -250px -> -15.625rem */;
+      top: 5rem /* 80px -> 5rem */;
+      @include mobile-breakpoint {
+        display: none;
+      }
+    }
+
+    p {
+      color: $neon-green;
+      font-family: $primary-font-regular;
+      text-align: center;
+      font-size: 1.375rem /* 22px -> 1.375rem */;
+      line-height: 2.0625rem /* 33px -> 2.0625rem */;
+      margin-bottom: 1.5625rem /* 25px -> 1.5625rem */;
+      @include mobile-breakpoint {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 18px;
+      }
+    }
+
+    h3 {
+      font-family: 'Cabinet Grotesk';
+      font-style: normal;
+      color: white;
+      text-align: center;
+      max-width: 44.125rem /* 706px -> 44.125rem */;
+      font-size: 3.375rem /* 54px -> 3.375rem */;
+      line-height: 4.1875rem /* 67px -> 4.1875rem */;
+      margin-bottom: 1.9375rem /* 31px -> 1.9375rem */;
+      @include mobile-breakpoint {
+        max-width: 262px;
+        font-size: 23px;
+        line-height: 29px;
+        margin: auto;
+        margin-bottom: 27px;
+      }
+    }
+
+    h5 {
+      margin: auto;
+      color: #898989;
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.375rem /* 22px -> 1.375rem */;
+      line-height: 2.0625rem /* 33px -> 2.0625rem */;
+      max-width: 29.625rem /* 474px -> 29.625rem */;
+      margin-bottom: 3.5rem /* 56px -> 3.5rem */;
+      @include mobile-breakpoint {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 35px;
+        max-width: 289px;
+      }
+    }
+
+    .button_group {
+      display: flex;
+      width: fit-content;
+      margin: auto;
+      gap: 2.5rem /* 40px -> 2.5rem */;
+      @include mobile-breakpoint {
+        gap: 30px;
+      }
+      & > div {
+        width: 13.5rem /* 216px -> 13.5rem */;
+        height: 6rem /* 96px -> 6rem */;
+        border-radius: 1.25rem /* 20px -> 1.25rem */;
+        @include hollow-button;
+        @include mobile-breakpoint {
+          width: 74px;
+          height: 74px;
+          border-radius: 20px;
+        }
+        box-sizing: border-box;
+        .social__image {
+          width: 3.5rem /* 56px -> 3.5rem */;
+          height: 3.5rem /* 56px -> 3.5rem */;
+          @include mobile-breakpoint {
+            width: 34px;
+            height: 34px;
+          }
+        }
+      }
+    }
+  }
+}
