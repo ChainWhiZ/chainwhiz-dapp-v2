@@ -2,12 +2,12 @@
 
 @mixin homepage-base-input {
   background: #1e1c30;
-  border-radius: 20px;
-  padding: 20px 40px;
+  border-radius: 1.25rem /* 20px -> 1.25rem */;
+  padding: 1.25rem /* 20px -> 1.25rem */ 2.5rem /* 40px -> 2.5rem */;
   border: 0;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 1.25rem /* 20px -> 1.25rem */;
+  line-height: 1.875rem /* 30px -> 1.875rem */;
   color: white;
   font-family: $primary-font;
   outline: none;

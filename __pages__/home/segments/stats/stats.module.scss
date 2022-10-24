@@ -1,0 +1,201 @@
+@import '/styles/variables';
+@import '/styles/mixins';
+
+.stats {
+  padding-top: 10.3125rem /* 165px -> 10.3125rem */;
+  padding-bottom: 165px; //todo remove later
+  position: relative;
+
+  @include mobile-breakpoint {
+    padding-top: 128px;
+    padding-bottom: 165px; //todo remove later
+  }
+
+  &::before {
+    width: 18.5rem /* 296px -> 18.5rem */;
+    height: 18.5rem /* 296px -> 18.5rem */;
+    background: #ffffff;
+    opacity: 0.2;
+    filter: blur(6.25rem /* 100px -> 6.25rem */);
+    content: '';
+    position: absolute;
+    bottom: 22.0625rem /* 353px -> 22.0625rem */;
+    left: 18rem /* 288px -> 18rem */;
+
+    @include mobile-breakpoint {
+      width: 296px;
+      height: 296px;
+      background: #ffffff;
+      opacity: 0.2;
+      filter: blur(100px);
+      top: 265px;
+      left: 0;
+    }
+  }
+  &::after {
+    width: 17.5rem /* 280px -> 17.5rem */;
+    height: 17.5rem /* 280px -> 17.5rem */;
+    background: $neon-green;
+    opacity: 0.3;
+    filter: blur(6.25rem /* 100px -> 6.25rem */);
+    content: '';
+    position: absolute;
+    bottom: 6.875rem /* 110px -> 6.875rem */;
+    right: 18.75rem /* 300px -> 18.75rem */;
+
+    @include mobile-breakpoint {
+      width: 280px;
+      height: 280px;
+      background: $neon-green;
+      opacity: 0.3;
+      filter: blur(100px);
+      bottom: 82px;
+      right: 55px;
+    }
+  }
+
+  .stats__text {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    @include mobile-breakpoint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    &::before {
+      background-image: url('/images/landing/stats/leftballs.svg');
+      content: '';
+      position: absolute;
+      width: 9.625rem /* 154px -> 9.625rem */;
+      height: 3.375rem /* 54px -> 3.375rem */;
+      background-size: 100%;
+      top: 0;
+      left: -11.1875rem /* -179px -> -11.1875rem */;
+      @include mobile-breakpoint {
+        width: 75px;
+        height: 26.3px;
+        left: 0;
+        top: -39px;
+      }
+    }
+    &::after {
+      background-image: url('/images/landing/stats/rightballs.svg');
+      content: '';
+      position: absolute;
+      background-size: 100%;
+
+      width: 11.0625rem /* 177px -> 11.0625rem */;
+      height: 3.0625rem /* 49px -> 3.0625rem */;
+      top: 0;
+      right: -16.625rem /* -266px -> -16.625rem */;
+      @include mobile-breakpoint {
+        width: 75px;
+        height: 26.3px;
+        right: 0;
+        top: -39px;
+      }
+    }
+
+    h4 {
+      color: white;
+      font-family: 'Cabinet Grotesk';
+      font-weight: 700;
+      font-size: 3.375rem /* 54px -> 3.375rem */;
+      line-height: 4.1875rem /* 67px -> 4.1875rem */;
+      text-align: center;
+      margin-bottom: 1.125rem /* 18px -> 1.125rem */;
+      @include mobile-breakpoint {
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 16px;
+      }
+    }
+    p {
+      font-family: $primary-font-regular;
+      font-size: 1.375rem /* 22px -> 1.375rem */;
+      line-height: 2.0625rem /* 33px -> 2.0625rem */;
+      text-align: center;
+      color: $light-grey;
+      max-width: 51.25rem /* 820px -> 51.25rem */;
+      margin-bottom: 6.8125rem /* 109px -> 6.8125rem */;
+      @include mobile-breakpoint {
+        max-width: 302px;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 53px;
+      }
+    }
+  }
+
+  .stats__statistics {
+    background: rgba(22, 20, 34, 0.6);
+    backdrop-filter: blur(0.625rem /* 10px -> .625rem */);
+    border-radius: 1.25rem /* 20px -> 1.25rem */;
+    width: 107.5rem /* 1720px -> 107.5rem */;
+    height: 24.0625rem /* 385px -> 24.0625rem */;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    @include mobile-breakpoint {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      width: 318px;
+      height: 794px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9375rem /* 15px -> .9375rem */;
+      align-items: center;
+
+      &:nth-of-type(2) {
+        border-right: 0.0625rem /* 1px -> .0625rem */ solid #464646;
+        border-left: 0.0625rem /* 1px -> .0625rem */ solid #464646;
+        @include mobile-breakpoint {
+          border: 0;
+          border-top: 0.0625rem /* 1px -> .0625rem */ solid #464646;
+          border-bottom: 0.0625rem /* 1px -> .0625rem */ solid #464646;
+          padding-top: 59px;
+          padding-bottom: 79px;
+          margin-left: 40px;
+          margin-right: 40px;
+        }
+      }
+
+      h1 {
+        font-weight: 800;
+        font-size: 6.25rem /* 100px -> 6.25rem */;
+        line-height: 7.75rem /* 124px -> 7.75rem */;
+        color: $neon-green;
+        font-family: 'Cabinet Grotesk';
+        @include mobile-breakpoint {
+          font-size: 80px;
+          line-height: 99px;
+        }
+      }
+      h5 {
+        font-weight: 400;
+        font-size: 1.875rem /* 30px -> 1.875rem */;
+        line-height: 2.8125rem /* 45px -> 2.8125rem */;
+        text-align: center;
+        color: white;
+        font-family: $primary-font-regular;
+        @include mobile-breakpoint {
+          font-size: 80px;
+          line-height: 99px;
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

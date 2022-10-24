@@ -4,8 +4,12 @@
 .partners__wrapper {
   // background: rgb(19,14,31);
   background: linear-gradient(180deg, rgba(19,14,31,1) 90%, rgba(16,12,26,1) 100%);
-  padding-bottom: 2.1875rem /* 35px -> 2.1875rem */;
+  padding-bottom: 11.25rem /* 180px -> 11.25rem */;
   position: relative;
+
+  @include mobile-breakpoint{
+    padding: 0;
+  }
 
   .partners {
     padding-top: 8rem /* 128px -> 8rem */;
