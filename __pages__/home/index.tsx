@@ -5,7 +5,7 @@
 import Hero from "./segments/hero";
 import Partners from "./segments/partners";
 import TorchBearer from "./segments/torchbearer";
-// import Stats from "./segments/stats";
+import Stats from "./segments/stats";
 
 // import all segments
 import styles from './home.module.scss';
@@ -19,7 +19,7 @@ export default function Sample() {
       <Hero />
       <Partners />
       <TorchBearer />
-      {/* <Stats /> */}
+      <Stats />
     </div>
   );
 }
