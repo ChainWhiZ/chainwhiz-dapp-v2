@@ -8,15 +8,18 @@ export default function Bounty({ bounty }) {
   return (
     <div className={styles.bounty__wrapper}>
       <span>{bounty.amount} matic</span>
+
       <div className={styles.bounty}>
         <RenderStyledImage
           src="/images/landing/polygon.svg"
           className={styles.bounty__chain}
         />
+
         <div className={styles.bounty__text}>
           <h4>{bounty.title}</h4>
           <p>{bounty.description}</p>
         </div>
+
         <div className={styles.bounty__meta}>
           <span>{bounty.daysLeft} days left</span>
           <aside>
@@ -28,6 +31,7 @@ export default function Bounty({ bounty }) {
           </aside>
         </div>
       </div>
+
     </div>
   );
 }

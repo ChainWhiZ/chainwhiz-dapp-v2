@@ -5,13 +5,9 @@
   span {
     display: none;
     cursor: pointer;
-
-    @include tab-breakpoint() {
-      transform: scale(1.5);
-      display: flex;
-    }
-
+    
     @include mobile-breakpoint() {
+      display: flex;
       transform: scale(1);
     }
   }
@@ -19,20 +15,19 @@
   .overlay__wrapper {
     background: linear-gradient(180deg, #110d1a 0%, #0c051c 100%);
     position: fixed;
-    top: 110px;
+    top: 6.875rem /* 110px -> 6.875rem */;
     left: 0;
     right: 0;
     width: 100%;
     height: calc(
-      100vh - 68px + 3px
-    ); //68px is the width of the navbar and we add 3px for some extra allowance
+      100vh - 4.25rem /* 68px -> 4.25rem */ + .1875rem /* 3px -> .1875rem */
+    );
     display: none;
 
-    @include tab-breakpoint() {
-      display: flex;
-    }
+
     @include mobile-breakpoint() {
-      top: 65px;
+      display: flex;
+      top: 4.0625rem /* 65px -> 4.0625rem */;
     }
     .overlay {
       width: 100%;
@@ -49,29 +44,31 @@
       .menu__items {
         width: fit-content;
         margin: auto;
+        margin-top: 43vw;
 
         h2 {
           font-family: $secondary-font;
-          font-size: 30px;
+          font-size: 1.875rem /* 30px -> 1.875rem */;
           cursor: pointer;
           text-align: center;
           line-height: unset;
-          margin-bottom: 17px;
+          margin-bottom: 1.0625rem /* 17px -> 1.0625rem */;
           font-weight: 700;
 
           &:first-of-type {
             color: $neon-green;
+            cursor: pointer;
           }
           &:last-of-type {
-            margin-top: 22px;
-            padding: 18px;
+            margin-top: 1.375rem /* 22px -> 1.375rem */;
+            padding: 1.125rem /* 18px -> 1.125rem */;
             color: white;
-            border-top: 1px solid $light-grey;
+            border-top: .0625rem /* 1px -> .0625rem */ solid $light-grey;
           }
         }
         p {
-          margin-bottom: 17px;
-          font-size: 22px;
+          margin-bottom: 1.0625rem /* 17px -> 1.0625rem */;
+          font-size: 1.375rem /* 22px -> 1.375rem */;
           line-height: unset;
           font-family: $primary-font-regular;
           text-align: center;
@@ -82,24 +79,33 @@
 
       .sub__items {
         width: fit-content;
-        margin: 50px auto;
+        margin: 3.125rem /* 50px -> 3.125rem */ auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         h5 {
           color: $light-grey;
-          font-size: 16px;
-          line-height: 24px;
-          margin-bottom: 15px;
+          font-size: 1rem /* 16px -> 1rem */;
+          line-height: 1.5rem /* 24px -> 1.5rem */;
+          margin-bottom: .9375rem /* 15px -> .9375rem */;
         }
         button {
           @include filled-button;
-          border: 2px solid #d4ff1e;
-          border-radius: 10px;
-          width: 148px;
-          height: 41px;
+          border: .125rem /* 2px -> .125rem */ solid #d4ff1e;
+          border-radius: .625rem /* 10px -> .625rem */;
+          width: 9.25rem /* 148px -> 9.25rem */;
+          height: 2.5625rem /* 41px -> 2.5625rem */;
           cursor: pointer;
         }
+      }
+
+      .plus__icon {
+        width: 1.5rem /* 24px -> 1.5rem */;
+        height: 1.5rem /* 24px -> 1.5rem */;
+        display: inline-block;
+        position: relative;
+        top: .1875rem /* 3px -> .1875rem */;
+        left: .1875rem /* 3px -> .1875rem */;
       }
     }
   }
