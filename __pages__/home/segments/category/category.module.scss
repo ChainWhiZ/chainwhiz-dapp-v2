@@ -109,6 +109,7 @@
             height: 6.1588rem;
             background-image: url('/images/landing/category/design.png');
             background-size: contain;
+            background-repeat: no-repeat;
             content: '';
             top: -2.625rem;
             left: -3.0625rem;
@@ -127,7 +128,7 @@
         padding-left: 6.5rem;
         @include mobile-breakpoint {
           padding: 0;
-          right: -44.4304px;
+          right: -2.7769rem;
         }
         div:last-of-type {
           position: relative;
@@ -137,12 +138,13 @@
             height: 6.1588rem;
             background-image: url('/images/landing/category/coding.png');
             background-size: contain;
+            background-repeat: no-repeat;
             content: '';
             top: -3.1875rem;
             right: -1.9375rem;
             box-sizing: border-box;
             @include mobile-breakpoint {
-              width: 31.0362rem;
+              width: 1.9737rem /* 31.58px -> 1.9737rem */;
               height: 1.9737rem;
               top: -1.4375rem;
               right: 1.625rem;
@@ -165,6 +167,7 @@
             height: 3rem;
             background-image: url(/images/landing/category/data.png);
             background-size: contain;
+            background-repeat: no-repeat;
             content: '';
             top: -1.4375rem;
             left: 0;
@@ -185,15 +188,16 @@
             height: 4.75rem;
             background-image: url('/images/landing/category/ux.png');
             background-size: contain;
+            background-repeat: no-repeat;
             content: '';
             top: -1.4375rem;
             right: -1.9375rem;
             box-sizing: border-box;
             @include mobile-breakpoint {
-              width: 38.1rem;
+              width: 2.385rem;
               height: 2.385rem;
-              top: -0.75rem;
-              right: -1.5rem;
+              top: - .75rem;
+              right: - 1.5rem;
             }
           }
         }
