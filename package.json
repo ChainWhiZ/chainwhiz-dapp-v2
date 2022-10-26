@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.186",
+    "@types/react-slick": "^0.23.10",
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "ethers": "^5.7.1",
@@ -17,7 +18,9 @@
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-toastify": "^9.0.8"
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.0.8",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "18.7.21",

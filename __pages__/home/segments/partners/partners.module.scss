@@ -24,7 +24,7 @@
     margin: auto;
     text-align: center;
     @include mobile-breakpoint {
-      width: 20rem /* 320px -> 20rem */;
+      // width: 20rem /* 320px -> 20rem */;
       background: $home-background;
     }
     .partners__text {

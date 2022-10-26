@@ -2,6 +2,7 @@
 @import './variables';
 @import 'styles/mixins';
 @import 'styles/font';
+@import './slickoverride';
 
 html,
 body {
@@ -13,7 +14,6 @@ body {
     font-size: 0.8333vw /* 16px -> .8333vw */;
     // font-size: 16px;
   }
-
 }
 
 h1,
