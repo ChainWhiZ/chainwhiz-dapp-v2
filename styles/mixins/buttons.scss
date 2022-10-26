@@ -5,6 +5,7 @@
   border: 2px solid $neon-green;
   font-family: Poppins-SemiBold;
   transition: $fast-transition-speed;
+  border: 2px solid transparent;
   cursor: pointer;
 
   &:hover {
@@ -23,6 +24,7 @@
   align-items: center;
   cursor: pointer;
   transition: $fast-transition-speed;
+  border: 2px solid transparent;
 
   &:hover {
     opacity: 0.8;

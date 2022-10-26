@@ -12,6 +12,7 @@ import Work from './segments/work';
 
 // import all segments
 import styles from './home.module.scss';
+import Publication from './segments/publications';
 
 export default function Sample() {
   //   const { connectWalletPressed } = useConnectWallet();
@@ -26,6 +27,7 @@ export default function Sample() {
       <Community />
       <Category />
       <Work />
+      <Publication />
     </div>
   );
 }
