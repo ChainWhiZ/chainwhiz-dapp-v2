@@ -24,6 +24,8 @@ const PUBLICATIONS = [
     url: '',
   },
 ];
+
+
 export default function Publications() {
   return (
     <section className={styles.publication__wrapper}>

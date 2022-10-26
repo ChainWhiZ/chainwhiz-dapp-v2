@@ -13,6 +13,7 @@ import Work from './segments/work';
 // import all segments
 import styles from './home.module.scss';
 import Publication from './segments/publications';
+import Teams from './segments/teams';
 
 export default function Sample() {
   //   const { connectWalletPressed } = useConnectWallet();
@@ -28,6 +29,7 @@ export default function Sample() {
       <Category />
       <Work />
       <Publication />
+      <Teams />
     </div>
   );
 }
