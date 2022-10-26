@@ -1,6 +1,7 @@
-@import "styles/variables";
-@import "styles/mixins";
+@import 'styles/variables';
+@import 'styles/mixins';
 
-.home{
-    background-color: $home-background;
+.home {
+  background-color: $home-background;
+  overflow-x: hidden;
 }

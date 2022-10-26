@@ -4,6 +4,7 @@
 .teams__wrapper {
   position: relative;
   .teams {
+    background: linear-gradient(90deg, #100c1a 50%, #0F0C1A 100%);
     .teams__text {
       width: fit-content;
       margin: auto;
@@ -53,6 +54,7 @@
     content: '';
     right: -160px;
     top: 240px;
+    z-index: 2;
     @include mobile-breakpoint {
       display: none;
     }
@@ -67,6 +69,7 @@
     content: '';
     left: -370px;
     top: 200px;
+    z-index: 2;
     @include mobile-breakpoint {
       width: 198px;
       height: 198px;
@@ -77,9 +80,8 @@
 }
 
 .teams__carousel {
-  max-width: 75.19%;
+  max-width: 80%;
   margin: auto;
-  overflow: hidden;
   @include mobile-breakpoint {
     padding-bottom: 164px;
   }
