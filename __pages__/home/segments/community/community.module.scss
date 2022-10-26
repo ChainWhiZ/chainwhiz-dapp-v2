@@ -12,12 +12,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 41.25rem /* 660px -> 41.25rem */;
+    width: 41.25rem /*  -> 41.25rem */;
     height: 27.3125rem /* 437px -> 27.3125rem */;
+    background-size: contain;
 
     @include mobile-breakpoint {
-      width: 190px;
-      height: 125.8px;
+      width: 11.875rem /* 190px -> 11.875rem */;
+      height: 7.8625rem /* 125.8px -> 7.8625rem */;
       background-image: url('/images/landing/community/leftimagemobile.svg');
     }
   }
@@ -31,10 +32,11 @@
     background-image: url('/images/landing/community/rightimage.png');
     top: 0;
     right: 0;
+    background-size: contain;
 
     @include mobile-breakpoint {
-      width: 81px;
-      height: 125.8px;
+      width: 5.0625rem /* 81px -> 5.0625rem */;
+      height: 7.8625rem /* 125.8px -> 7.8625rem */;
       background-image: url('/images/landing/community/rightimagemobile.svg');
     }
   }
@@ -81,9 +83,9 @@
       line-height: 2.0625rem /* 33px -> 2.0625rem */;
       margin-bottom: 1.5625rem /* 25px -> 1.5625rem */;
       @include mobile-breakpoint {
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 18px;
+        font-size: 1.25rem /* 20px -> 1.25rem */;
+        line-height: 1.875rem /* 30px -> 1.875rem */;
+        margin-bottom: 1.125rem /* 18px -> 1.125rem */;
       }
     }
 
@@ -97,11 +99,11 @@
       line-height: 4.1875rem /* 67px -> 4.1875rem */;
       margin-bottom: 1.9375rem /* 31px -> 1.9375rem */;
       @include mobile-breakpoint {
-        max-width: 262px;
-        font-size: 23px;
-        line-height: 29px;
+        max-width: 16.375rem /* 262px -> 16.375rem */;
+        font-size: 1.4375rem /* 23px -> 1.4375rem */;
+        line-height: 1.8125rem /* 29px -> 1.8125rem */;
         margin: auto;
-        margin-bottom: 27px;
+        margin-bottom: 1.6875rem /* 27px -> 1.6875rem */;
       }
     }
 
@@ -115,10 +117,10 @@
       max-width: 29.625rem /* 474px -> 29.625rem */;
       margin-bottom: 3.5rem /* 56px -> 3.5rem */;
       @include mobile-breakpoint {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 35px;
-        max-width: 289px;
+        font-size: 1rem /* 16px -> 1rem */;
+        line-height: 1.5rem /* 24px -> 1.5rem */;
+        margin-bottom: 2.1875rem /* 35px -> 2.1875rem */;
+        max-width: 18.0625rem /* 289px -> 18.0625rem */;
       }
     }
 
@@ -128,7 +130,7 @@
       margin: auto;
       gap: 2.5rem /* 40px -> 2.5rem */;
       @include mobile-breakpoint {
-        gap: 30px;
+        gap: 1.875rem /* 30px -> 1.875rem */;
       }
       & > div {
         width: 13.5rem /* 216px -> 13.5rem */;
@@ -136,17 +138,17 @@
         border-radius: 1.25rem /* 20px -> 1.25rem */;
         @include hollow-button;
         @include mobile-breakpoint {
-          width: 74px;
-          height: 74px;
-          border-radius: 20px;
+          width: 4.625rem /* 74px -> 4.625rem */;
+          height: 4.625rem /* 74px -> 4.625rem */;
+          border-radius: 1.25rem /* 20px -> 1.25rem */;
         }
         box-sizing: border-box;
         .social__image {
           width: 3.5rem /* 56px -> 3.5rem */;
           height: 3.5rem /* 56px -> 3.5rem */;
           @include mobile-breakpoint {
-            width: 34px;
-            height: 34px;
+            width: 2.125rem /* 34px -> 2.125rem */;
+            height: 2.125rem /* 34px -> 2.125rem */;
           }
         }
       }
