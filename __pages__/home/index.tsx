@@ -8,6 +8,7 @@ import TorchBearer from './segments/torchbearer';
 import Stats from './segments/stats';
 import Community from './segments/community';
 import Category from './segments/category';
+import Work from './segments/work';
 
 // import all segments
 import styles from './home.module.scss';
@@ -24,6 +25,7 @@ export default function Sample() {
       <Stats />
       <Community />
       <Category />
+      <Work />
     </div>
   );
 }
