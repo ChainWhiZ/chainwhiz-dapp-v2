@@ -14,6 +14,7 @@ import Work from './segments/work';
 import styles from './home.module.scss';
 import Publication from './segments/publications';
 import Teams from './segments/teams';
+import Footer from './segments/footer';
 
 export default function Sample() {
   //   const { connectWalletPressed } = useConnectWallet();
@@ -30,6 +31,7 @@ export default function Sample() {
       <Work />
       <Publication />
       <Teams />
+      <Footer />
     </div>
   );
 }

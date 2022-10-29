@@ -1,0 +1,230 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.footer {
+  width: 100%;
+  background-image: url('/images/landing/helixes/BG-Footer.png');
+  background-color: #0d0915d6;
+
+  background-blend-mode: color-dodge;
+  box-sizing: border-box;
+  padding: 16.625rem 6.25rem 10.75rem;
+  position: relative;
+
+  @include mobile-breakpoint {
+    padding: 0rem 1.25rem 2.125rem;
+    background-repeat: no-repeat;
+    background-image: url('/images/landing/helixes/footermobile.png');
+    background-color: #0c051c;
+    background-size: contain;
+  }
+
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12.125rem;
+    @include mobile-breakpoint {
+      flex-direction: column-reverse;
+      margin-bottom: 5.1875rem;
+      gap: 6.875rem;
+    }
+    .footer__top__text {
+      .footer__image {
+        width: 17.5625rem;
+        height: 3.75rem;
+        margin-bottom: 2.625rem;
+        @include mobile-breakpoint {
+          width: 7.9875rem;
+          height: 1.6875rem;
+          margin: auto;
+          margin-bottom: 1.125rem;
+        }
+      }
+
+      p {
+        max-width: 33.0625rem;
+        color: #898989;
+        font-size: 1.375rem;
+        line-height: 2.0625rem;
+        margin-bottom: 2.1875rem;
+        @include mobile-breakpoint {
+          font-size: 0.875rem;
+          line-height: 1.3125rem;
+          margin: auto;
+          margin-bottom: 2.1875rem;
+          text-align: center;
+        }
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 1.875rem;
+        @include mobile-breakpoint {
+          gap: 1.2913rem;
+          width: fit-content;
+          margin: auto;
+        }
+        .social__icon {
+          width: 2.75rem;
+          height: 2.75rem;
+          cursor: pointer;
+          @include mobile-breakpoint {
+            width: 1.8938rem;
+            height: 1.5063rem;
+          }
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    .footer__top__input {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        color: white;
+        font-family: $secondary-font;
+        font-weight: 700;
+        max-width: 35.3125rem;
+        font-size: 3.375rem;
+        line-height: 4.1875rem;
+        margin-bottom: 2.9375rem;
+        @include mobile-breakpoint {
+          font-size: 1.875rem;
+          line-height: 2.3125rem;
+          margin: auto;
+          margin-bottom: 1.8125rem;
+          text-align: center;
+        }
+        span {
+          color: $neon-green;
+        }
+      }
+      input {
+        @include homepage-base-input;
+        width: 35.625rem;
+        height: 4.375rem;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        margin-bottom: 1.875rem;
+        @include mobile-breakpoint {
+          width: 19.875rem;
+          height: 4.375rem;
+          margin: auto;
+          margin-bottom: 1.8125rem;
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      button {
+        @include filled-button;
+        width: 14.3125rem;
+        height: 4.375rem;
+        border-radius: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        margin-bottom: 1.875rem;
+        @include mobile-breakpoint {
+          width: 9.0625rem;
+          height: 2.5625rem;
+          border-radius: 0.625rem;
+          margin: auto;
+          margin-bottom: 1.3125rem;
+          font-size: 0.875rem;
+          line-height: 1.3125rem;
+        }
+      }
+      & > span {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #898989;
+        @include mobile-breakpoint {
+          font-size: 0.75rem;
+          line-height: 1.125rem;
+          width: fit-content;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .footer_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile-breakpoint {
+      flex-direction: column;
+    }
+
+    .footer_bottom__left {
+      display: flex;
+      flex-direction: column;
+      gap: 2.875rem;
+      @include mobile-breakpoint {
+        gap: 2.3125rem;
+        margin-bottom: 5.25rem;
+      }
+      div {
+        display: flex;
+        gap: 3.75rem;
+        @include mobile-breakpoint {
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+        span {
+          color: white;
+          font-size: 1.25rem;
+          line-height: 1.875rem;
+          text-align: center;
+          cursor: pointer;
+          @include mobile-breakpoint {
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+          }
+        }
+      }
+    }
+    .footer_bottom__right {
+      h5 {
+        font-size: 2.5rem;
+        line-height: 3.75rem;
+        margin-bottom: 1.0625rem;
+        color: white;
+        @include mobile-breakpoint {
+          font-size: 2.5rem;
+          line-height: 3.75rem;
+          margin-bottom: 1.1875rem;
+          text-align: center;
+        }
+      }
+      h6 {
+        font-size: 1.375rem;
+        line-height: 2.0625rem;
+        color: $neon-green;
+        font-family: $primary-font-medium;
+        cursor: pointer;
+        @include mobile-breakpoint {
+          font-size: 1.375rem;
+          line-height: 2.0625rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &::after {
+    width: 22.25rem;
+    height: 22.25rem;
+    background: #ffffff;
+    opacity: 0.2;
+    filter: blur(6.25rem);
+    position: absolute;
+    content: '';
+    bottom: 12.5rem;
+    right: -12.5rem;
+    @include mobile-breakpoint {
+      display: none;
+    }
+  }
+}
