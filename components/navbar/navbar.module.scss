@@ -88,6 +88,11 @@
         align-items: center;
         &#bounties {
           gap: 1.0313rem /* 16.5px -> 1.0313rem */;
+          position: relative;
+
+          // .open_menu{
+          //   position: absolute;
+          // }
         }
         &#leaderboard {
           margin-left: 3.5rem /* 56.0006px -> 3.5rem */;
