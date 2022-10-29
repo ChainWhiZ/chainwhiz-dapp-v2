@@ -1,0 +1,8 @@
+@import 'styles/variables';
+
+@mixin truncate-lines($line-count) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-count;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

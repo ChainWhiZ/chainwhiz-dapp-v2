@@ -1,0 +1,19 @@
+@import "styles/variables";
+
+@mixin mobile-breakpoint {
+  @media (max-width: $mobile-breakpoint ){
+    @content;
+  }
+}
+
+@mixin tab-breakpoint {
+  @media (max-width: $tab-breakpoint ){
+    @content;
+  }
+}
+
+@mixin xlarge-screen {
+  @media (min-width: $max-breakpoint ){
+    @content;
+  }
+}
