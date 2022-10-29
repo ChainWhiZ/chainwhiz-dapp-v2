@@ -13,7 +13,7 @@
 
   .partners {
     padding-top: 8rem /* 128px -> 8rem */;
-    background-image: url('/images/landing/helixes/partner.png');
+    background-image: url('/images/landing/helixes/partnerbg.png');
     background-blend-mode: color-dodge;
     background-color: $home-background;
     // background-position: center;
@@ -170,16 +170,18 @@
     height: 23.25rem /* 372px -> 23.25rem */;
     position: absolute;
     background: #ffffff;
+    border-radius: 50%;
     opacity: 0.2;
     filter: blur(6.25rem /* 100px -> 6.25rem */);
     content: '';
     top: 3.9375rem /* 63px -> 3.9375rem */;
-    left: 1.875rem /* 30px -> 1.875rem */;
+    left: 5.125rem /* 30px -> 1.875rem */;
     border-radius: 50%;
     @include mobile-breakpoint {
-      width: 216px;
-      height: 216px;
+      width: 13.5rem;
+      height: 13.5rem;
       opacity: 0.3;
+      left: -4.5rem;
     }
   }
   &::after {
