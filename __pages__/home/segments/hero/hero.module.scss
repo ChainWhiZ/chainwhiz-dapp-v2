@@ -51,7 +51,7 @@
       background-blend-mode: color-dodge;
       position: relative;
 
-      &::before{
+      &::before {
         width: 10.5rem;
         height: 10.5rem;
         border-radius: 50%;
@@ -170,7 +170,7 @@
     width: 100%;
     background: linear-gradient(
       10deg,
-      rgb(9, 8, 15) 77%,
+      rgb(10 8 17) 78%,
       rgb(11, 11, 19) 83%,
       #131518 100%
     );
