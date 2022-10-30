@@ -9,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: $primary-font;
+  overflow-x: hidden;
 
   @media (min-width: $mobile-breakpoint) and (max-width: $max-breakpoint) {
     font-size: 0.8333vw /* 16px -> .8333vw */;

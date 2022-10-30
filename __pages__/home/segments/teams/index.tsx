@@ -45,7 +45,7 @@ const TEAM = [
 export default function Teams() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 700,
     slidesToShow: 5,
@@ -62,6 +62,7 @@ export default function Teams() {
         breakpoint: 800,
         settings: {
           slidesToShow: 1,
+          dots: true,
         },
       },
     ],
