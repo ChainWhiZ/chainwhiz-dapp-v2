@@ -193,7 +193,8 @@
       @include mobile-breakpoint {
         margin: auto;
         margin-bottom: 46px;
-        width: 20rem;
+        // width: 20rem;
+        max-width: 43.6875rem;
       }
       h4 {
         font-weight: 400;
