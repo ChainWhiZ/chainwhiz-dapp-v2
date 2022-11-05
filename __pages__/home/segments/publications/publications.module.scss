@@ -54,21 +54,20 @@
   }
 
   &::after {
-    width: 24.875rem;
-    height: 24.875rem;
-    border-radius: 50%;
-    background: $white;
+    width: 398px;
+    height: 398px;
+    background: white;
     opacity: 0.3;
     filter: blur(100px);
     content: '';
     position: absolute;
     top: 250px;
-    left: -8.25rem;
+    left: -200px;
     @include mobile-breakpoint {
       width: 12rem;
       height: 12rem;
       top: 1.875rem;
-      left: -5rem;
+      left: -3.125rem;
     }
   }
 

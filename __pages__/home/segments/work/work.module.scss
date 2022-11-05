@@ -111,8 +111,8 @@
           width: 12rem /* 192px -> 12rem */;
           height: 12rem /* 192px -> 12rem */;
           opacity: 0.2;
-          filter: blur(3.2258rem);
-          left: -2.375rem /* -38px -> -3.125rem */;
+          filter: blur(51.6129px);
+          left: -3.125rem /* -50px -> -3.125rem */;
           top: -3.125rem /* -50px -> -3.125rem */;
         }
       }
@@ -133,7 +133,6 @@
         height: 19.875rem /* 318px -> 19.875rem */;
         background: $neon-green;
         opacity: 0.6;
-        border-radius: 50%;
         filter: blur(6.25rem /* 100px -> 6.25rem */);
         content: '';
         position: absolute;

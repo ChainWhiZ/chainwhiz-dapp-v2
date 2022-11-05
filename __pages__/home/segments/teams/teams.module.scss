@@ -60,22 +60,21 @@
     }
   }
   &::after {
+    width: 476px;
+    height: 476px;
     position: absolute;
-    width: 29.75rem;
-    height: 29.75rem;
-    background: $neon-green;
-    border-radius: 50%;
+    background: #d4ff1e;
     opacity: 0.3;
     filter: blur(100px);
     content: '';
-    left: -23.125rem;
-    top: 12.5rem;
+    left: -370px;
+    top: 200px;
     z-index: 2;
     @include mobile-breakpoint {
-      width: 12.375rem;
-      height: 12.375rem;
-      left: 5.0625rem;
-      top: -3.125rem;
+      width: 198px;
+      height: 198px;
+      left: 80px;
+      top: -50px;
     }
   }
 }
