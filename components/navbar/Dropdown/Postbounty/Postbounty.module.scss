@@ -1,0 +1,15 @@
+.postBounty_container{
+  position: absolute;
+  top: 0;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  background-color: #161422;
+  background-image: url('/images/nav/postbountybg.png');
+  color: white;
+  margin: 0;
+  background-blend-mode: color-dodge;
+  max-width: 100vw;
+  max-height: 100vh;
+};

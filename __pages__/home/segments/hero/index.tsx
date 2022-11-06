@@ -24,7 +24,7 @@ export default function Segment1() {
           <button>Launch App</button>
           <div>
             <RenderStyledImage
-              src="/images/landing/watch.svg"
+              src="/images/landing/watch.png"
               className={styles.svg__wrapper}
             />
             <span>Watch video</span>

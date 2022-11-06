@@ -13,7 +13,7 @@
 
   .partners {
     padding-top: 8rem /* 128px -> 8rem */;
-    background-image: url('/images/landing/helixes/partnerbg.png');
+    background-image: url('/images/landing/partners/partnerbg.png');
     background-blend-mode: color-dodge;
     background-color: $home-background;
     // background-position: center;
@@ -43,7 +43,7 @@
         }
       }
       h2 {
-        font-weight: 700;
+        font-weight: 500;
         font-size: 3.375rem /* 54px -> 3.375rem */;
         line-height: 4.1875rem /* 67px -> 4.1875rem */;
         font-family: $secondary-font;
@@ -149,6 +149,7 @@
     }
 
     aside {
+      font-weight: 400;
       h4 {
         font-size: 1.875rem /* 30px -> 1.875rem */;
         line-height: 2.8125rem /* 45px -> 2.8125rem */;

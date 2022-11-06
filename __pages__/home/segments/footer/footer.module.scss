@@ -88,7 +88,7 @@
       h1 {
         color: white;
         font-family: $secondary-font;
-        font-weight: 700;
+        // font-weight: 700;
         max-width: 35.3125rem;
         font-size: 3.375rem;
         line-height: 4.1875rem;
@@ -225,7 +225,7 @@
     position: absolute;
     content: '';
     bottom: 12.5rem;
-    right: -12.5rem;
+    right: -3.125rem;
     @include mobile-breakpoint {
       display: none;
     }

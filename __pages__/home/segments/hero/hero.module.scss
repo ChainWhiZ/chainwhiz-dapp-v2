@@ -2,6 +2,7 @@
 @import 'styles/mixins';
 
 .hero {
+  position: relative;
   background-blend-mode: screen;
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,7 +36,7 @@
     background-image: url('/images/landing/herobg.png'),
       linear-gradient(90deg, rgba(64, 50, 99, 1) 50%, rgba(0, 0, 0, 0) 100%);
     box-sizing: border-box;
-    background-blend-mode: hard-light;
+    background-blend-mode: overlay;
     background-size: 100vw;
     background-position-y: -5.625rem /* -90px -> -5.625rem */;
 
