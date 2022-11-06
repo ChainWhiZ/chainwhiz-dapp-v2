@@ -32,7 +32,7 @@
     padding-bottom: 11.3125rem /* 181.0003px -> 11.3125rem */;
     width: 100%;
 
-    background-image: url('/images/landing/herobg.png'),
+    background-image: url('/images/landing/helixes/BG-Home.png'),
       linear-gradient(90deg, rgba(64, 50, 99, 1) 50%, rgba(0, 0, 0, 0) 100%);
     box-sizing: border-box;
     background-blend-mode: hard-light;
@@ -45,23 +45,10 @@
       margin-bottom: 0;
       background-color: #110e1b;
       box-sizing: border-box;
-      // background-position-y: 50px;
-      background-image: url(/images/landing/helixes/heromobilebg3.png);
+      background-position-y: 50px;
+      background-image: url(/images/landing/herobgmobile.svg);
       background-size: contain;
       background-blend-mode: color-dodge;
-      position: relative;
-
-      &::before{
-        width: 10.5rem;
-        height: 10.5rem;
-        border-radius: 50%;
-        content: '';
-        position: absolute;
-        background-color: $neon-green;
-        opacity: 0.4;
-        top: 0;
-        filter: blur(100px);
-      }
     }
 
     @include xlarge-screen {

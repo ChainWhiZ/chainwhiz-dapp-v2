@@ -16,7 +16,6 @@
     height: 18.5rem /* 296px -> 18.5rem */;
     background: #ffffff;
     opacity: 0.2;
-    border-radius: 50%;
     filter: blur(6.25rem /* 100px -> 6.25rem */);
     content: '';
     position: absolute;
@@ -30,7 +29,7 @@
       opacity: 0.2;
       filter: blur(6.25rem /* 100px -> 6.25rem */);
       top: 16.5625rem /* 265px -> 16.5625rem */;
-      left: -3%;
+      left: 0;
     }
   }
   &::after {
@@ -38,11 +37,10 @@
     height: 17.5rem /* 280px -> 17.5rem */;
     background: $neon-green;
     opacity: 0.3;
-    border-radius: 50%;
     filter: blur(6.25rem /* 100px -> 6.25rem */);
     content: '';
     position: absolute;
-    bottom: 8.75rem /* 110px -> 6.875rem */;
+    bottom: 6.875rem /* 110px -> 6.875rem */;
     right: 18.75rem /* 300px -> 18.75rem */;
 
     @include mobile-breakpoint {
@@ -52,7 +50,7 @@
       opacity: 0.3;
       filter: blur(100px);
       bottom: 82px;
-      left: 28%;
+      right: 55px;
     }
   }
 
