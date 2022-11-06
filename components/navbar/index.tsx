@@ -34,11 +34,15 @@ export default function Navbar({ extraStyles = '' }) {
           {/* menu items for large screens*/}
           <section className={styles.navbar__items}>
             <span id={styles.bounties} onClick={toggleMenuOpen}>
+<<<<<<< HEAD
               Bounties
               <RenderStyledImage
                 className={styles.downarrow__icon}
                 src="/images/nav/downarrow.svg"
               />
+=======
+              Bounties <DownArrow />
+>>>>>>> 9978db1 (feature: add tab and background layout to create post section)
               <div className={styles.open_menu}>{menuOpen && <Dropdown />}</div>
             </span>
             <span id={styles.leaderboard}>Leaderboard</span>
