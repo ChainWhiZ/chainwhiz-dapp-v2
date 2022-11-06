@@ -4,5 +4,20 @@
   "addMark": true,
   "vw": true,
   "vwHover": false,
-  "vwDesign": 1920
+  "vwDesign": 1920,
+  "languages": [
+    "html",
+    "vue",
+    "css",
+    "postcss",
+    "less",
+    "scss",
+    "sass",
+    "stylus",
+    "javascriptreact",
+    "typescriptreact",
+    "javascript",
+    "typescript",
+    "ts"
+  ]
 }

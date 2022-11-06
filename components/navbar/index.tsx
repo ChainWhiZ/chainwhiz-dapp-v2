@@ -10,7 +10,7 @@ import styles from './navbar.module.scss';
 import { useRef, useState } from 'react';
 import RenderStyledImage from 'components/image/renderstyledimage';
 
-export default function Navbar() {
+export default function Navbar({ extraStyles = '' }) {
   const { connectWalletPressed } = useConnectWallet();
   const { account, active } = useWeb3React();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,8 +21,9 @@ export default function Navbar() {
     setMenuOpen(false);
   });
 
+  const baseClassName = `${styles.navbar__wrapper} ${extraStyles}`;
   return (
-    <section className={styles.navbar__wrapper}>
+    <section className={baseClassName}>
       <nav id={styles.navbar} ref={ref}>
         {/* menu logo */}
         <section>
@@ -33,11 +34,15 @@ export default function Navbar() {
           {/* menu items for large screens*/}
           <section className={styles.navbar__items}>
             <span id={styles.bounties} onClick={toggleMenuOpen}>
+<<<<<<< HEAD
               Bounties
               <RenderStyledImage
                 className={styles.downarrow__icon}
                 src="/images/nav/downarrow.svg"
               />
+=======
+              Bounties <DownArrow />
+>>>>>>> 9978db1 (feature: add tab and background layout to create post section)
               <div className={styles.open_menu}>{menuOpen && <Dropdown />}</div>
             </span>
             <span id={styles.leaderboard}>Leaderboard</span>
