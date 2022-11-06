@@ -57,7 +57,6 @@ export const CreatePost = styled.div`
 
 // ----- header section
 export const CreatePostTextContent = styled.div`
-
   h3 {
     color: white;
     text-align: center;
