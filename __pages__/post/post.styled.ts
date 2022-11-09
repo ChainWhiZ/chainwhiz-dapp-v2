@@ -11,6 +11,9 @@ export const CreatePostWrapper = styled.div`
 
   ${devices.mobile} {
     min-height: calc(100vh - 4.25rem);
+    background-image: none;
+    background-color: #171422;
+    padding-bottom: 5.5325rem;
   }
 
   &::before {
@@ -238,4 +241,77 @@ export const TabMobile = styled(SectionTab)`
   }
 `;
 
-export const CreatePostContent = styled.div``;
+export const CreatePostContent = styled.div`
+  background: #1f1e2b;
+  border-radius: 1.25rem;
+  ${devices.mobile} {
+    background: transparent;
+  }
+`;
+
+export const CreatePostAction = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  margin-top: 2.9375rem;
+  align-items: center;
+  ${devices.mobile} {
+    gap: 1.3125rem;
+    margin-top: 2.1875rem;
+  }
+`;
+
+export const BackButton = styled.div`
+  display: none;
+  left: 3px;
+  color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  font-weight: 300;
+  align-items: center;
+  cursor: pointer;
+  
+  font-size: .75rem;
+  line-height: 1.3125rem;
+  gap: .6875rem;
+
+  &::before {
+    content: '';
+    height: .6044rem;
+    width: .3731rem;
+    background-image: url('/images/post/postleftarrow.svg');
+    display: block;
+  }
+
+  ${devices.mobile} {
+    display: flex;
+  }
+`;
+
+export const ActionButton = styled.div<{ variant: 'grey' | 'neon' }>`
+  width: fit-content;
+  cursor: pointer;
+  background-color: ${(props) =>
+    props.variant === 'grey'
+      ? props.theme.colors.neonGreen
+      : props.theme.colors.postActionBlack};
+  color: ${(props) =>
+    props.variant === 'grey'
+      ? props.theme.colors.darkGrey
+      : props.theme.colors.white};
+  transition: ${(props) => props.theme.meta.fastTransitionSpeed};
+  border-radius: 0.625rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 400;
+  font-size: 1.125rem;
+
+  ${devices.mobile} {
+    padding: 0.515rem 0.8581rem;
+    font-size: 0.7724rem;
+    line-height: 1rem;
+    border-radius: 0.1875rem;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+`;
