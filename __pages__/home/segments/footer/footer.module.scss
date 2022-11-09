@@ -16,9 +16,10 @@
   @include mobile-breakpoint {
     padding: 0rem 1.25rem 2.125rem;
     background-repeat: no-repeat;
-    background-image: url('/images/landing/helixes/footermobile.png');
-    background-color: #0c051c;
+    background-image: url('/images/landing/helixes/mobilefooterbg.png');
+    background-color: #100c1a;
     background-size: contain;
+    margin-top: 8.75rem;
   }
 
   .footer__top {
@@ -112,7 +113,7 @@
         line-height: 1.875rem;
         margin-bottom: 1.875rem;
         @include mobile-breakpoint {
-          width: 19.875rem;
+          width: 23rem;
           height: 4.375rem;
           margin: auto;
           margin-bottom: 1.8125rem;
@@ -184,6 +185,7 @@
           @include mobile-breakpoint {
             font-size: 1.25rem;
             line-height: 1.875rem;
+            font-weight: 400;
           }
         }
       }
