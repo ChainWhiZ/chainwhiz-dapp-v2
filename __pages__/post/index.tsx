@@ -27,6 +27,7 @@ import {
   BackButton,
 } from './post.styled';
 
+
 // ----- import tabs
 import BasicDetailsTab from './tabs/basicdetails';
 import BountyCriteriaTab from './tabs/bountycriteria';
