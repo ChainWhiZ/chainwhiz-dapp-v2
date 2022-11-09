@@ -6,7 +6,9 @@ const colors = {
   lightGrey: '#898989',
   white: '#ffffff',
   homeBackground: '#100C1A',
-  blueFade: '#1E1C30'
+  blueFade: '#1E1C30',
+  postInputBlack: '#0D0F12',
+  postActionBlack: "rgba(138, 153, 168, 0.25)"
 };
 
 const breakpoints = {
@@ -28,7 +30,6 @@ const fonts = {
 const meta = {
   fastTransitionSpeed: '200ms',
 };
-
 
 export const devices = {
   mobile: `@media (max-width: ${breakpoints.mobile})`,

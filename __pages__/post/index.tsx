@@ -1,16 +1,24 @@
+import useBasicDetails from 'hooks/createpost/usebasicdetails';
+import useCreatePost from 'hooks/createpost/usebasicdetails';
 import React, { useEffect, useState } from 'react';
+import theme from 'theme';
 import {
   CreatePostWrapper,
   CreatePostTextContent,
   CreatePostBreadcrumb,
   CreatePostHeader,
+  CreatePostAction,
   CreatePostContent,
+  ActionButton,
   GoBackButton,
   CreatePost,
   CreatePostTabs,
   TabDesktop,
   TabMobile,
+  BackButton
 } from './post.styled';
+import BasicDetailsTab from './tabs/basicdetails';
+import BountyCriteriaTab from './tabs/bountycriteria';
 
 const DEFAULT_BREAKCRUMBS = ['Home', 'Post a bounty'];
 const CREATE_POST_TABS = [
@@ -19,19 +27,38 @@ const CREATE_POST_TABS = [
   'Rewards & Voting',
   'Finish creating bounty',
 ];
+const ALL_TABS = [
+  BasicDetailsTab,
+  BountyCriteriaTab,
+  BountyCriteriaTab,
+  BountyCriteriaTab,
+];
 
 export default function Post() {
   const [crumbs, setCrumbs] = useState(DEFAULT_BREAKCRUMBS);
   const [activeTab, setActiveTab] = useState(0);
-  // define the state variables
+
+  const basicDetailsState = useBasicDetails();
+  const { isCompleted: basicDetailsIsCompleted = false } = basicDetailsState;
+  const tabsFilledStatus = [basicDetailsIsCompleted, false, false, false];
 
   useEffect(() => {
     setCrumbs([...DEFAULT_BREAKCRUMBS, CREATE_POST_TABS[activeTab]]);
   }, [activeTab]);
 
-  function getTabStatus(index: number) {
-    return index < activeTab;
-  }
+  const resetState = () => {
+    console.log('reset state');
+  };
+
+  const proceed = () => {
+    if (tabsFilledStatus[activeTab]) {
+      setActiveTab((a) => a + 1);
+    } else {
+      // TODO notify that the form is incomplete
+    }
+  };
+
+  const CurrentTab = ALL_TABS[activeTab];
 
   return (
     <CreatePostWrapper>
@@ -56,7 +83,7 @@ export default function Post() {
             <TabDesktop
               data-index={index}
               active={activeTab === index}
-              filled={getTabStatus(index)}
+              filled={tabsFilledStatus[index]}
               onClick={() => setActiveTab(index)}
               key={oneTab}
             >
@@ -67,8 +94,18 @@ export default function Post() {
         </CreatePostTabs>
 
         <CreatePostContent>
-            {/* alternate between the different tabs here */}
+          <CurrentTab basicDetails={basicDetailsState} />
         </CreatePostContent>
+
+        <CreatePostAction>
+          <BackButton>Back</BackButton>
+          <ActionButton onClick={resetState} variant="neon">
+            Reset
+          </ActionButton>
+          <ActionButton onClick={proceed} variant="grey">
+            Continue
+          </ActionButton>
+        </CreatePostAction>
       </CreatePost>
     </CreatePostWrapper>
   );
