@@ -2,9 +2,9 @@ import RenderStyledImage from 'components/image/renderstyledimage';
 import styles from './footer.module.scss';
 
 const SOCIALS = [
-  { image: '/images/landing/footer/fb.png', url: 'www.google.com' },
-  { image: '/images/landing/footer/discord.png', url: 'www.google.com' },
-  { image: '/images/landing/footer/twitter.png', url: 'www.google.com' },
+  { image: '/images/landing/foot/fb.png', url: 'www.google.com' },
+  { image: '/images/landing/foot/discord.png', url: 'www.google.com' },
+  { image: '/images/landing/foot/twitter.png', url: 'www.google.com' },
 ];
 
 const FOOTER_TOP_LINKS = [
@@ -30,7 +30,7 @@ export default function Footer() {
         <div className={styles.footer__top__text}>
           <RenderStyledImage
             className={styles.footer__image}
-            src="/images/landing/footer/footerlogo.png"
+            src="/images/landing/foot/footerlogo.png"
           />
           <p>
             Chainwhiz is an open-source bounty marketplace connecting Web3
