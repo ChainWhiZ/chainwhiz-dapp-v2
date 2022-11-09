@@ -8,12 +8,7 @@
   background-size: cover;
   min-height: 75.0625rem /* 1153.0003px -> 72.0625rem */;
   width: 100%;
-  background: linear-gradient(
-    180deg,
-    rgb(9, 8, 15) 92%,
-    rgb(11, 11, 19) 96%,
-    #130e1f 100%
-  );
+  background: #0a0812;
 
   @include mobile-breakpoint {
     background: $home-background;
@@ -191,6 +186,11 @@
     @include mobile-breakpoint {
       display: inline-block;
       max-width: unset;
+<<<<<<< HEAD
+=======
+      width: fit-content;
+      padding-bottom: 0; //todo maybe later remove
+>>>>>>> adff9b85fcba94c1be3fe316290b2fae0829a5c2
     }
     .latest__bounties__text {
       margin-bottom: 4.2188vw /* 81px -> 4.2188vw */;

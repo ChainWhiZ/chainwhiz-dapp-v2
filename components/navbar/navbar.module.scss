@@ -24,9 +24,13 @@
 
 .navbar__wrapper {
   @include mobile-breakpoint {
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
     z-index: 2;
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
   }
   &::after {
     @include highlight;
