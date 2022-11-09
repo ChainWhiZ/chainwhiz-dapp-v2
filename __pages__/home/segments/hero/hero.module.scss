@@ -44,13 +44,14 @@
       background-repeat: no-repeat;
       padding-bottom: 68px;
       margin-bottom: 0;
-      background-color: #110e1b;
+      // background-color: #110e1b;
       box-sizing: border-box;
       // background-position-y: 50px;
-      background-image: url(/images/landing/helixes/heromobilebg3.png);
-      background-size: contain;
+      background-image: url('/images/landing/helixes/mobileherobg.png');
+      background-size: cover;
       background-blend-mode: color-dodge;
       position: relative;
+      background-position: center;
 
       &::before {
         width: 10.5rem;
@@ -59,7 +60,7 @@
         content: '';
         position: absolute;
         background-color: $neon-green;
-        opacity: 0.4;
+        opacity: 0.6;
         top: 0;
         filter: blur(100px);
       }
@@ -168,6 +169,8 @@
   }
 
   .latest__bounties__wrapper {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     background: linear-gradient(
       10deg,
@@ -186,13 +189,13 @@
     margin: auto;
     // background-color: #090811;
     @include mobile-breakpoint {
+      display: inline-block;
       max-width: unset;
-      padding-bottom: 40px; //todo maybe later remove
     }
     .latest__bounties__text {
       margin-bottom: 4.2188vw /* 81px -> 4.2188vw */;
       @include mobile-breakpoint {
-        margin: auto;
+        // margin: auto;
         margin-bottom: 46px;
         // width: 20rem;
         max-width: 43.6875rem;

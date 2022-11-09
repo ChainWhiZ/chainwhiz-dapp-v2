@@ -51,7 +51,7 @@ export default function Footer() {
 
         <div className={styles.footer__top__input}>
           <h1>
-            <span>Wise-</span>cribe to our newsletter
+            <span>Wise-</span>cribe to our Newsletter
           </h1>
           <input placeholder="Enter your email" type="text" />
           <button>Subscribe now</button>

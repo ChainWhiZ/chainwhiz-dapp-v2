@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import PostBounty from "./Postbounty";
-import styles from "./Dropdown.module.scss";
+import React, { useState } from 'react';
+import PostBounty from './postbounty';
+import styles from './dropdown.module.scss';
 
 export default function index({ onconfirm }: any) {
   const [bounties, setBounties] = useState(false);
   const [postbounty, setPostbounty] = useState(false);
   const [explorebounty, setExplorebounty] = useState(false);
-
 
   return (
     <div className={styles.menu_wrapper}>
