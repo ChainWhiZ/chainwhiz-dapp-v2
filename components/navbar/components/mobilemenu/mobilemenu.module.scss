@@ -12,6 +12,14 @@
     }
   }
 
+  .ham_bell{
+    display: flex;
+
+  }
+  #mobilebell svg{
+    margin-right: 1.8731rem;
+  }
+
   .overlay__wrapper {
     background: linear-gradient(180deg, #110d1a 0%, #0c051c 100%);
     position: fixed;
@@ -24,6 +32,18 @@
     );
     display: none;
 
+    &::after{
+      content: '';
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      opacity: 0.4;
+      filter: blur(100px);
+      background-color: $neon-green;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
     @include mobile-breakpoint() {
       display: flex;
@@ -44,7 +64,7 @@
       .menu__items {
         width: fit-content;
         margin: auto;
-        margin-top: 43vw;
+        margin-top: 9.625rem;
 
         h2 {
           font-family: $secondary-font;
@@ -84,6 +104,7 @@
         flex-direction: column;
         align-items: center;
         h5 {
+          font-weight: 400;
           color: $light-grey;
           font-size: 1rem /* 16px -> 1rem */;
           line-height: 1.5rem /* 24px -> 1.5rem */;
@@ -96,6 +117,7 @@
           width: 9.25rem /* 148px -> 9.25rem */;
           height: 2.5625rem /* 41px -> 2.5625rem */;
           cursor: pointer;
+          font-weight: 600;
         }
       }
 
