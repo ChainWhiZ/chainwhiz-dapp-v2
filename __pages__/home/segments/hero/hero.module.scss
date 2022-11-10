@@ -185,12 +185,8 @@
     // background-color: #090811;
     @include mobile-breakpoint {
       display: inline-block;
-      max-width: unset;
-<<<<<<< HEAD
-=======
       width: fit-content;
       padding-bottom: 0; //todo maybe later remove
->>>>>>> adff9b85fcba94c1be3fe316290b2fae0829a5c2
     }
     .latest__bounties__text {
       margin-bottom: 4.2188vw /* 81px -> 4.2188vw */;
