@@ -185,10 +185,6 @@
     // background-color: #090811;
     @include mobile-breakpoint {
       display: inline-block;
-<<<<<<< HEAD
-      max-width: unset;
-=======
->>>>>>> 2777f5113785c3a2dbab4c0ca35bfea0f55985c5
       width: fit-content;
       padding-bottom: 0; //todo maybe later remove
     }

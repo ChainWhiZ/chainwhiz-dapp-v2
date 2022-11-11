@@ -2,15 +2,9 @@ import RenderStyledImage from 'components/image/renderstyledimage';
 import styles from './footer.module.scss';
 
 const SOCIALS = [
-<<<<<<< HEAD
   { image: '/images/landing/footer/fb.svg', url: 'www.google.com' },
   { image: '/images/landing/footer/discord.svg', url: 'www.google.com' },
   { image: '/images/landing/footer/twitter.svg', url: 'www.google.com' },
-=======
-  { image: '/images/landing/foot/fb.png', url: 'www.google.com' },
-  { image: '/images/landing/foot/discord.png', url: 'www.google.com' },
-  { image: '/images/landing/foot/twitter.png', url: 'www.google.com' },
->>>>>>> 2777f5113785c3a2dbab4c0ca35bfea0f55985c5
 ];
 
 const FOOTER_TOP_LINKS = [
@@ -36,11 +30,7 @@ export default function Footer() {
         <div className={styles.footer__top__text}>
           <RenderStyledImage
             className={styles.footer__image}
-<<<<<<< HEAD
             src="/images/landing/footer/mobilefooterlogo.svg"
-=======
-            src="/images/landing/foot/footerlogo.png"
->>>>>>> 2777f5113785c3a2dbab4c0ca35bfea0f55985c5
           />
           <p>
             Chainwhiz is an open-source bounty marketplace connecting Web3
