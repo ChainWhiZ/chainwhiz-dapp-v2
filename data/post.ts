@@ -1,7 +1,7 @@
-export const BASIC_DETAILS= {
-    title: "",
-    categories: [],
-    referenceLink: "",
-    description: "",
-    timeToComplete: 0
-}
+export const BASIC_DETAILS = {
+  title: '',
+  categories: '',
+  referenceLink: '',
+  description: '',
+  timeToComplete: 0,
+};
