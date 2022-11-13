@@ -4,10 +4,12 @@
 .footer {
   width: 100%;
   background-image: url('/images/landing/helixes/footerbg.png');
-  background-color: #0d0915d6;
+  // background-color: #0d0915d6;
   margin-top: 4.7631rem;
+  background-color: rgb(83 79 98);
+  background-blend-mode: overlay;
 
-  background-blend-mode: color-dodge;
+  // background-blend-mode: color-dodge;
   background-size: contain;
   box-sizing: border-box;
   padding: 16.625rem 6.25rem 10.75rem;

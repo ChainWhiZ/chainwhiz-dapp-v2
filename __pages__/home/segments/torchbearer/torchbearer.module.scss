@@ -14,6 +14,8 @@
     height: 22.25rem /* 356px -> 22.25rem */;
     background: white;
     opacity: 0.15;
+    border-radius: 50%;
+    object-fit: cover;
     filter: blur(100px);
     content: '';
     left: calc(50% - 11.125rem /* 178px -> 11.125rem */);
