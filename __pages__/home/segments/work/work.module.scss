@@ -23,7 +23,7 @@
       position: relative;
       h5 {
         font-weight: 500;
-        letter-spacing: 0.085em;
+        letter-spacing: 0.085rem;
         color: white;
         font-family: $primary-font-regular;
         font-size: 1.375rem /* 22px -> 1.375rem */;
@@ -103,10 +103,11 @@
         height: 23.25rem /* 372px -> 23.25rem */;
         background: #ffffff;
         opacity: 0.2;
+        border-radius: 50%;
         filter: blur(6.25rem /* 100px -> 6.25rem */);
         content: '';
         position: absolute;
-        top: -6.25rem /* -100px -> -6.25rem */;
+        top: -8.25rem /* -100px -> -6.25rem */;
         left: -0.625rem /* -10px -> -0.625rem */;
         @include mobile-breakpoint {
           width: 12rem /* 192px -> 12rem */;
@@ -138,6 +139,10 @@
         @include mobile-breakpoint {
           width: 18.6875rem /* 299px -> 18.6875rem */;
           height: 13.875rem /* 222px -> 13.875rem */;
+          &::after{
+            display: none;
+            // background-color: transparent;
+          }
         }
       }
       &::after {
@@ -150,7 +155,8 @@
         content: '';
         position: absolute;
         top: -3.125rem /* -50px -> -3.125rem */;
-        left: 19.4375rem /* 311px -> 19.4375rem */;
+        // left: 19.4375rem /* 311px -> 19.4375rem */;
+        right: -1.25rem;
         @include mobile-breakpoint {
           display: none;
         }

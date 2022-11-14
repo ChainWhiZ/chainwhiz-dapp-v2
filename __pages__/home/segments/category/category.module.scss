@@ -83,7 +83,8 @@
           background-color: #1e1c30;
           padding: 1.875rem 3.75rem;
           border-radius: 1.25rem;
-          font-weight: $primary-font-medium;
+          font-family: $primary-font-regular;
+          font-weight: 500;
           font-size: 1.125rem;
           line-height: 1.6875rem;
           @include mobile-breakpoint {

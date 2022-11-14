@@ -63,6 +63,8 @@ export default function Teams() {
         settings: {
           slidesToShow: 1,
           dots: true,
+          autoplay: true,
+          autoplaySpeed: 5000,
         },
       },
     ],

@@ -37,12 +37,13 @@
       width: 6rem;
       height: 6rem;
       border-radius: 50%;
-      opacity: 0.4;
+      opacity: 0.8;
+      object-fit: cover;
       filter: blur(100px);
       background-color: $neon-green;
       position: absolute;
       top: 0;
-      right: 0;
+      right: .875rem;
     }
 
     @include mobile-breakpoint() {

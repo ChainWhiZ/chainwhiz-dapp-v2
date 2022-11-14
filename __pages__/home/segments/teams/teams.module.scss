@@ -45,8 +45,8 @@
     }
   }
   &::before {
-    width: 254px;
-    height: 254px;
+    width: 15.625rem;
+    height: 15.625rem;
     background: #ffffff;
     opacity: 0.4;
     filter: blur(100px);
@@ -65,7 +65,7 @@
     height: 29.75rem;
     background: $neon-green;
     border-radius: 50%;
-    opacity: 0.6;
+    opacity: 0.4;
     filter: blur(100px);
     content: '';
     left: -23.125rem;
@@ -76,6 +76,7 @@
       height: 12.375rem;
       left: 5.0625rem;
       top: -3.125rem;
+      opacity: 0.3;
     }
   }
 }
@@ -83,6 +84,7 @@
 .teams__carousel {
   max-width: 80%;
   margin: auto;
+
   @include mobile-breakpoint {
     // padding-bottom: 164px;
   }
@@ -99,6 +101,11 @@
     margin-bottom: 2.6875rem;
     border-radius: 50%;
     transition: 400ms;
+
+    // &:hover {
+    // transition: transform .5s; 
+    // transform: scale(1.5);
+  // }
     @include mobile-breakpoint {
       width: 196px;
       height: 196px;
@@ -114,6 +121,7 @@
     color: white;
     text-align: center;
     display: none;
+    font-weight: 500;
     @include mobile-breakpoint {
       font-size: 20px;
       line-height: 30px;
@@ -129,6 +137,7 @@
     line-height: 1.875rem;
     text-align: center;
     display: none;
+    font-weight: 400;
     @include mobile-breakpoint {
       margin-bottom: 36px;
       font-size: 16px;

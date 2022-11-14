@@ -22,6 +22,7 @@
     background-color: #100c1a;
     background-size: contain;
     margin-top: 8.75rem;
+    background-blend-mode: color-dodge;
   }
 
   .footer__top {
@@ -123,6 +124,9 @@
           line-height: 1.5rem;
         }
       }
+      input::placeholder{
+        color: #ffffff
+      }
       button {
         @include filled-button;
         width: 14.3125rem;
@@ -156,6 +160,7 @@
   }
 
   .footer_bottom {
+    text-align: right;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -203,6 +208,7 @@
           line-height: 3.75rem;
           margin-bottom: 1.1875rem;
           text-align: center;
+          font-weight: 400;
         }
       }
       h6 {
@@ -215,6 +221,7 @@
           font-size: 1.375rem;
           line-height: 2.0625rem;
           text-align: center;
+          font-weight: 500;
         }
       }
     }
