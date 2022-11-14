@@ -2,7 +2,11 @@
 @import 'styles/mixins';
 
 .partners__wrapper {
-  background: linear-gradient(180deg, #110d1a 20%, #0f0c19 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(17 12 29) 90%,
+    rgba(16, 12, 26, 1) 100%
+  );
   padding-bottom: 11.25rem /* 180px -> 11.25rem */;
   position: relative;
 
@@ -12,8 +16,7 @@
 
   .partners {
     padding-top: 8rem /* 128px -> 8rem */;
-    background-image: url(/images/landing/partners/partnerbg.png),
-      linear-gradient(180deg, #0a0812 50%, #110d1a 90%);
+    background-image: url(/images/landing/partners/partnerbg.png), linear-gradient(180deg, #0a0812 50%, #0e0d1c 90%);
     background-blend-mode: color-dodge;
     background-repeat: no-repeat;
     background-size: cover;
