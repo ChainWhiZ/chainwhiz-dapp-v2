@@ -16,10 +16,11 @@
 
   .partners {
     padding-top: 8rem /* 128px -> 8rem */;
-    background-image: url(/images/landing/partners/partnerbg.png), linear-gradient(180deg, #0a0812 50%, #0e0d1c 90%);
+    background: url(/images/landing/partners/partnerbg.png) 0 14px, linear-gradient(180deg, #0a0812 50%, #0e0d1c 90%);
     background-blend-mode: color-dodge;
     background-repeat: no-repeat;
     background-size: cover;
+    // background-position-y: 1.5625rem;
 
     margin: auto;
     text-align: center;
