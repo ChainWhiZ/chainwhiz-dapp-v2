@@ -4,7 +4,7 @@ import RenderImage from 'components/image/renderimage';
 import useConnectWallet from 'hooks/useConnectWallet';
 import { useClickAway } from 'react-use';
 import { formatAddress } from 'utils';
-import Dropdown from './dropdown';
+import Dropdown from './dropdown/index';
 
 import styles from './navbar.module.scss';
 import { useRef, useState } from 'react';
