@@ -28,7 +28,7 @@ export default function useBasicDetails() {
    * This function will be triggered when an input element state changes
    * @param e The event object
    */
-  const onStateChange = (
+  const onFormStateChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
     const name = e.target.name;
@@ -42,7 +42,7 @@ export default function useBasicDetails() {
   return {
     state: basicDetails,
     setState: setBasicDetails,
-    onFormStateChange: onStateChange,
+    onFormStateChange,
     isCompleted,
   };
 }
