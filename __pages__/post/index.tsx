@@ -1,6 +1,7 @@
+import { CREATE_POST_TABS, DEFAULT_BREAKCRUMBS } from 'data';
 import useBasicDetails from 'hooks/createpost/usebasicdetails';
 import useBountyCriteria from 'hooks/createpost/usebountycriteria';
-import { useRouter } from 'next/router';
+import useRewardsAndVoting from 'hooks/createpost/userewardsandvoting';
 import React, { useEffect, useState } from 'react';
 import {
   CreatePostWrapper,
@@ -17,26 +18,20 @@ import {
   TabMobile,
   BackButton,
 } from './post.styled';
+
+// ----- import tabs
 import BasicDetailsTab from './tabs/basicdetails';
 import BountyCriteriaTab from './tabs/bountycriteria';
+import RewardsAndVotingTab from './tabs/rewardsandvoting';
 
-const DEFAULT_BREAKCRUMBS = ['Home', 'Post a bounty'];
-const CREATE_POST_TABS = [
-  'Enter basic details',
-  'Add bounty criterias',
-  'Rewards & Voting',
-  'Finish creating bounty',
-];
 const ALL_TABS = [
   BasicDetailsTab,
   BountyCriteriaTab,
-  BountyCriteriaTab,
-  BountyCriteriaTab,
+  RewardsAndVotingTab,
+  BasicDetailsTab,
 ];
 
 export default function Post() {
-  const router = useRouter();
-  const { stage } = router.query;
   const [crumbs, setCrumbs] = useState(DEFAULT_BREAKCRUMBS);
   const [activeTab, setActiveTab] = useState(0);
 
@@ -47,30 +42,22 @@ export default function Post() {
   const bountyCriteriaState = useBountyCriteria();
   const { isCompleted: bountyCriteriaIsCompleted = false } =
     bountyCriteriaState;
+  // rewards and voting state
+  const rewardsAndVotingState = useRewardsAndVoting();
+  const { isCompleted: rewardsAndVotingCompleted = false } =
+    rewardsAndVotingState;
 
   // tab filled state
   const tabsFilledStatus = [
     basicDetailsIsCompleted,
     bountyCriteriaIsCompleted,
-    false,
+    rewardsAndVotingCompleted,
     false,
   ];
 
   useEffect(() => {
     setCrumbs([...DEFAULT_BREAKCRUMBS, CREATE_POST_TABS[activeTab]]);
   }, [activeTab]);
-
-  useEffect(() => {
-    // validate they are frree
-  }, [stage]);
-
-  const proceed = () => {
-    if (tabsFilledStatus[activeTab]) {
-      setActiveTab((a) => a + 1);
-    } else {
-      // TODO notify that the form is incomplete
-    }
-  };
 
   const gotoTab = (index: number) => {
     // ensure all tabs before this one are filled before the user can proceed.
@@ -87,7 +74,6 @@ export default function Post() {
   };
 
   const CurrentTab = ALL_TABS[activeTab];
-
   return (
     <CreatePostWrapper>
       <CreatePost>
@@ -127,6 +113,7 @@ export default function Post() {
           <CurrentTab
             basicDetails={basicDetailsState}
             bountyCriteria={bountyCriteriaState}
+            rewardsAndVoting={rewardsAndVotingState}
           />
         </CreatePostContent>
 
