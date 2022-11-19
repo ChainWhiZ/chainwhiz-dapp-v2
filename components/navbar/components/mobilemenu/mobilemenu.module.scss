@@ -5,11 +5,18 @@
   span {
     display: none;
     cursor: pointer;
-    
+
     @include mobile-breakpoint() {
       display: flex;
       transform: scale(1);
     }
+  }
+
+  .ham_bell {
+    display: flex;
+  }
+  #mobilebell svg {
+    margin-right: 1.8731rem;
   }
 
   .overlay__wrapper {
@@ -20,10 +27,23 @@
     right: 0;
     width: 100%;
     height: calc(
-      100vh - 4.25rem /* 68px -> 4.25rem */ + .1875rem /* 3px -> .1875rem */
+      100vh - 4.25rem /* 68px -> 4.25rem */ + 0.1875rem /* 3px -> .1875rem */
     );
     display: none;
 
+    &::after {
+      content: '';
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      opacity: 0.8;
+      object-fit: cover;
+      filter: blur(100px);
+      background-color: $neon-green;
+      position: absolute;
+      top: 0;
+      right: 0.875rem;
+    }
 
     @include mobile-breakpoint() {
       display: flex;
@@ -36,7 +56,6 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: bottom;
-      background-color: #0c051c;
       background-blend-mode: color-dodge;
       display: flex;
       flex-direction: column;
@@ -44,7 +63,7 @@
       .menu__items {
         width: fit-content;
         margin: auto;
-        margin-top: 43vw;
+        margin-top: 9.875rem;
 
         h2 {
           font-family: $secondary-font;
@@ -63,7 +82,7 @@
             margin-top: 1.375rem /* 22px -> 1.375rem */;
             padding: 1.125rem /* 18px -> 1.125rem */;
             color: white;
-            border-top: .0625rem /* 1px -> .0625rem */ solid $light-grey;
+            border-top: 0.0625rem /* 1px -> .0625rem */ solid $light-grey;
           }
         }
         p {
@@ -84,18 +103,20 @@
         flex-direction: column;
         align-items: center;
         h5 {
+          font-weight: 400;
           color: $light-grey;
           font-size: 1rem /* 16px -> 1rem */;
           line-height: 1.5rem /* 24px -> 1.5rem */;
-          margin-bottom: .9375rem /* 15px -> .9375rem */;
+          margin-bottom: 0.9375rem /* 15px -> .9375rem */;
         }
         button {
           @include filled-button;
-          border: .125rem /* 2px -> .125rem */ solid #d4ff1e;
-          border-radius: .625rem /* 10px -> .625rem */;
+          border: 0.125rem /* 2px -> .125rem */ solid #d4ff1e;
+          border-radius: 0.625rem /* 10px -> .625rem */;
           width: 9.25rem /* 148px -> 9.25rem */;
           height: 2.5625rem /* 41px -> 2.5625rem */;
           cursor: pointer;
+          font-weight: 600;
         }
       }
 
@@ -104,8 +125,8 @@
         height: 1.5rem /* 24px -> 1.5rem */;
         display: inline-block;
         position: relative;
-        top: .1875rem /* 3px -> .1875rem */;
-        left: .1875rem /* 3px -> .1875rem */;
+        top: 0.1875rem /* 3px -> .1875rem */;
+        left: 0.1875rem /* 3px -> .1875rem */;
       }
     }
   }

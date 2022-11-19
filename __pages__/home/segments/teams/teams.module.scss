@@ -4,7 +4,7 @@
 .teams__wrapper {
   position: relative;
   .teams {
-    background: linear-gradient(90deg, #100c1a 50%, #0F0C1A 100%);
+    background: linear-gradient(90deg, #100c1a 50%, #0f0c1a 100%);
     .teams__text {
       width: fit-content;
       margin: auto;
@@ -26,7 +26,7 @@
           line-height: 2.3125rem;
           margin: auto;
           margin-bottom: 1.25rem;
-          max-width: 19.625rem;
+          max-width: 14.6875rem;
           text-align: center;
         }
       }
@@ -45,8 +45,8 @@
     }
   }
   &::before {
-    width: 254px;
-    height: 254px;
+    width: 15.625rem;
+    height: 15.625rem;
     background: #ffffff;
     opacity: 0.4;
     filter: blur(100px);
@@ -65,7 +65,7 @@
     height: 29.75rem;
     background: $neon-green;
     border-radius: 50%;
-    opacity: 0.3;
+    opacity: 0.4;
     filter: blur(100px);
     content: '';
     left: -23.125rem;
@@ -76,6 +76,7 @@
       height: 12.375rem;
       left: 5.0625rem;
       top: -3.125rem;
+      opacity: 0.3;
     }
   }
 }
@@ -83,8 +84,9 @@
 .teams__carousel {
   max-width: 80%;
   margin: auto;
+
   @include mobile-breakpoint {
-    padding-bottom: 164px;
+    // padding-bottom: 164px;
   }
 }
 
@@ -93,12 +95,17 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
   .team__member__image {
     width: 7.5rem;
     height: 7.5rem;
     margin-bottom: 2.6875rem;
     border-radius: 50%;
-    transition: 400ms;
+    transition: $fast-transition-speed;
+
+    &:hover {
+      transform: scale(1.1);
+    }
     @include mobile-breakpoint {
       width: 196px;
       height: 196px;
@@ -114,6 +121,7 @@
     color: white;
     text-align: center;
     display: none;
+    font-weight: 500;
     @include mobile-breakpoint {
       font-size: 20px;
       line-height: 30px;
@@ -129,6 +137,7 @@
     line-height: 1.875rem;
     text-align: center;
     display: none;
+    font-weight: 400;
     @include mobile-breakpoint {
       margin-bottom: 36px;
       font-size: 16px;

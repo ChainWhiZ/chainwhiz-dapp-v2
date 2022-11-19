@@ -15,13 +15,13 @@ export default function Community() {
           <div>
             <RenderStyledImage
               className={styles.social__image}
-              src="/images/landing/community/discord.svg"
+              src="/images/landing/footer/discord.svg"
             />
           </div>
           <div>
             <RenderStyledImage
               className={styles.social__image}
-              src="/images/landing/community/twitter.svg"
+              src="/images/landing/footer/twitter.svg"
             />
           </div>
         </div>

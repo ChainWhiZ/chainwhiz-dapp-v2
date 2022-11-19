@@ -8,7 +8,7 @@ export default function Category() {
         <div className={styles.category__text}>
           <h3>
             10+ Categories.
-            <br /> That&apos;s a <span>lot!</span>
+            <br /> That&apos;s a <span>LOT!</span>
           </h3>
           <p>
             Chainwhiz brings you the very best bounties from top Protocols,

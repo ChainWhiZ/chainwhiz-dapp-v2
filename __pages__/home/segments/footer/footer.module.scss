@@ -4,10 +4,12 @@
 .footer {
   width: 100%;
   background-image: url('/images/landing/helixes/footerbg.png');
-  background-color: #0d0915d6;
+  // background-color: #0d0915d6;
   margin-top: 4.7631rem;
+  background-color: rgb(83 79 98);
+  background-blend-mode: overlay;
 
-  background-blend-mode: color-dodge;
+  // background-blend-mode: color-dodge;
   background-size: contain;
   box-sizing: border-box;
   padding: 16.625rem 6.25rem 10.75rem;
@@ -16,9 +18,11 @@
   @include mobile-breakpoint {
     padding: 0rem 1.25rem 2.125rem;
     background-repeat: no-repeat;
-    background-image: url('/images/landing/helixes/footermobile.png');
-    background-color: #0c051c;
+    background-image: url('/images/landing/helixes/mobilefooterbg.png');
+    background-color: #100c1a;
     background-size: contain;
+    margin-top: 8.75rem;
+    background-blend-mode: color-dodge;
   }
 
   .footer__top {
@@ -88,7 +92,7 @@
       h1 {
         color: white;
         font-family: $secondary-font;
-        font-weight: 700;
+        // font-weight: 700;
         max-width: 35.3125rem;
         font-size: 3.375rem;
         line-height: 4.1875rem;
@@ -112,13 +116,16 @@
         line-height: 1.875rem;
         margin-bottom: 1.875rem;
         @include mobile-breakpoint {
-          width: 19.875rem;
+          width: 23rem;
           height: 4.375rem;
           margin: auto;
           margin-bottom: 1.8125rem;
           font-size: 1rem;
           line-height: 1.5rem;
         }
+      }
+      input::placeholder{
+        color: #ffffff
       }
       button {
         @include filled-button;
@@ -153,6 +160,7 @@
   }
 
   .footer_bottom {
+    text-align: right;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -184,6 +192,7 @@
           @include mobile-breakpoint {
             font-size: 1.25rem;
             line-height: 1.875rem;
+            font-weight: 400;
           }
         }
       }
@@ -199,6 +208,7 @@
           line-height: 3.75rem;
           margin-bottom: 1.1875rem;
           text-align: center;
+          font-weight: 400;
         }
       }
       h6 {
@@ -211,6 +221,7 @@
           font-size: 1.375rem;
           line-height: 2.0625rem;
           text-align: center;
+          font-weight: 500;
         }
       }
     }
@@ -225,7 +236,7 @@
     position: absolute;
     content: '';
     bottom: 12.5rem;
-    right: -12.5rem;
+    right: -3.125rem;
     @include mobile-breakpoint {
       display: none;
     }
