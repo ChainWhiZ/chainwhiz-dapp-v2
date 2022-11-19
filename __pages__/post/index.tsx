@@ -1,7 +1,7 @@
 import useBasicDetails from 'hooks/createpost/usebasicdetails';
-import useCreatePost from 'hooks/createpost/usebasicdetails';
+import useBountyCriteria from 'hooks/createpost/usebountycriteria';
+import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import theme from 'theme';
 import {
   CreatePostWrapper,
   CreatePostTextContent,
@@ -15,7 +15,7 @@ import {
   CreatePostTabs,
   TabDesktop,
   TabMobile,
-  BackButton
+  BackButton,
 } from './post.styled';
 import BasicDetailsTab from './tabs/basicdetails';
 import BountyCriteriaTab from './tabs/bountycriteria';
@@ -35,20 +35,34 @@ const ALL_TABS = [
 ];
 
 export default function Post() {
+  const router = useRouter();
+  const { stage } = router.query;
   const [crumbs, setCrumbs] = useState(DEFAULT_BREAKCRUMBS);
   const [activeTab, setActiveTab] = useState(0);
 
+  // basic details state
   const basicDetailsState = useBasicDetails();
   const { isCompleted: basicDetailsIsCompleted = false } = basicDetailsState;
-  const tabsFilledStatus = [basicDetailsIsCompleted, false, false, false];
+  // bounty criteria state
+  const bountyCriteriaState = useBountyCriteria();
+  const { isCompleted: bountyCriteriaIsCompleted = false } =
+    bountyCriteriaState;
+
+  // tab filled state
+  const tabsFilledStatus = [
+    basicDetailsIsCompleted,
+    bountyCriteriaIsCompleted,
+    false,
+    false,
+  ];
 
   useEffect(() => {
     setCrumbs([...DEFAULT_BREAKCRUMBS, CREATE_POST_TABS[activeTab]]);
   }, [activeTab]);
 
-  const resetState = () => {
-    console.log('reset state');
-  };
+  useEffect(() => {
+    // validate they are frree
+  }, [stage]);
 
   const proceed = () => {
     if (tabsFilledStatus[activeTab]) {
@@ -56,6 +70,20 @@ export default function Post() {
     } else {
       // TODO notify that the form is incomplete
     }
+  };
+
+  const gotoTab = (index: number) => {
+    // ensure all tabs before this one are filled before the user can proceed.
+    const previousTabsFilled = tabsFilledStatus.slice(0, index).every(Boolean);
+    if (previousTabsFilled) {
+      setActiveTab(index);
+    } else {
+      // TODO use custom notification to ensure that the tab is navigated to
+    }
+  };
+
+  const resetState = () => {
+    console.log('reset function to be implemented shortly');
   };
 
   const CurrentTab = ALL_TABS[activeTab];
@@ -84,25 +112,30 @@ export default function Post() {
               data-index={index}
               active={activeTab === index}
               filled={tabsFilledStatus[index]}
-              onClick={() => setActiveTab(index)}
+              onClick={() => gotoTab(index)}
               key={oneTab}
             >
               <span>{oneTab}</span>
             </TabDesktop>
           ))}
-          <TabMobile active>{CREATE_POST_TABS[activeTab]}</TabMobile>
+          <TabMobile active filled={tabsFilledStatus[activeTab]}>
+            {CREATE_POST_TABS[activeTab]}
+          </TabMobile>
         </CreatePostTabs>
 
         <CreatePostContent>
-          <CurrentTab basicDetails={basicDetailsState} />
+          <CurrentTab
+            basicDetails={basicDetailsState}
+            bountyCriteria={bountyCriteriaState}
+          />
         </CreatePostContent>
 
         <CreatePostAction>
-          <BackButton>Back</BackButton>
+          <BackButton onClick={() => gotoTab(activeTab - 1)}>Back</BackButton>
           <ActionButton onClick={resetState} variant="neon">
             Reset
           </ActionButton>
-          <ActionButton onClick={proceed} variant="grey">
+          <ActionButton onClick={() => gotoTab(activeTab + 1)} variant="grey">
             Continue
           </ActionButton>
         </CreatePostAction>

@@ -1,10 +1,14 @@
 import { useWeb3React } from '@web3-react/core';
 import MobileMenu from './components/mobilemenu';
 import RenderImage from 'components/image/renderimage';
-import useConnectWallet from 'hooks/useConnectWallet';
+import useConnectWallet from 'hooks/useconnectwallet';
 import { useClickAway } from 'react-use';
 import { formatAddress } from 'utils';
+<<<<<<< HEAD
 import Dropdown from './Dropdown/index';
+=======
+import Dropdown from './dropdown/index';
+>>>>>>> 705ee32 (feature: create logic for the second tab for bounty criteria)
 
 import styles from './navbar.module.scss';
 import { useRef, useState } from 'react';
