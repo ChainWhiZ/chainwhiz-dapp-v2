@@ -47,6 +47,7 @@ export type RewardsAndVotingHookType = {
   };
 };
 
+
 export type CreatePostTabType = {
   basicDetails: CreatePostHookType;
   bountyCriteria: BountyCriteriaHookType;

@@ -33,16 +33,6 @@ export const BOUNTY_PERMISSIONS_PERMISSIONED_TYPES = {
   TOKEN_GATED: 'token gated',
 };
 
-export const SOLUTION_VOTING_TYPES = {
-  YES: 'yes',
-  NO: 'no',
-};
-
-export const VOTING_ACCESIBILITY = {
-  EVERYONE: 'everyone',
-  SPECIFICS: 'specifics',
-};
-
 // -------------------------------------------
 
 // ---------------------------------
@@ -66,41 +56,9 @@ export const BOUNTY_CRITERIA = {
   walletAddress: '',
   evaluationCriteria: '',
 };
-
-export const REWARDS_AND_VOTING = {
-  rewardAmount: '',
-  rewardToken: '',
-  solutionVoting: SOLUTION_VOTING_TYPES.NO,
-  votingAccesibility: VOTING_ACCESIBILITY.EVERYONE,
-  votingToken: '',
-  votingAmount: '',
-  votingTime: '',
-};
 // ---------------------------------
 
 // -------------------------------------------
-export const VOTING_ACCESIBILITY_OPTIONS = [
-  {
-    label: VOTING_ACCESIBILITY.EVERYONE,
-    name: 'votingAccesibility',
-  },
-  {
-    label: VOTING_ACCESIBILITY.EVERYONE,
-    name: 'votingAccesibility',
-  },
-];
-
-export const SOLUTION_VOTING_OPTIONS = [
-  {
-    label: SOLUTION_VOTING_TYPES.YES,
-    name: 'solutionVoting',
-  },
-  {
-    label: SOLUTION_VOTING_TYPES.NO,
-    name: 'solutionVoting',
-  },
-];
-
 export const NFT_REWARD_TYPES_OPTIONS = [
   {
     label: UPSKILLED_NFT_REWARDS_TYPES.YES,

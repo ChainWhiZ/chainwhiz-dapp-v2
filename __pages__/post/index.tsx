@@ -44,6 +44,8 @@ const ALL_TABS = [
 
 
 export default function Post() {
+  const router = useRouter();
+  const { stage } = router.query;
   const [crumbs, setCrumbs] = useState(DEFAULT_BREAKCRUMBS);
   const [activeTab, setActiveTab] = useState(0);
   const router = useRouter();
