@@ -1,13 +1,13 @@
 import { useWeb3React } from '@web3-react/core';
 import RenderStyledImage from 'components/image/renderstyledimage';
-import useConnectWallet from 'hooks/useConnectWallet';
+import useConnectWallet from 'hooks/useconnectwallet';
 import React, { useState } from 'react';
 import { formatAddress } from 'utils';
 import { CloseIcon, HamBurgerMenu } from './assets';
 import styles from './mobilemenu.module.scss';
 
-const OPEN_ICON = "/images/nav/plus.svg";
-const CLOSE_ICON = "/images/nav/minus.svg";
+const OPEN_ICON = '/images/nav/plus.svg';
+const CLOSE_ICON = '/images/nav/minus.svg';
 const ICONS = [OPEN_ICON, CLOSE_ICON];
 
 export default function MobileMenu() {
