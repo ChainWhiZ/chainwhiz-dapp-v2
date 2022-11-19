@@ -41,10 +41,14 @@ export const CreatePost = styled.div`
   width: 89.375rem;
   margin: auto;
   padding-top: 3.625rem;
+  padding-bottom: 6.25rem;
 
   ${devices.mobile} {
     width: fit-content;
     padding-top: 4.75rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
   }
 `;
 
@@ -270,15 +274,15 @@ export const BackButton = styled.div`
   font-weight: 300;
   align-items: center;
   cursor: pointer;
-  
-  font-size: .75rem;
+
+  font-size: 0.75rem;
   line-height: 1.3125rem;
-  gap: .6875rem;
+  gap: 0.6875rem;
 
   &::before {
     content: '';
-    height: .6044rem;
-    width: .3731rem;
+    height: 0.6044rem;
+    width: 0.3731rem;
     background-image: url('/images/post/postleftarrow.svg');
     display: block;
   }
