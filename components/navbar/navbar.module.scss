@@ -1,0 +1,131 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+// define a mixin for the highlight under each navbar
+@mixin highlight {
+  content: '';
+  filter: blur(100px);
+  position: absolute;
+  width: 10.5rem /* 168px -> 10.5rem */;
+  height: 10.5rem /* 168px -> 10.5rem */;
+  background: $neon-green;
+  opacity: 0.5;
+  transform: rotate(180deg);
+  z-index: 2;
+  top: 0;
+
+  @include mobile-breakpoint {
+    width: 168px /* 168px -> 8.75vw */;
+    height: 168px /* 168px -> 8.75vw */;
+    position: sticky;
+    top: 0;
+  }
+}
+
+.navbar__wrapper {
+  @include mobile-breakpoint {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+  }
+  &::after {
+    @include highlight;
+    right: 6.9063rem /* 110.5px -> 6.9063rem */;
+    @include mobile-breakpoint() {
+      display: none;
+    }
+  }
+  &::before {
+    @include highlight;
+    left: 9.5313rem /* 152.5px -> 9.5313rem */;
+    @include mobile-breakpoint() {
+      left: calc(50% - 84px); //center it to the screen. 84 = 168/2
+    }
+  }
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $dark-grey;
+    box-sizing: border-box;
+    padding: 0 6rem /* 96px -> 6rem */;
+    z-index: 3;
+    position: relative;
+    font-family: $primary-font-regular;
+
+    width: 100%;
+    height: 6.9376rem /* 111.001px -> 6.9376rem */;
+    @include mobile-breakpoint() {
+      height: 68px;
+      padding: 0 20px;
+    }
+
+    // the first section containing the logo
+    & > section:first-of-type {
+      display: inline-block;
+      position: relative;
+      width: 17.5625rem /* 280.9997px -> 17.5625rem */;
+      height: 3.75rem /* 60px -> 3.75rem */;
+      @include mobile-breakpoint() {
+        width: 126.41px;
+        height: 27px;
+      }
+      cursor: pointer;
+    }
+
+    .navbar__items {
+      display: flex;
+      color: $white;
+      // hide on large screen
+      @include mobile-breakpoint() {
+        display: none;
+      }
+
+      span {
+        cursor: pointer;
+        font-size: 1.25rem /* 20.0006px -> 1.25rem */;
+        display: flex;
+        align-items: center;
+        &#bounties {
+          gap: 1.0313rem /* 16.5px -> 1.0313rem */;
+          position: relative;
+
+          // .open_menu{
+          //   position: absolute;
+          // }
+        }
+        &#leaderboard {
+          margin-left: 3.5rem /* 56.0006px -> 3.5rem */;
+        }
+        &#notifications {
+          margin-left: 2.7031rem /* 43.2499px -> 2.7031rem */;
+          margin-right: 2.59rem /* 41.4394px -> 2.59rem */;
+        }
+      }
+
+      button {
+        @include filled-button;
+        padding: 0.625rem /* 9.9994px -> .625rem */ 1.25rem
+          /* 20.0006px -> 1.25rem */;
+        border-radius: 0.625rem /* 9.9994px -> .625rem */;
+        font-size: 1.25rem /* 20.0006px -> 1.25rem */;
+        cursor: pointer;
+        position: relative;
+      }
+    }
+  }
+}
+
+.downarrow__icon{
+  height: .5rem;
+  width: .8125rem;
+}
+
+.bell__icon{
+  height: 1.3544rem;
+  width: 1.2188rem;
+}

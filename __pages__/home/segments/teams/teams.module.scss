@@ -1,0 +1,179 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins';
+
+.teams__wrapper {
+  position: relative;
+  .teams {
+    background: linear-gradient(90deg, #100c1a 50%, #0f0c1a 100%);
+    .teams__text {
+      width: fit-content;
+      margin: auto;
+      margin-bottom: 7.5rem;
+
+      @include mobile-breakpoint {
+        margin-bottom: 3.75rem;
+      }
+
+      h3 {
+        color: white;
+        font-family: $secondary-font;
+        font-weight: 700;
+        font-size: 3.75rem;
+        line-height: 4.625rem;
+        margin-bottom: 1.1875rem;
+        @include mobile-breakpoint {
+          font-size: 1.875rem;
+          line-height: 2.3125rem;
+          margin: auto;
+          margin-bottom: 1.25rem;
+          max-width: 14.6875rem;
+          text-align: center;
+        }
+      }
+      p {
+        color: #898989;
+        text-align: center;
+        font-size: 1.375rem;
+        line-height: 2.0625rem;
+        max-width: 40.9375rem;
+        @include mobile-breakpoint {
+          max-width: 19.9375rem;
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+  &::before {
+    width: 15.625rem;
+    height: 15.625rem;
+    background: #ffffff;
+    opacity: 0.4;
+    filter: blur(100px);
+    position: absolute;
+    content: '';
+    right: -160px;
+    top: 240px;
+    z-index: 2;
+    @include mobile-breakpoint {
+      display: none;
+    }
+  }
+  &::after {
+    position: absolute;
+    width: 29.75rem;
+    height: 29.75rem;
+    background: $neon-green;
+    border-radius: 50%;
+    opacity: 0.4;
+    filter: blur(100px);
+    content: '';
+    left: -23.125rem;
+    top: 12.5rem;
+    z-index: 2;
+    @include mobile-breakpoint {
+      width: 12.375rem;
+      height: 12.375rem;
+      left: 5.0625rem;
+      top: -3.125rem;
+      opacity: 0.3;
+    }
+  }
+}
+
+.teams__carousel {
+  max-width: 80%;
+  margin: auto;
+
+  @include mobile-breakpoint {
+    // padding-bottom: 164px;
+  }
+}
+
+.team__member {
+  width: 20.375rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  .team__member__image {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-bottom: 2.6875rem;
+    border-radius: 50%;
+    transition: $fast-transition-speed;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include mobile-breakpoint {
+      width: 196px;
+      height: 196px;
+      margin-bottom: 20px;
+    }
+  }
+
+  h4 {
+    font-size: 1.875rem;
+    line-height: 2.8125rem;
+    font-family: $primary-font-medium;
+    margin-bottom: 0.875rem;
+    color: white;
+    text-align: center;
+    display: none;
+    font-weight: 500;
+    @include mobile-breakpoint {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 7px;
+      display: initial;
+    }
+  }
+
+  h5 {
+    text-align: center;
+    color: #898989;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    text-align: center;
+    display: none;
+    font-weight: 400;
+    @include mobile-breakpoint {
+      margin-bottom: 36px;
+      font-size: 16px;
+      line-height: 30px;
+      display: initial;
+    }
+  }
+
+  &.__sibling {
+    .team__member__image {
+      width: 12.125rem;
+      height: 12.125rem;
+      @include mobile-breakpoint {
+        width: 196px;
+        height: 196px;
+      }
+    }
+  }
+
+  &.__active {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    @include mobile-breakpoint {
+      padding: 0;
+    }
+    .team__member__image {
+      width: 20.375rem;
+      height: 20.375rem;
+      @include mobile-breakpoint {
+        width: 196px;
+        height: 196px;
+      }
+    }
+    h4,
+    h5 {
+      display: block;
+    }
+  }
+}

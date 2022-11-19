@@ -1,19 +1,29 @@
-@import "./variables.scss";
-@import "./partials/mixins";
 // a file to override defalult styling of components
+@import './variables';
+@import 'styles/mixins';
+@import 'styles/font';
+@import './slickoverride';
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-family: $primary-font;
+  overflow-x: hidden;
 
-  // // on tablets
-  @media (max-width: $tab-breakpoint) {
-    font-size: 14px;
+  @media (min-width: $mobile-breakpoint) and (max-width: $max-breakpoint) {
+    font-size: 0.8333vw /* 16px -> .8333vw */;
+    // font-size: 16px;
   }
+}
 
-  // // on phones
-  @media (max-width: $mobile-breakpoint) {
-    font-size: 13px;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }

@@ -1,0 +1,34 @@
+.slick-track{
+    display: flex !important;
+    align-items: center !important;
+}
+
+.slick-slide {
+  display: flex !important;
+  align-items: center !important;
+}
+.slick-track {
+  height: 28.75rem !important;
+
+  @include mobile-breakpoint {
+    height: fit-content !important;
+  }
+}
+
+.slick-dots {
+  height: fit-content !important;
+  li {
+    background: #363636;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .slick-active {
+    background-color: #d9d9d9;
+  }
+}
+
+.slick-list{
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
