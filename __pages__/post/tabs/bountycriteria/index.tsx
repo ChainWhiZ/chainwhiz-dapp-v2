@@ -21,8 +21,6 @@ export default function BountyCriteriaTab({
   const { state, onFormStateChange, toggleRewardSelectState, flowState } =
     bountyCriteria;
 
-  console.log(state);
-
   return (
     <BountyCriteriaWrapper>
       <BountySection>
