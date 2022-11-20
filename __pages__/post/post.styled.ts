@@ -45,6 +45,7 @@ export const CreatePost = styled.div`
   padding-top: 3.625rem;
   padding-bottom: 6.25rem;
 
+
   ${devices.mobile} {
     width: fit-content;
     padding-top: 4.75rem;
@@ -56,6 +57,7 @@ export const CreatePost = styled.div`
 
 // ----- header section
 export const CreatePostTextContent = styled.div`
+
   h3 {
     color: white;
     text-align: center;
