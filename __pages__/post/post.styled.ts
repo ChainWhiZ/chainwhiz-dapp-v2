@@ -8,6 +8,8 @@ export const CreatePostWrapper = styled.div`
   font-family: ${(props) => props.theme.fonts.primaryFont};
   background-image: url('/images/landing/helixes/BG-Postbounty.png');
   min-height: calc(100vh - 6.9376rem);
+  background-size: cover;
+
 
   ${devices.mobile} {
     min-height: calc(100vh - 4.25rem);
@@ -43,6 +45,7 @@ export const CreatePost = styled.div`
   padding-top: 3.625rem;
   padding-bottom: 6.25rem;
 
+
   ${devices.mobile} {
     width: fit-content;
     padding-top: 4.75rem;
@@ -54,6 +57,7 @@ export const CreatePost = styled.div`
 
 // ----- header section
 export const CreatePostTextContent = styled.div`
+
   h3 {
     color: white;
     text-align: center;
@@ -164,6 +168,7 @@ export const CreatePostTabs = styled.div`
   gap: 2.1875rem;
   padding-left: 1.6875rem;
   padding-right: 1.6875rem;
+  
 
   ${devices.mobile} {
     padding: 0;
@@ -248,6 +253,25 @@ export const TabMobile = styled(SectionTab)`
 export const CreatePostContent = styled.div`
   background: #1f1e2b;
   border-radius: 1.25rem;
+  position: relative;
+  margin-top: 2.8125rem;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    width: 218px;
+    height: 218px;
+    background: #D4FF1E;
+    border-radius: 50%;
+    opacity: 0.1;
+    bottom: -80px;
+    right: -100px;
+    object-fit: contain;
+    filter: blur(6.25rem);
+  }
+  
   ${devices.mobile} {
     background: transparent;
   }
