@@ -49,7 +49,7 @@ export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
   input[type='number'] {
     width: 38.5625rem;
     ${devices.mobile} {
-      width: 320px;
+      width: 20rem;
     }
   }
   div.inputanddropdown {
@@ -104,8 +104,8 @@ export const BountySection = styled.section`
 
 export const InputAndDropdown = styled.div`
   display: flex;
-  gap: 8px;
+  gap: .5rem;
   input {
-    width: 417px;
+    width: 26.0625rem;
   }
 `;
