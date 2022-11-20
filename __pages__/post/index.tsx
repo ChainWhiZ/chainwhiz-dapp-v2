@@ -23,12 +23,13 @@ import {
 import BasicDetailsTab from './tabs/basicdetails';
 import BountyCriteriaTab from './tabs/bountycriteria';
 import RewardsAndVotingTab from './tabs/rewardsandvoting';
+import ConfirmBounty from './tabs/confirmbounty';
 
 const ALL_TABS = [
   BasicDetailsTab,
   BountyCriteriaTab,
   RewardsAndVotingTab,
-  BasicDetailsTab,
+  ConfirmBounty,
 ];
 
 export default function Post() {
@@ -49,9 +50,9 @@ export default function Post() {
 
   // tab filled state
   const tabsFilledStatus = [
-    basicDetailsIsCompleted,
-    bountyCriteriaIsCompleted,
-    rewardsAndVotingCompleted,
+    true,//basicDetailsIsCompleted,
+    true,//bountyCriteriaIsCompleted,
+    true,//rewardsAndVotingCompleted,
     false,
   ];
 
@@ -117,7 +118,7 @@ export default function Post() {
           />
         </CreatePostContent>
 
-        <CreatePostAction>
+        <CreatePostAction hidden={activeTab === 3}>
           <BackButton onClick={() => gotoTab(activeTab - 1)}>Back</BackButton>
           <ActionButton onClick={resetState} variant="neon">
             Reset

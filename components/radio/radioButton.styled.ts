@@ -11,7 +11,7 @@ export const Label = styled.label<{ disabled?: boolean }>`
     opacity: 0.95;
     text-transform: capitalize;
     ${devices.mobile}{
-      font-size: 12px;
+      font-size: .75rem;
     }
   }
 `;

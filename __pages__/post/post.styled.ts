@@ -46,8 +46,8 @@ export const CreatePost = styled.div`
   ${devices.mobile} {
     width: fit-content;
     padding-top: 4.75rem;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     padding-bottom: 0;
   }
 `;
@@ -253,9 +253,9 @@ export const CreatePostContent = styled.div`
   }
 `;
 
-export const CreatePostAction = styled.div`
+export const CreatePostAction = styled.div<{ hidden?: boolean }>`
   position: relative;
-  display: flex;
+  display: ${(props) => (props.hidden ? 'none' : 'flex')};
   justify-content: flex-end;
   gap: 1.25rem;
   margin-top: 2.9375rem;
@@ -268,7 +268,7 @@ export const CreatePostAction = styled.div`
 
 export const BackButton = styled.div`
   display: none;
-  left: 3px;
+  left: .1875rem;
   color: rgba(255, 255, 255, 0.95);
   position: absolute;
   font-weight: 300;

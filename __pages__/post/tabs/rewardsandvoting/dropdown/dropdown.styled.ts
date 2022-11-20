@@ -19,8 +19,8 @@ export const DropdownWrapper = styled.div`
     ${devices.mobile} {
       background: rgba(138, 153, 168, 0.25);
       width: 6.875rem;
-      padding: .9375rem;
-      gap: .75rem;
+      padding: 0.9375rem;
+      gap: 0.75rem;
     }
   }
 `;
@@ -46,6 +46,9 @@ export const DropdownHeader = styled.div`
     mix-blend-mode: normal;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    ${devices.mobile} {
+      font-size: 10px;
+    }
   }
   &::after {
     height: 0.375rem;
@@ -62,7 +65,7 @@ export const DropdownHeader = styled.div`
   ${devices.mobile} {
     width: 6.875rem;
     span {
-      font-size: 9px;
+      font-size: 0.5625rem;
       line-height: 1.25rem;
     }
   }
@@ -78,6 +81,6 @@ export const DropdownItem = styled.div<{ active?: boolean }>`
     opacity: 0.85;
   }
   ${devices.mobile} {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 `;
