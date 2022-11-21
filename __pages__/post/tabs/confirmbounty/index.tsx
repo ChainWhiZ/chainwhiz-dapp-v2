@@ -1,7 +1,11 @@
-import { useWeb3React } from '@web3-react/core';
-import Checkbox from 'components/checkbox';
 import React, { useState } from 'react';
+import { useWeb3React } from '@web3-react/core';
+
+import { BOUNTY_TYPES, SOLUTION_VOTING_TYPES } from 'data';
 import { CreatePostTabType } from 'types/post';
+import Checkbox from 'components/checkbox';
+import { logError } from 'utils/logger';
+
 import Dropdown from '../rewardsandvoting/dropdown';
 import {
   BountySection,
@@ -16,6 +20,7 @@ import {
 } from './confirmbounty.styled';
 
 export default function ConfirmBounty({
+  basicDetails,
   bountyCriteria,
   rewardsAndVoting,
 }: CreatePostTabType) {
@@ -33,8 +38,50 @@ export default function ConfirmBounty({
 
   const totalAmount =
     Number(criteriaState.numOfWinners) * Number(rewardsState.rewardAmount);
+
+  function finalStateIsValid() {
+    const { bountyType, numOfWinners } = criteriaState;
+    const { rewardAmount, solutionVoting, votingAmount } = rewardsState;
+    // confirm that if the type is paid then the amount and number of winners shouldnt be null
+    if (bountyType === BOUNTY_TYPES.PAID) {
+      if (numOfWinners < 1) {
+        logError('The number of winners must be more than one');
+        return false;
+      }
+      if (!rewardAmount || +rewardAmount <= 0) {
+        logError('The bounty reward amount must be greater than 0');
+        return false;
+      }
+    }
+    // confirm that if voting is enabled then the value for voting reward shouldnt be null
+    if (
+      solutionVoting === SOLUTION_VOTING_TYPES.YES &&
+      (!votingAmount || +votingAmount <= 0)
+    ) {
+      logError('Please pass in a voting reward greater than 0');
+      return false;
+    }
+    // confirm they agree to terms and conditions
+    if (!checked) {
+      logError(
+        'Kindly agree with the terms and conditions before you proceed!'
+      );
+      return false;
+    }
+    return true;
+  }
   const submitBounty = () => {
-    alert('submitted');
+    // verify state
+    if (finalStateIsValid()) {
+      alert('submitted to console');
+      console.log({
+        state: {
+          basicDetails,
+          bountyCriteria,
+          rewardsAndVoting,
+        },
+      });
+    }
   };
 
   return (
@@ -104,6 +151,7 @@ export default function ConfirmBounty({
             </section>
             <div>
               <Dropdown
+                size="small"
                 active={rewardsState.rewardToken}
                 setActive={(val: string) =>
                   rewardOnValueChange('rewardToken', val)

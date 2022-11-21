@@ -18,9 +18,9 @@ export const ConfirmBountyWrapper = styled.div`
     flex-direction: column;
     gap: 0;
     margin-top: 2.1875rem;
-    max-width: 321px;
+    max-width: 20.0625rem;
     height: fit-content;
-    padding-bottom: 0px;
+    padding-bottom: 0rem;
   }
 `;
 
@@ -46,9 +46,9 @@ export const InputWrapper = styled(GlobalInputWrapper)<{ text?: string }>`
   input[type='number'] {
     width: 12rem;
     ${devices.mobile} {
-      width: 148px;
+      width: 9.25rem;
       &.winners {
-        width: 127px;
+        width: 7.9375rem;
       }
     }
   }
@@ -98,8 +98,8 @@ export const Heading = styled.div`
     line-height: 1.5rem;
     color: #a29898;
     ${devices.mobile} {
-      font-size: 10px;
-      line-height: 15px;
+      font-size: .625rem;
+      line-height: .9375rem;
     }
   }
 `;
@@ -144,27 +144,27 @@ export const AmountPaid = styled.div`
       font-size: 0.75rem;
       line-height: 1.125rem;
       color: #ffffff;
-      margin-top: 47px;
-      margin-bottom: 10px;
+      margin-top: 2.9375rem;
+      margin-bottom: .625rem;
     }
   }
   & > section {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: .625rem;
     margin-bottom: 0.6875rem;
     ${devices.mobile} {
       /* flex-direction: column; */
       align-items: end;
-      gap: 10px;
+      gap: .625rem;
     }
     & > div {
       display: flex;
       align-items: flex-end;
       gap: 0.75rem;
 
-      span {
-        color: #a29898;
+      & > span {
+        color: white;
         font-weight: 500;
         font-size: 0.875rem;
         line-height: 1.3125rem;
@@ -200,8 +200,8 @@ export const AmountPaid = styled.div`
         display: inline-block;
         margin-left: 0.4375rem;
         ${devices.mobile} {
-          font-size: 30px;
-          line-height: 45px;
+          font-size: 1.875rem;
+          line-height: 2.8125rem;
           margin-left: 0;
         }
       }
@@ -216,9 +216,9 @@ export const AmountPaid = styled.div`
       display: none;
     }
     ${devices.mobile} {
-      margin-top: 20px;
-      font-size: 12px;
-      line-height: 18px;
+      margin-top: 1.25rem;
+      font-size: .75rem;
+      line-height: 1.125rem;
       color: #a29898;
       br{
         display: block;
@@ -230,7 +230,7 @@ export const AmountPaid = styled.div`
 export const WalletSection = styled.div`
   margin-top: 4.25rem;
   ${devices.mobile} {
-    margin-top: 56px;
+    margin-top: 3.5rem;
   }
   h4 {
     color: #ffffff;
@@ -238,9 +238,9 @@ export const WalletSection = styled.div`
     font-size: 1.25rem;
     line-height: 1.875rem;
     ${devices.mobile} {
-      font-size: 12px;
-      line-height: 18px;
-      margin-bottom: 8px;
+      font-size: .75rem;
+      line-height: 1.125rem;
+      margin-bottom: .5rem;
     }
   }
   div {
@@ -251,8 +251,8 @@ export const WalletSection = styled.div`
     font-size: 1rem;
     line-height: 1.5rem;
     ${devices.mobile} {
-      font-size: 12px;
-      line-height: 18px;
+      font-size: .75rem;
+      line-height: 1.125rem;
     }
     span {
       font-style: italic;
@@ -265,8 +265,8 @@ export const WalletSection = styled.div`
         opacity: 0.85;
       }
       ${devices.mobile} {
-        font-size: 12px;
-        line-height: 18px;
+        font-size: .75rem;
+        line-height: 1.125rem;
       }
     }
   }
@@ -280,10 +280,10 @@ export const TermsCondition = styled.div`
   font-size: 1rem;
   line-height: 1.25rem;
   ${devices.mobile} {
-    font-size: 12px;
-    line-height: 20px;
-    margin-top: 47px;
-    margin-bottom: 27px;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    margin-top: 2.9375rem;
+    margin-bottom: 1.6875rem;
   }
   p {
     span {
@@ -310,10 +310,10 @@ export const PostBounty = styled.div`
     opacity: 0.85;
   }
   ${devices.mobile} {
-    width: 145px;
-    height: 33.48px;
-    font-size: 12.3592px;
-    line-height: 16px;
-    border-radius: 3px;
+    width: 9.0625rem;
+    height: 2.0925rem;
+    font-size: .7724rem;
+    line-height: 1rem;
+    border-radius: .1875rem;
   }
 `;

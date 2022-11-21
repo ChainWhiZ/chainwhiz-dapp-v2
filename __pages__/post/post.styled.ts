@@ -261,13 +261,13 @@ export const CreatePostContent = styled.div`
     content: '';
 
     position: absolute;
-    width: 218px;
-    height: 218px;
+    width: 13.625rem;
+    height: 13.625rem;
     background: #D4FF1E;
     border-radius: 50%;
     opacity: 0.1;
-    bottom: -80px;
-    right: -100px;
+    bottom: -5rem;
+    right: -6.25rem;
     object-fit: contain;
     filter: blur(6.25rem);
   }
