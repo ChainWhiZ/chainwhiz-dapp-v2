@@ -7,8 +7,8 @@
   position: relative;
 
   @include mobile-breakpoint {
-    padding-top: 128px;
-    padding-bottom: 94px;
+    padding-top: 8rem;
+    padding-bottom: 5.875rem;
   }
 
   &::before {

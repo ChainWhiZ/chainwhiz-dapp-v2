@@ -1,16 +1,18 @@
 import { useWeb3React } from '@web3-react/core';
 import MobileMenu from './components/mobilemenu';
 import RenderImage from 'components/image/renderimage';
-import useConnectWallet from 'hooks/useConnectWallet';
+import useConnectWallet from 'hooks/useconnectwallet';
 import { useClickAway } from 'react-use';
 import { formatAddress } from 'utils';
-import Dropdown from './Dropdown/index';
+
+import Dropdown from './dropdown/index';
+
 
 import styles from './navbar.module.scss';
 import { useRef, useState } from 'react';
 import RenderStyledImage from 'components/image/renderstyledimage';
 
-export default function Navbar() {
+export default function Navbar({ extraStyles = '' }) {
   const { connectWalletPressed } = useConnectWallet();
   const { account, active } = useWeb3React();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,8 +23,9 @@ export default function Navbar() {
     setMenuOpen(false);
   });
 
+  const baseClassName = `${styles.navbar__wrapper} ${extraStyles}`;
   return (
-    <section className={styles.navbar__wrapper}>
+    <section className={baseClassName}>
       <nav id={styles.navbar} ref={ref}>
         {/* menu logo */}
         <section>
