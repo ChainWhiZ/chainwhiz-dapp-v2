@@ -70,7 +70,7 @@ export const BOUNTY_CRITERIA = {
 export const REWARDS_AND_VOTING = {
   rewardAmount: '',
   rewardToken: '',
-  solutionVoting: SOLUTION_VOTING_TYPES.YES,
+  solutionVoting: SOLUTION_VOTING_TYPES.NO,
   votingAccesibility: VOTING_ACCESIBILITY.EVERYONE,
   votingToken: '',
   votingAmount: '',
