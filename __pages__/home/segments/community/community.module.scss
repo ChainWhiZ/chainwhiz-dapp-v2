@@ -91,6 +91,7 @@
     }
 
     h3 {
+      font-weight: 500;
       font-family: 'Cabinet Grotesk';
       font-style: normal;
       color: white;
@@ -100,8 +101,8 @@
       line-height: 4.1875rem /* 67px -> 4.1875rem */;
       margin-bottom: 1.9375rem /* 31px -> 1.9375rem */;
       @include mobile-breakpoint {
-        max-width: 16.375rem /* 262px -> 16.375rem */;
-        font-size: 1.4375rem /* 23px -> 1.4375rem */;
+        max-width: 17.125rem/* 274px -> 16.375rem */;
+        font-size: 1.5625rem/* 25px -> 1.4375rem */;
         line-height: 1.8125rem /* 29px -> 1.8125rem */;
         margin: auto;
         margin-bottom: 1.6875rem /* 27px -> 1.6875rem */;

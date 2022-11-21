@@ -1,13 +1,13 @@
-import { useWeb3React } from '@web3-react/core';
-import RenderStyledImage from 'components/image/renderstyledimage';
-import useConnectWallet from 'hooks/useConnectWallet';
-import React, { useState } from 'react';
-import { formatAddress } from 'utils';
-import { CloseIcon, HamBurgerMenu } from './assets';
-import styles from './mobilemenu.module.scss';
+import { useWeb3React } from "@web3-react/core";
+import RenderStyledImage from "components/image/renderstyledimage";
+import useConnectWallet from "hooks/useconnectwallet";
+import React, { useState } from "react";
+import { formatAddress } from "utils";
+import { CloseIcon, HamBurgerMenu, MobileBellIcon } from "./assets";
+import styles from "./mobilemenu.module.scss";
 
-const OPEN_ICON = "/images/nav/plus.svg";
-const CLOSE_ICON = "/images/nav/minus.svg";
+const OPEN_ICON = '/images/nav/plus.svg';
+const CLOSE_ICON = '/images/nav/minus.svg';
 const ICONS = [OPEN_ICON, CLOSE_ICON];
 
 export default function MobileMenu() {
@@ -23,9 +23,14 @@ export default function MobileMenu() {
   return (
     <>
       <section id={styles.mobilemenu}>
-        <span onClick={toggleOpen}>
-          {open ? <CloseIcon /> : <HamBurgerMenu />}
-        </span>
+        <div className={styles.ham_bell}>
+          <span id={styles.mobilebell}>
+            <MobileBellIcon />
+          </span>
+          <span onClick={toggleOpen}>
+            {open ? <CloseIcon /> : <HamBurgerMenu />}
+          </span>
+        </div>
         {open ? (
           <div className={styles.overlay__wrapper}>
             <div className={styles.overlay}>
@@ -47,11 +52,11 @@ export default function MobileMenu() {
                 <h2>LeaderBoard</h2>
               </section>
               <section className={styles.sub__items}>
-                <h5>linked wallet</h5>
+                <h5>Linked Wallet</h5>
                 <button onClick={connectWalletPressed}>
                   {active && account
                     ? formatAddress(account)
-                    : 'Connect wallet'}
+                    : "Connect wallet"}
                 </button>
               </section>
             </div>

@@ -6,14 +6,14 @@ import styled from 'styled-components';
 import { devices } from 'theme';
 
 export const GlobalInputWrapper = styled.div`
-  section {
+  & > section {
     align-items: baseline;
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 0.6875rem;
     ${devices.mobile} {
-      margin-bottom: .375rem;
+      margin-bottom: .5625rem;
     }
   }
 
@@ -22,7 +22,7 @@ export const GlobalInputWrapper = styled.div`
     font-size: 1rem;
     line-height: 1.5rem;
     ${devices.mobile} {
-      font-size: .75rem;
+      font-size: 0.75rem;
       line-height: 1.125rem;
     }
   }
@@ -33,12 +33,13 @@ export const GlobalInputWrapper = styled.div`
     font-size: 0.875rem;
     line-height: 1.3125rem;
     ${devices.mobile} {
-      font-size: .625rem;
-      line-height: .9375rem;
+      font-size: 0.625rem;
+      line-height: 0.9375rem;
     }
   }
 
-  input,
+  input[type='text'],
+  input[type='number'],
   textarea {
     color: white;
     outline: none;
@@ -62,9 +63,9 @@ export const GlobalInputWrapper = styled.div`
     }
 
     ${devices.mobile} {
-      font-size: .75rem;
+      font-size: 0.75rem;
       line-height: 1.25rem;
-      padding: .625rem 1rem;
+      padding: 0.625rem 1rem;
     }
   }
 

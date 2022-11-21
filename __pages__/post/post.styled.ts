@@ -8,6 +8,8 @@ export const CreatePostWrapper = styled.div`
   font-family: ${(props) => props.theme.fonts.primaryFont};
   background-image: url('/images/landing/helixes/BG-Postbounty.png');
   min-height: calc(100vh - 6.9376rem);
+  background-size: cover;
+
 
   ${devices.mobile} {
     min-height: calc(100vh - 4.25rem);
@@ -41,15 +43,20 @@ export const CreatePost = styled.div`
   width: 89.375rem;
   margin: auto;
   padding-top: 3.625rem;
+  padding-bottom: 6.25rem;
 
   ${devices.mobile} {
     width: fit-content;
     padding-top: 4.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0;
   }
 `;
 
 // ----- header section
 export const CreatePostTextContent = styled.div`
+
   h3 {
     color: white;
     text-align: center;
@@ -244,14 +251,33 @@ export const TabMobile = styled(SectionTab)`
 export const CreatePostContent = styled.div`
   background: #1f1e2b;
   border-radius: 1.25rem;
+  position: relative;
+  margin-top: 2.8125rem;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    width: 13.625rem;
+    height: 13.625rem;
+    background: #D4FF1E;
+    border-radius: 50%;
+    opacity: 0.1;
+    bottom: -5rem;
+    right: -6.25rem;
+    object-fit: contain;
+    filter: blur(6.25rem);
+  }
+  
   ${devices.mobile} {
     background: transparent;
   }
 `;
 
-export const CreatePostAction = styled.div`
+export const CreatePostAction = styled.div<{ hidden?: boolean }>`
   position: relative;
-  display: flex;
+  display: ${(props) => (props.hidden ? 'none' : 'flex')};
   justify-content: flex-end;
   gap: 1.25rem;
   margin-top: 2.9375rem;
@@ -264,21 +290,20 @@ export const CreatePostAction = styled.div`
 
 export const BackButton = styled.div`
   display: none;
-  left: 3px;
+  left: .1875rem;
   color: rgba(255, 255, 255, 0.95);
   position: absolute;
   font-weight: 300;
   align-items: center;
   cursor: pointer;
-  
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1.3125rem;
-  gap: .6875rem;
+  gap: 0.6875rem;
 
   &::before {
     content: '';
-    height: .6044rem;
-    width: .3731rem;
+    height: 0.6044rem;
+    width: 0.3731rem;
     background-image: url('/images/post/postleftarrow.svg');
     display: block;
   }

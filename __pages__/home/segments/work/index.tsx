@@ -8,7 +8,7 @@ export default function Work() {
       <div className={styles.work}>
 
         <div className={styles.work__text}>
-          <h5>How we work?</h5>
+          <h5>HOW WE WORK?</h5>
           <h3>Create. Solve. Repeat</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet

@@ -10,6 +10,20 @@ export default function useBasicDetails() {
     useState<BasicDetailsType>(BASIC_DETAILS);
 
   /**
+   * This function will be triggered when an input element state changes
+   * @param e The event object
+   */
+  const onFormStateChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => {
+    const name = e.target.name;
+    const value = e.target.value;
+    if (value.length < MAX_LENGTH) {
+      setBasicDetails({ ...basicDetails, [name]: value });
+    }
+  };
+
+  /**
    * Use this function to check if the state has been completed
    * @param state
    * @returns {Boolean} returns true|false depending on the completion status of the state variables
@@ -24,25 +38,12 @@ export default function useBasicDetails() {
     );
   };
 
-  /**
-   * This function will be triggered when an input element state changes
-   * @param e The event object
-   */
-  const onStateChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ): void => {
-    const name = e.target.name;
-    const value = e.target.value;
-    if (value.length < MAX_LENGTH) {
-      setBasicDetails({ ...basicDetails, [name]: value });
-    }
-  };
   const isCompleted = verifyState(basicDetails);
 
   return {
     state: basicDetails,
     setState: setBasicDetails,
-    onFormStateChange: onStateChange,
+    onFormStateChange,
     isCompleted,
   };
 }

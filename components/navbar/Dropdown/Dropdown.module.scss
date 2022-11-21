@@ -1,11 +1,11 @@
 @import 'styles/variables';
 @import 'styles/mixins';
 
-.menu_wrapper{
+.menu_wrapper {
   background-color: #161422;
   width: 13.875rem;
   height: 12.125rem;
-  border-radius: .625rem;
+  border-radius: 0.625rem;
   color: $white;
   white-space: nowrap;
   position: absolute;
@@ -14,8 +14,9 @@
   top: 3.75rem;
   z-index: 100;
   padding: 1.5625rem 1.875rem;
-  
-  .menu{
+
+  .menu {
+    // position: relative;
     font-size: 1.25rem;
     line-height: 1.875rem;
     display: flex;
@@ -25,22 +26,22 @@
     gap: 1.6875rem;
   }
 
-  .menu > p:hover{
+  .menu > p:hover {
     color: $neon-green;
   }
 
-  @keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-40px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-    }
-}
+  // @keyframes fadeInDown {
+  //   0% {
+  //     opacity: 0;
+  //     -webkit-transform: translateY(-40px);
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //     -webkit-transform: translateY(0);
+  //   }
+  // }
 
-  .post{
+  .post {
     margin: 1.6875rem 0;
   }
 }

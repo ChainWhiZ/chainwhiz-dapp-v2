@@ -8,11 +8,25 @@ export const BasicDetailsWrapper = styled.div`
   width: 89.375rem;
   height: 30.9375rem;
   border-radius: 1.25rem;
-  margin-top: 2.8125rem;
+  // margin-top: 2.8125rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
+
+  &::after{
+    content: '';
+    width: 13.625rem;
+    height: 13.625rem;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: -5.125rem;
+    left: -8.375rem;
+    opacity: 0.1;
+    filter: blur(6.25rem);
+  }
 
   ${devices.mobile} {
     width: 100%;

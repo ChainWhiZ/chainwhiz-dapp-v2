@@ -8,7 +8,7 @@ const colors = {
   homeBackground: '#100C1A',
   blueFade: '#1E1C30',
   postInputBlack: '#0D0F12',
-  postActionBlack: "rgba(138, 153, 168, 0.25)"
+  postActionBlack: "rgba(138, 153, 168, 0.25)",
 };
 
 const breakpoints = {
