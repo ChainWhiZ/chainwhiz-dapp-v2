@@ -1,1 +1,1 @@
-export {};
+export type EmptyFunction = () => void;

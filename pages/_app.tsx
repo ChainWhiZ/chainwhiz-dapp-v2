@@ -10,14 +10,17 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'react-toastify/dist/ReactToastify.css';
 import 'styles/globals.scss';
+import { ToastProvider } from 'contexts/toastcontext';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Web3ReactProvider getLibrary={getLibrary}>
-        <Component {...pageProps} />
-        <ToastContainer />
-      </Web3ReactProvider>
+      <ToastProvider>
+        <Web3ReactProvider getLibrary={getLibrary}>
+          <Component {...pageProps} />
+          <ToastContainer /> 
+        </Web3ReactProvider>
+      </ToastProvider>
     </ThemeProvider>
   );
 }
