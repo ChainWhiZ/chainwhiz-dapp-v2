@@ -17,13 +17,13 @@ export const BasicDetailsWrapper = styled.div`
 
   &::after{
     content: '';
-    width: 218px;
-    height: 218px;
+    width: 13.625rem;
+    height: 13.625rem;
     background: #ffffff;
     border-radius: 50%;
     position: absolute;
-    top: -82px;
-    left: -134px;
+    top: -5.125rem;
+    left: -8.375rem;
     opacity: 0.1;
     filter: blur(6.25rem);
   }

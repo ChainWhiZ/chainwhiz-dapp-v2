@@ -1,4 +1,4 @@
-import { CREATE_POST_TABS, DEFAULT_BREAKCRUMBS } from 'data';
+import { BASIC_DETAILS, BOUNTY_CRITERIA, CREATE_POST_TABS, DEFAULT_BREAKCRUMBS, REWARDS_AND_VOTING } from 'data';
 import useBasicDetails from 'hooks/createpost/usebasicdetails';
 import useBountyCriteria from 'hooks/createpost/usebountycriteria';
 import useRewardsAndVoting from 'hooks/createpost/userewardsandvoting';
@@ -24,6 +24,7 @@ import BasicDetailsTab from './tabs/basicdetails';
 import BountyCriteriaTab from './tabs/bountycriteria';
 import RewardsAndVotingTab from './tabs/rewardsandvoting';
 import ConfirmBounty from './tabs/confirmbounty';
+import { logError } from 'utils/logger';
 
 const ALL_TABS = [
   BasicDetailsTab,
@@ -38,23 +39,31 @@ export default function Post() {
 
   // basic details state
   const basicDetailsState = useBasicDetails();
-  const { isCompleted: basicDetailsIsCompleted = false } = basicDetailsState;
+  const { isCompleted: basicDetailsIsCompleted = false, setState: setBasicDetailsState  } = basicDetailsState;
   // bounty criteria state
   const bountyCriteriaState = useBountyCriteria();
-  const { isCompleted: bountyCriteriaIsCompleted = false } =
+  const { isCompleted: bountyCriteriaIsCompleted = false, setState: setCriteriaState } =
     bountyCriteriaState;
   // rewards and voting state
   const rewardsAndVotingState = useRewardsAndVoting();
-  const { isCompleted: rewardsAndVotingCompleted = false } =
+  const { isCompleted: rewardsAndVotingCompleted = false, setState: setRewardState } =
     rewardsAndVotingState;
 
   // tab filled state
   const tabsFilledStatus = [
-    true,//basicDetailsIsCompleted,
-    true,//bountyCriteriaIsCompleted,
-    true,//rewardsAndVotingCompleted,
+    basicDetailsIsCompleted,
+    bountyCriteriaIsCompleted,
+    rewardsAndVotingCompleted,
     false,
   ];
+
+  //
+  const resetIndividualState = [
+    () => setBasicDetailsState(BASIC_DETAILS),
+    () => setCriteriaState(BOUNTY_CRITERIA),
+    () => setRewardState(REWARDS_AND_VOTING),
+    () => "working",
+  ]
 
   useEffect(() => {
     setCrumbs([...DEFAULT_BREAKCRUMBS, CREATE_POST_TABS[activeTab]]);
@@ -67,11 +76,12 @@ export default function Post() {
       setActiveTab(index);
     } else {
       // TODO use custom notification to ensure that the tab is navigated to
+      logError('Please fill in all required fields before proceeding');
     }
   };
 
   const resetState = () => {
-    console.log('reset function to be implemented shortly');
+    resetIndividualState[activeTab]();
   };
 
   const CurrentTab = ALL_TABS[activeTab];

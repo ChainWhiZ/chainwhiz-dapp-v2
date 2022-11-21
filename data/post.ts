@@ -1,4 +1,4 @@
-export const TOKEN_DROPDOWN_ITEMS = ['MATIC', 'BTC', 'UDST', 'USDC'];
+export const TOKEN_DROPDOWN_ITEMS = ['MATIC', 'USDC', 'UDST', 'DAI'];
 export const DEFAULT_BREAKCRUMBS = ['Home', 'Post a bounty'];
 export const CREATE_POST_TABS = [
   'Enter basic details',
@@ -70,7 +70,7 @@ export const BOUNTY_CRITERIA = {
 export const REWARDS_AND_VOTING = {
   rewardAmount: '',
   rewardToken: '',
-  solutionVoting: SOLUTION_VOTING_TYPES.YES,
+  solutionVoting: SOLUTION_VOTING_TYPES.NO,
   votingAccesibility: VOTING_ACCESIBILITY.EVERYONE,
   votingToken: '',
   votingAmount: '',
