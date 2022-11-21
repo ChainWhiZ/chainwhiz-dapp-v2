@@ -10,9 +10,11 @@ import {
 export default function Dropdown({
   active,
   setActive,
+  size = 'large',
 }: {
   active: string;
   setActive: (newValue: string) => void;
+  size?: string;
 }) {
   const ddRef = useRef(null);
   const [ddOpen, setddOpen] = useState(false);
@@ -22,7 +24,11 @@ export default function Dropdown({
   });
   return (
     <DropdownWrapper>
-      <DropdownHeader onClick={() => setddOpen(true)}>
+      <DropdownHeader
+        size={size}
+        active={ddOpen}
+        onClick={() => setddOpen(true)}
+      >
         <span>{active === '' ? 'Select token' : active}</span>
       </DropdownHeader>
       <section style={extraStyle} ref={ddRef}>

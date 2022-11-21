@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { devices } from 'theme';
 
 export const GlobalInputWrapper = styled.div`
-  section {
+  & > section {
     align-items: baseline;
     display: flex;
     justify-content: space-between;
