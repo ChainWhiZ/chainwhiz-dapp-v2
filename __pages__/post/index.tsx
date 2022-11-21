@@ -1,8 +1,16 @@
-import { BASIC_DETAILS, BOUNTY_CRITERIA, CREATE_POST_TABS, DEFAULT_BREAKCRUMBS, REWARDS_AND_VOTING } from 'data';
+import {
+  BASIC_DETAILS,
+  BOUNTY_CRITERIA,
+  CREATE_POST_TABS,
+  DEFAULT_BREAKCRUMBS,
+  REWARDS_AND_VOTING,
+} from 'data';
 import useBasicDetails from 'hooks/createpost/usebasicdetails';
 import useBountyCriteria from 'hooks/createpost/usebountycriteria';
 import useRewardsAndVoting from 'hooks/createpost/userewardsandvoting';
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+
 import {
   CreatePostWrapper,
   CreatePostTextContent,
@@ -36,18 +44,26 @@ const ALL_TABS = [
 export default function Post() {
   const [crumbs, setCrumbs] = useState(DEFAULT_BREAKCRUMBS);
   const [activeTab, setActiveTab] = useState(0);
+  const router = useRouter();
 
   // basic details state
   const basicDetailsState = useBasicDetails();
-  const { isCompleted: basicDetailsIsCompleted = false, setState: setBasicDetailsState  } = basicDetailsState;
+  const {
+    isCompleted: basicDetailsIsCompleted = false,
+    setState: setBasicDetailsState,
+  } = basicDetailsState;
   // bounty criteria state
   const bountyCriteriaState = useBountyCriteria();
-  const { isCompleted: bountyCriteriaIsCompleted = false, setState: setCriteriaState } =
-    bountyCriteriaState;
+  const {
+    isCompleted: bountyCriteriaIsCompleted = false,
+    setState: setCriteriaState,
+  } = bountyCriteriaState;
   // rewards and voting state
   const rewardsAndVotingState = useRewardsAndVoting();
-  const { isCompleted: rewardsAndVotingCompleted = false, setState: setRewardState } =
-    rewardsAndVotingState;
+  const {
+    isCompleted: rewardsAndVotingCompleted = false,
+    setState: setRewardState,
+  } = rewardsAndVotingState;
 
   // tab filled state
   const tabsFilledStatus = [
@@ -62,8 +78,7 @@ export default function Post() {
     () => setBasicDetailsState(BASIC_DETAILS),
     () => setCriteriaState(BOUNTY_CRITERIA),
     () => setRewardState(REWARDS_AND_VOTING),
-    () => "working",
-  ]
+  ];
 
   useEffect(() => {
     setCrumbs([...DEFAULT_BREAKCRUMBS, CREATE_POST_TABS[activeTab]]);
@@ -89,7 +104,7 @@ export default function Post() {
     <CreatePostWrapper>
       <CreatePost>
         <CreatePostHeader>
-          <GoBackButton>
+          <GoBackButton onClick={() => router.back()}>
             <span>Back</span>
           </GoBackButton>
           <CreatePostTextContent>
