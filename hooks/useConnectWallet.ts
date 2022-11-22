@@ -18,7 +18,7 @@ export default function useConnectWallet() {
       setActivatingConnector(undefined);
     }
   }, [activatingConnector, connector]);
-
+  // comment
   useEffect(() => {
     if (!error) return;
     let message = '';
