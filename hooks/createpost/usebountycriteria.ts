@@ -102,7 +102,7 @@ export default function useBountyCriteria() {
     const unpaidFlowCompleted =
       isUpskilledBountyType &&
       (state.upskilledNFTReward === UPSKILLED_NFT_REWARDS_TYPES.YES
-        ? state.nftAddress
+        ? state.nftFile && state.nftFile.name
         : true);
     const bountyTypeFlowCompleted = paidFlowCompleted || unpaidFlowCompleted;
     // --------- {end} variables for monitoring bounty type

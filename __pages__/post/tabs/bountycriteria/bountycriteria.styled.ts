@@ -22,9 +22,9 @@ export const BountyCriteriaWrapper = styled.div`
 `;
 
 export const UploadButton = styled.div`
-  width: 102px;
-  height: 40px;
-  border-radius: 3px;
+  width: 6.375rem;
+  height: 2.5rem;
+  border-radius: .1875rem;
   background: #d4ff1e;
   display: flex;
   justify-content: center;
@@ -35,10 +35,10 @@ export const UploadButton = styled.div`
     opacity: 0.85;
   }
   ${devices.mobile} {
-    width: 83.26px;
-    height: 40px;
-    font-size: 12px;
-    line-height: 20px;
+    width: 5.2038rem;
+    height: 2.5rem;
+    font-size: .75rem;
+    line-height: 1.25rem;
   }
 `;
 
@@ -55,9 +55,9 @@ export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
     display: flex;
     justify-content: space-between;
     input[type='text'] {
-      width: 504px;
+      width: 31.5rem;
       ${devices.mobile} {
-        width: 229.72px;
+        width: 14.3575rem;
       }
     }
     input[type='file'] {
