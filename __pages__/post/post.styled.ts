@@ -259,11 +259,10 @@ export const CreatePostContent = styled.div`
 
   &::after {
     content: '';
-
     position: absolute;
     width: 13.625rem;
     height: 13.625rem;
-    background: #D4FF1E;
+    background: #d4ff1e;
     border-radius: 50%;
     opacity: 0.1;
     bottom: -5rem;
@@ -271,9 +270,14 @@ export const CreatePostContent = styled.div`
     object-fit: contain;
     filter: blur(6.25rem);
   }
-  
+
   ${devices.mobile} {
     background: transparent;
+    border-radius: 0;
+    margin-top: 0;
+    &::after {
+      display: none;
+    }
   }
 `;
 
