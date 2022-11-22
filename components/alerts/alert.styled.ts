@@ -1,49 +1,69 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface PropTypes {
-    size?: string;
-    width?: string;
+  size?: string;
+  show?: boolean;
 }
 
-export const AlertContainer = styled.div`
-    position: fixed;
-    width: 25vw;
-    top: 20px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    z-index: 9999;
-    background-color: #1E1C30;
+export const AlertContainer = styled.div<PropTypes>`
+  position: fixed;
+  background-color: #1e1c30;
+  z-index: 10;
+  top: 1.25rem;
+  right: 1.25rem;
+  border-radius: .625rem;
+  padding: ${(props) =>
+    props.size === 'small' ? '1.5625rem 1.625rem' : '1.125rem 1.6875rem 2.125rem'};
+  width: 26.6875rem;
+  display: ${(props) => (props.show ? 'flex' : 'none')};
+  gap: ${(props) => (props.size === 'small' ? '1.0625rem' : '1.4806rem')};
+  box-sizing: border-box;
+  flex-direction: ${(props) => (props.size === 'small' ? 'row' : 'column')};
+  span {
+    height: .8125rem;
+    width: .8125rem;
+    right: 2.1481rem;
+    top: 1.9581rem;
+    position: absolute;
+    cursor: pointer;
+  }
 `;
 
 export const AlertContent = styled.div<PropTypes>`
-    display: flex;
-    justify-content: space-between;
-    ${(props)=> props.size === "small" ? '' : `margin-bottom: 10px`};
+  display: flex;
+  gap: ${(props) => (props.size === 'small' ? '.4375rem' : '.625rem')};
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: ${(props) => (props.size == 'small' ? '17.1875rem' : '21.5rem')};
 `;
 
 export const AlertImageWrapper = styled.div<PropTypes>`
-    border-radius: 10px;
-    position: relative;
-    height: ${(props) => props.size === "small" ? '3rem' : '4rem'};
-    width: ${({ width }: {width?:string}) => width || ''};
+  border-radius: .625rem;
+  position: relative;
+  height: ${(props) => (props.size === 'small' ? '3.4144rem' : '5.7888rem')};
+  width: ${(props) => (props.size === 'small' ? '3.4144rem' : '5.7888rem')};
 
-    img{
-        border-radius: 5px;
-        object-fit: cover;
-    }
-`
-
-export const AlertHeading = styled.div`
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #FFFFFF;
-    padding-bottom: 5px;
-
+  img {
+    border-radius: .3125rem;
+    object-fit: cover;
+  }
 `;
 
-export const AlertText = styled.div`
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: #898989;
+export const AlertHeading = styled.div<PropTypes>`
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  font-family: ${(props) => props.theme.fonts.primaryFontMedium};
+  color: white;
+  font-size: ${(props) => (props.size === 'small' ? '1rem' : '1.25rem')};
+  line-height: 1.25rem;
+`;
+
+export const AlertText = styled.div<PropTypes>`
+  display: flex;
+  color: #898989;
+  align-items: center;
+  font-size: .75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
 `;

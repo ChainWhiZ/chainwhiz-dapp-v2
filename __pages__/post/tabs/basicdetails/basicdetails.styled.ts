@@ -34,6 +34,11 @@ export const BasicDetailsWrapper = styled.div`
     padding: 0;
     gap: 0;
     margin-top: 2.5rem;
+    border-radius: 0;
+    &::after{
+      display: none;
+      opacity: 0;
+    }
   }
 `;
 
