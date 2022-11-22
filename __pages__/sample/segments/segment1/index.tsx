@@ -1,4 +1,5 @@
 import Alert from 'components/alerts';
+import Modal from 'components/modals';
 import Toast from 'components/toast';
 import { useAlert } from 'contexts/alertcontext';
 import { useToast } from 'contexts/toastcontext';
@@ -22,7 +23,12 @@ export default function Segment1() {
       >
         open toast
       </button>
-      <button>open alert</button>
+      <Modal
+        title="success"
+        subTitle="successfull subtitle"
+        success={false}
+        onClose={() => alert('closed')}
+      />
     </div>
   );
 }
