@@ -11,15 +11,18 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'react-toastify/dist/ReactToastify.css';
 import 'styles/globals.scss';
 import { ToastProvider } from 'contexts/toastcontext';
+import { AlertProvider } from 'contexts/alertcontext';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <ToastProvider>
-        <Web3ReactProvider getLibrary={getLibrary}>
-          <Component {...pageProps} />
-          <ToastContainer /> 
-        </Web3ReactProvider>
+        <AlertProvider>
+          <Web3ReactProvider getLibrary={getLibrary}>
+            <Component {...pageProps} />
+            <ToastContainer />
+          </Web3ReactProvider>
+        </AlertProvider>
       </ToastProvider>
     </ThemeProvider>
   );
