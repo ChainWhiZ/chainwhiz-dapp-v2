@@ -5,7 +5,7 @@ import { devices } from 'theme';
 export const RAVWrapper = styled.div`
   box-sizing: border-box;
   padding: 3.0625rem 3.625rem 5.0625rem 2.9375rem;
-  margin-top: 2.625rem;
+  /* margin-top: 2.625rem; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5.625rem;

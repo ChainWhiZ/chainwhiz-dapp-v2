@@ -5,7 +5,7 @@ import { devices } from 'theme';
 export const ConfirmBountyWrapper = styled.div`
   box-sizing: border-box;
   padding: 2.5rem 3rem;
-  margin-top: 2.625rem;
+  /* margin-top: 2.625rem; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5.625rem;

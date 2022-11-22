@@ -27,6 +27,7 @@ export type BountyCriteriaHookType = {
   flowState: {
     showRewardType: boolean;
     showNFTAddressBar: boolean;
+    showNFTUploadBar: boolean;
     showUpskilledReward: boolean;
     showPermissionedTypes: boolean;
     showWalletAddress: boolean;

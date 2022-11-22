@@ -59,6 +59,7 @@ export const BOUNTY_CRITERIA = {
   upskilledNFTReward: UPSKILLED_NFT_REWARDS_TYPES.NO,
   paidRewardTypes: [''],
   nftAddress: '',
+  nftFile: { name: '' },
   numOfWinners: 1,
   permissionType: BOUNTY_PERMISSIONS_TYPES.OPEN,
   permissionedType: BOUNTY_PERMISSIONS_PERMISSIONED_TYPES.WALLET_ADDRESS,

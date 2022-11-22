@@ -48,7 +48,7 @@ export const CreatePost = styled.div`
 
   ${devices.mobile} {
     width: fit-content;
-    padding-top: 4.75rem;
+    padding-top: 9rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     padding-bottom: 0;

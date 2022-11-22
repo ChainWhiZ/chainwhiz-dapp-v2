@@ -61,11 +61,11 @@ export const ToastButton = styled.button<{ show: boolean }>`
   color: #000000;
   cursor: pointer;
   border: 2px solid #d4ff1e;
-  border-radius: 10px;
-  width: 118px;
-  height: 41px;
-  font-size: 14px;
-  line-height: 21px;
+  border-radius: .625rem;
+  width: 7.375rem;
+  height: 2.5625rem;
+  font-size: .875rem;
+  line-height: 1.3125rem;
 
   &:hover {
     opacity: 0.85;
