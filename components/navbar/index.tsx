@@ -7,13 +7,14 @@ import { formatAddress } from 'utils';
 
 import Dropdown from './dropdown/index';
 
-
 import styles from './navbar.module.scss';
 import { useRef, useState } from 'react';
 import RenderStyledImage from 'components/image/renderstyledimage';
+import { useRouter } from 'next/router';
 
 export default function Navbar({ extraStyles = '' }) {
   const { connectWalletPressed } = useConnectWallet();
+  const router = useRouter();
   const { account, active } = useWeb3React();
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenuOpen = () => setMenuOpen((o) => !o);
@@ -28,7 +29,7 @@ export default function Navbar({ extraStyles = '' }) {
     <section className={baseClassName}>
       <nav id={styles.navbar} ref={ref}>
         {/* menu logo */}
-        <section>
+        <section onClick={() => router.push('/')}>
           <RenderImage src="/images/nav/logo.svg" alt="" />
         </section>
 
