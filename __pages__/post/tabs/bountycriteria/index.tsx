@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   BOUNTY_TYPES_OPTIONS,
   NFT_REWARD_TYPES_OPTIONS,
@@ -13,13 +13,31 @@ import {
   BountyCriteriaWrapper,
   BountySection,
   InputWrapper,
+  UploadButton,
 } from './bountycriteria.styled';
+import { logError } from 'utils/logger';
 
 export default function BountyCriteriaTab({
   bountyCriteria,
 }: CreatePostTabType) {
-  const { state, onFormStateChange, toggleRewardSelectState, flowState } =
-    bountyCriteria;
+  const {
+    state,
+    onFormStateChange,
+    toggleRewardSelectState,
+    flowState,
+    onValueChange,
+  } = bountyCriteria;
+  const imageRef = useRef<HTMLInputElement>(null);
+
+  const onFileChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const file: any = event.target.files?.[0];
+    // validate the image type before setting it to state
+    if (file.type.split('/')[0] !== 'image') {
+      return logError('Please upload only an image');
+    }
+    onValueChange('nftFile', file);
+  };
 
   return (
     <BountyCriteriaWrapper>
@@ -37,7 +55,6 @@ export default function BountyCriteriaTab({
             />
           </div>
         </InputWrapper>
-
         <InputWrapper hide={!flowState.showUpskilledReward}>
           <section className="stacked">
             <label>Pay reward in NFT?*</label>
@@ -51,7 +68,6 @@ export default function BountyCriteriaTab({
             />
           </div>
         </InputWrapper>
-
         <InputWrapper hide={!flowState.showRewardType}>
           <section className="stacked">
             <label>Choose the type of Reward*</label>
@@ -74,6 +90,25 @@ export default function BountyCriteriaTab({
                 toggleRewardSelectState(BOUNTY_REWARD_TYPES.NFT);
               }}
             />
+          </div>
+        </InputWrapper>
+        <InputWrapper hide={!flowState.showNFTUploadBar}>
+          <section>
+            <label>Upload your NFT</label>
+            <span>Max upload size 120MB</span>
+          </section>
+          <div className="imageuploader">
+            <input
+              placeholder="No File Selected"
+              type="text"
+              disabled
+              name="nftFile"
+              value={state.nftFile.name}
+            />
+            <UploadButton onClick={() => imageRef.current?.click()}>
+              Select file
+            </UploadButton>
+            <input onChange={onFileChangeHandler} ref={imageRef} type="file" />
           </div>
         </InputWrapper>
 

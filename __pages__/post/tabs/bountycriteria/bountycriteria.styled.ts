@@ -5,7 +5,7 @@ import { devices } from 'theme';
 export const BountyCriteriaWrapper = styled.div`
   box-sizing: border-box;
   padding: 3.0625rem 3.625rem 2.375rem 2.9375rem;
-  margin-top: 2.625rem;
+  /* margin-top: 2.625rem; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5.625rem;
@@ -21,6 +21,27 @@ export const BountyCriteriaWrapper = styled.div`
   }
 `;
 
+export const UploadButton = styled.div`
+  width: 102px;
+  height: 40px;
+  border-radius: 3px;
+  background: #d4ff1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: ${(props) => props.theme.meta.fastTransitionSpeed};
+  &:hover {
+    opacity: 0.85;
+  }
+  ${devices.mobile} {
+    width: 83.26px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+`;
+
 export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
   display: ${(props) => (props.hide ? 'none' : 'block')};
   section.stacked {
@@ -28,6 +49,19 @@ export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
     gap: 0.1875rem;
     ${devices.mobile} {
       gap: 0.3125rem;
+    }
+  }
+  div.imageuploader {
+    display: flex;
+    justify-content: space-between;
+    input[type='text'] {
+      width: 504px;
+      ${devices.mobile} {
+        width: 229.72px;
+      }
+    }
+    input[type='file'] {
+      display: none;
     }
   }
   div.radiogroup {

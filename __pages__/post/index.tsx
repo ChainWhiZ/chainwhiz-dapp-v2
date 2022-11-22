@@ -68,9 +68,9 @@ export default function Post() {
 
   // tab filled state
   const tabsFilledStatus = [
-    basicDetailsIsCompleted,
-    bountyCriteriaIsCompleted,
-    rewardsAndVotingCompleted,
+    true,//basicDetailsIsCompleted,
+    true, //bountyCriteriaIsCompleted,
+    true,//rewardsAndVotingCompleted,
     false,
   ];
 

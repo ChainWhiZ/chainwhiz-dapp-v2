@@ -59,12 +59,12 @@ export default function useBountyCriteria() {
   const showUpskilledReward =
     bountyCriteria.bountyType === BOUNTY_TYPES.UPSKILLED;
   const showNFTAddressBar =
-    (bountyCriteria.paidRewardTypes
+    bountyCriteria.paidRewardTypes
       .map((a) => a.toLowerCase()) //convert to lower case for easy string matching
-      .includes(BOUNTY_REWARD_TYPES.NFT.toLowerCase()) &&
-      showRewardType) ||
-    (bountyCriteria.upskilledNFTReward === UPSKILLED_NFT_REWARDS_TYPES.YES &&
-      showUpskilledReward);
+      .includes(BOUNTY_REWARD_TYPES.NFT.toLowerCase()) && showRewardType;
+  const showNFTUploadBar =
+    bountyCriteria.upskilledNFTReward === UPSKILLED_NFT_REWARDS_TYPES.YES &&
+    showUpskilledReward;
   // ----
   const showPermissionedTypes =
     bountyCriteria.permissionType === BOUNTY_PERMISSIONS_TYPES.PERMISSIONED;
@@ -80,7 +80,6 @@ export default function useBountyCriteria() {
     BOUNTY_REWARD_TYPES.CRYPTO
   );
   // define the variables responsible for hiding or showing several components depending on which states are filled
-
 
   /**
    * Use this function to check if the state has been completed
@@ -143,6 +142,7 @@ export default function useBountyCriteria() {
     flowState: {
       showRewardType,
       showNFTAddressBar,
+      showNFTUploadBar,
       showUpskilledReward,
       showPermissionedTypes,
       showWalletAddress,
