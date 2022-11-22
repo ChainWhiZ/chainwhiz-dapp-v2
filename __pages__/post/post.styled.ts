@@ -252,7 +252,7 @@ export const TabMobile = styled(SectionTab)`
 
 export const CreatePostContent = styled.div`
   background: #1f1e2b;
-  border-radius: 1.25rem;
+  border-radius: .625rem;
   position: relative;
   margin-top: 2.8125rem;
   overflow: hidden;
