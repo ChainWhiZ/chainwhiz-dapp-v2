@@ -4,12 +4,14 @@ import { devices } from 'theme';
 export const ErrorPageWrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: ${(props) => props.theme.colors.darkBlue};
+  background-color: #171422;
+  background-blend-mode: color-dodge;
   font-family: ${(props) => props.theme.fonts.primaryFont};
-  background-image: url('/images/landing/helixes/BG-Postbounty.png');
-  min-height: calc(100vh - 6.9376rem);
-  background-size: cover;
+  background-image: url('/images/landing/helixes/torch.png');
+  min-height: 66.8125rem;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
 
   ${devices.mobile} {
     min-height: calc(100vh - 4.25rem);
@@ -31,100 +33,114 @@ export const ErrorPageWrapper = styled.div`
     filter: blur(6.25rem);
 
     ${devices.mobile} {
+      opacity: 0.3;
       top: -1.25rem;
       width: 11.5rem;
       height: 11.5rem;
       left: calc(50vw - 4.1875rem);
-      opacity: 0.3;
     }
   }
-`
+`;
 
 export const ErrorPageContent = styled.div`
   text-align: center;
   position: relative;
-`
+  margin-top: 12.8125rem;
+  ${devices.mobile} {
+    margin-top: 13.1875rem;
+  }
+`;
 
-export const ErrorImageWrapper = styled.div`
+export const ErrorImageWrapper = styled.span`
   position: absolute;
-  top: -1rem;
-  left: -8.75rem;
-  right: 8.75rem;
   margin: 0 auto;
-  height: 8rem;
-  width: 8rem;
   opacity: 0.3;
+  top: -35px;
+  left: -8.75rem;
+  height: 156px;
+  width: 156px;
 
   ${devices.mobile} {
-    left: 0;
-    right: 7.5rem;
-    margin: 0 auto;
     width: 2.5rem;
     height: 2.5rem;
+    top: -6px;
+    left: -33px;
   }
-`
+`;
 
 export const ErrorPageHeading = styled.div`
-  font-weight: 600;
+  color: #d4ff1e;
+  position: relative;
+  width: fit-content;
+  margin: auto;
   font-size: 6.25rem;
   line-height: 9rem;
-  color: #D4FF1E;
+  span {
+    font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+    z-index: 2;
+  }
 
   ${devices.mobile} {
     font-size: 3.75rem;
     line-height: 5.625rem;
   }
-`
+`;
 
 export const ErrorPageText = styled.div`
-  font-weight: 500;
+  font-family: ${(props) => props.theme.fonts.primaryFontMedium};
+  color: #ffffff;
   font-size: 3.75rem;
   line-height: 5.625rem;
-  color: #FFFFFF;
 
   ${devices.mobile} {
     font-size: 1.25rem;
     line-height: 1.875rem;
   }
-`
+`;
 
 export const ErrorPageDescription = styled.div`
-  margin: 3rem auto;
-  width: 60%;
+  text-align: center;
+  color: #898989;
+  margin: 3.5rem auto 3.6875rem;
+  max-width: 929px;
   font-weight: 400;
   font-size: 1.875rem;
   line-height: 2.813rem;
-  text-align: center;
-  color: #898989;
 
   ${devices.mobile} {
-    margin: 1.5rem auto;
+    margin: .875rem auto 1.8125rem;
     font-size: 0.75rem;
     line-height: 1.125rem;
-    width: 80%;
+    max-width: 80%;
   }
-`
+`;
 
 export const ErrorPageButton = styled.button`
-  background-color: #D4FF1E;
-  padding: 20px 40px;
-  border: 2px solid #D4FF1E;
+  background-color: #d4ff1e;
+  border: 0.125rem solid #d4ff1e;
+  padding: 1.25rem 2.5rem;
   border-radius: 20px;
+  cursor: pointer;
+  transition: ${(props) => props.theme.meta.fastTransitionSpeed};
 
   ${devices.mobile} {
     border-radius: 10px;
     padding: 10px 20px;
   }
+  &:hover {
+    opacity: 0.85;
+  }
 
-  span {
-    font-weight: 600;
+  a {
+    font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+    color: #000000;
+    text-decoration: none;
     font-size: 1.25rem;
     line-height: 1.875rem;
-    color: #000000;
 
     ${devices.mobile} {
       font-size: 0.875rem;
       line-height: 1.313rem;
     }
   }
-`
+`;
