@@ -24,6 +24,7 @@ export type BountyCriteriaHookType = {
   onFormStateChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
+  isCompleted: boolean;
   flowState: {
     showRewardType: boolean;
     showNFTAddressBar: boolean;

@@ -12,10 +12,11 @@ export const BasicDetailsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 3rem;
+  row-gap: 3rem;
+  column-gap: 7.875rem;
   position: relative;
 
-  &::after{
+  &::after {
     content: '';
     width: 13.625rem;
     height: 13.625rem;
@@ -28,6 +29,23 @@ export const BasicDetailsWrapper = styled.div`
     filter: blur(6.25rem);
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    width: 13.625rem;
+    height: 13.625rem;
+    background: #d4ff1e;
+    border-radius: 50%;
+    opacity: 0.17;
+    bottom: -2.8125rem;
+    right: 0rem;
+    object-fit: contain;
+    filter: blur(6.25rem);
+    ${devices.mobile} {
+      display: none;
+    }
+  }
+
   ${devices.mobile} {
     width: 100%;
     height: fit-content;
@@ -35,7 +53,7 @@ export const BasicDetailsWrapper = styled.div`
     gap: 0;
     margin-top: 2.5rem;
     border-radius: 0;
-    &::after{
+    &::after {
       display: none;
       opacity: 0;
     }

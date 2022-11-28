@@ -18,6 +18,7 @@ import {
   TermsCondition,
   PostBounty,
 } from './confirmbounty.styled';
+import useConnectWallet from 'hooks/useconnectwallet';
 
 export default function ConfirmBounty({
   basicDetails,
@@ -25,14 +26,23 @@ export default function ConfirmBounty({
   rewardsAndVoting,
 }: CreatePostTabType) {
   const { account } = useWeb3React();
+  const { connectWalletPressed } = useConnectWallet();
+
   const [checked, setChecked] = useState(false);
   const [dollarPrice, setDollarPrice] = useState(21.65);
 
-  const { state: criteriaState, onFormStateChange: criteriaOnFormStateChange } =
-    bountyCriteria;
+  const { isCompleted: basicDetailsIsCompleted = false } = basicDetails;
+
+  const {
+    state: criteriaState,
+    isCompleted: bountyCriteriaIsCompleted = false,
+    onFormStateChange: criteriaOnFormStateChange,
+  } = bountyCriteria;
+
   const {
     state: rewardsState,
     onFormStateChange: rewardOnFormStateChange,
+    isCompleted: rewardsAndVotingCompleted = false,
     onValueChange: rewardOnValueChange,
   } = rewardsAndVoting;
 
@@ -72,6 +82,17 @@ export default function ConfirmBounty({
   }
   const submitBounty = () => {
     // verify state
+    if (!basicDetailsIsCompleted) {
+      return logError('Please fill in all fields in the basic details tab');
+    }
+    if (!bountyCriteriaIsCompleted) {
+      return logError('Please fill in all fields in the bounty criteria tab');
+    }
+    if (!rewardsAndVotingCompleted) {
+      return logError(
+        'Please fill in all fields in the rewards and voting tab'
+      );
+    }
     if (finalStateIsValid()) {
       alert('submitted to console');
       console.log({
@@ -84,11 +105,15 @@ export default function ConfirmBounty({
     }
   };
 
+  const totalAmountToBePaid =
+    +rewardsState.rewardAmount * +criteriaState.numOfWinners +
+    +rewardsState.votingAmount;
+
   return (
     <ConfirmBountyWrapper>
       <BountySection>
         <Heading>
-          <h3>Glance through and Confirm</h3>
+          <h3>Glance through and Confirm </h3>
           <h5>You may modify your selection before you confirm.</h5>
         </Heading>
         <BountyFeeBreakdown>
@@ -125,7 +150,7 @@ export default function ConfirmBounty({
 
           <section>
             <InputWrapper
-              text={`${rewardsState.votingAmount} ${rewardsState.votingToken}`}
+              text={`${rewardsState.votingAmount} ${rewardsState.rewardToken}`}
             >
               <section>
                 <label>Voting reward</label>
@@ -147,7 +172,7 @@ export default function ConfirmBounty({
           <section>
             <section>
               <h4>Total Amount to be paid:</h4>
-              <span>65</span>
+              <span>{totalAmountToBePaid || 0}</span>
             </section>
             <div>
               <Dropdown
@@ -175,6 +200,7 @@ export default function ConfirmBounty({
             <p>{account}</p>
             <span
               onClick={() => {
+                if (!account) return connectWalletPressed();
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 const { ethereum } = window as any;
                 ethereum.request({
@@ -187,7 +213,7 @@ export default function ConfirmBounty({
                 });
               }}
             >
-              change
+              {account ? 'change' : 'connect'}
             </span>
           </div>
         </WalletSection>

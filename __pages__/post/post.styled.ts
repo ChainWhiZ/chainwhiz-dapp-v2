@@ -4,12 +4,14 @@ import { devices } from 'theme';
 // ---- wrappers section
 export const CreatePostWrapper = styled.div`
   position: relative;
-  background-color: ${(props) => props.theme.colors.darkBlue};
   font-family: ${(props) => props.theme.fonts.primaryFont};
   background-image: url('/images/landing/helixes/BG-Postbounty.png');
   min-height: calc(100vh - 6.9376rem);
   background-size: cover;
-
+  background-blend-mode: lighten;
+  background-color: #171422;
+  background-position-y: -4.4625rem;
+  background-size: 100vw;
 
   ${devices.mobile} {
     min-height: calc(100vh - 4.25rem);
@@ -45,7 +47,6 @@ export const CreatePost = styled.div`
   padding-top: 3.625rem;
   padding-bottom: 6.25rem;
 
-
   ${devices.mobile} {
     width: fit-content;
     padding-top: 9rem;
@@ -57,7 +58,6 @@ export const CreatePost = styled.div`
 
 // ----- header section
 export const CreatePostTextContent = styled.div`
-
   h3 {
     color: white;
     text-align: center;
@@ -94,8 +94,7 @@ export const CreatePostHeader = styled.div`
     }
   }
 `;
-
-export const GoBackButton = styled.button`
+export const GoBackButton = styled.button<{ hidden?: boolean }>`
   background: ${(props) => props.theme.colors.blueFade};
   transition: ${(props) => props.theme.meta.fastTransitionSpeed};
   color: white;
@@ -110,6 +109,7 @@ export const GoBackButton = styled.button`
   font-size: 1.25rem;
   line-height: 1.875rem;
   border-radius: 0.625rem;
+  opacity: ${(props) => (props.hidden ? 0 : 1)};
 
   &::before {
     content: '';
@@ -135,7 +135,7 @@ export const CreatePostBreadcrumb = styled.div`
   span {
     transition: ${(props) => props.theme.meta.fastTransitionSpeed};
     color: ${(props) => props.theme.colors.lightGrey};
-    font-family: ${(props) => props.theme.fonts.primaryFontMedium};
+    font-family: ${(props) => props.theme.fonts.primaryFont};
     cursor: pointer;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -168,7 +168,6 @@ export const CreatePostTabs = styled.div`
   gap: 2.1875rem;
   padding-left: 1.6875rem;
   padding-right: 1.6875rem;
-  
 
   ${devices.mobile} {
     padding: 0;
@@ -252,24 +251,10 @@ export const TabMobile = styled(SectionTab)`
 
 export const CreatePostContent = styled.div`
   background: #1f1e2b;
-  border-radius: .625rem;
+  border-radius: 1.25rem;
   position: relative;
   margin-top: 2.8125rem;
   overflow: hidden;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 13.625rem;
-    height: 13.625rem;
-    background: #d4ff1e;
-    border-radius: 50%;
-    opacity: 0.1;
-    bottom: -5rem;
-    right: -6.25rem;
-    object-fit: contain;
-    filter: blur(6.25rem);
-  }
 
   ${devices.mobile} {
     background: transparent;
@@ -296,7 +281,7 @@ export const CreatePostAction = styled.div<{ hidden?: boolean }>`
 
 export const BackButton = styled.div`
   display: none;
-  left: .1875rem;
+  left: 0.1875rem;
   color: rgba(255, 255, 255, 0.95);
   position: absolute;
   font-weight: 300;

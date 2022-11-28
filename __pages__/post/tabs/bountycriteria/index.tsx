@@ -128,10 +128,10 @@ export default function BountyCriteriaTab({
 
         <InputWrapper hide={!flowState.showMaxWinners}>
           <section>
-            <label>Maximum no. of winners?</label>
-            <span>
-              Enter any description <br /> for this field
-            </span>
+            <label>
+              Maximum no. of <br /> winners?
+            </label>
+            <span>Enter any description for this field</span>
           </section>
           <input
             placeholder="For e.g. 6 people"
@@ -173,14 +173,13 @@ export default function BountyCriteriaTab({
         </InputWrapper>
         <InputWrapper hide={!flowState.showWalletAddress}>
           <section>
-            <label>Please enter wallet address*</label>
+            <label>Please enter wallet <br /> addresses*</label>
             <span>
-              Enter any description <br /> for this field
+              Maximum characters {state.walletAddress.length} out of 500
             </span>
           </section>
-          <input
+          <textarea
             placeholder="For e.g. FDGDFNJDSKN%&#DFKJ566"
-            type="text"
             name="walletAddress"
             value={state.walletAddress}
             onChange={onFormStateChange}
@@ -189,9 +188,7 @@ export default function BountyCriteriaTab({
         <InputWrapper hide={!flowState.showTokenAddress}>
           <section>
             <label>Please enter your token*</label>
-            <span>
-              Enter any description <br /> for this feild
-            </span>
+            <span>Enter any description for this feild</span>
           </section>
           <input
             placeholder="For e.g. FDGDFNJDSKN%&#DFKJ566"
@@ -205,8 +202,7 @@ export default function BountyCriteriaTab({
           <section>
             <label>Evaluation criteria*</label>
             <span>
-              Maximum characters <br /> {state.evaluationCriteria.length} out of
-              500
+              Maximum characters {state.evaluationCriteria.length} out of 500
             </span>
           </section>
           <textarea

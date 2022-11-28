@@ -32,7 +32,6 @@ import BasicDetailsTab from './tabs/basicdetails';
 import BountyCriteriaTab from './tabs/bountycriteria';
 import RewardsAndVotingTab from './tabs/rewardsandvoting';
 import ConfirmBounty from './tabs/confirmbounty';
-import { logError } from 'utils/logger';
 
 const ALL_TABS = [
   BasicDetailsTab,
@@ -40,7 +39,6 @@ const ALL_TABS = [
   RewardsAndVotingTab,
   ConfirmBounty,
 ];
-
 
 export default function Post() {
   const [crumbs, setCrumbs] = useState(DEFAULT_BREAKCRUMBS);
@@ -86,14 +84,7 @@ export default function Post() {
   }, [activeTab]);
 
   const gotoTab = (index: number) => {
-    // ensure all tabs before this one are filled before the user can proceed.
-    const previousTabsFilled = tabsFilledStatus.slice(0, index).every(Boolean);
-    if (previousTabsFilled) {
-      setActiveTab(index);
-    } else {
-      // TODO use custom notification to ensure that the tab is navigated to
-      logError('Please fill in all required fields before proceeding');
-    }
+    setActiveTab(index);
   };
 
   const resetState = () => {
@@ -105,7 +96,7 @@ export default function Post() {
     <CreatePostWrapper>
       <CreatePost>
         <CreatePostHeader>
-          <GoBackButton onClick={() => router.back()}>
+          <GoBackButton hidden={activeTab === 0} onClick={() => router.back()}>
             <span>Back</span>
           </GoBackButton>
           <CreatePostTextContent>

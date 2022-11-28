@@ -5,11 +5,10 @@ import { devices } from 'theme';
 export const RAVWrapper = styled.div`
   box-sizing: border-box;
   padding: 3.0625rem 3.625rem 5.0625rem 2.9375rem;
-  /* margin-top: 2.625rem; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5.625rem;
-  min-height: 32.125rem;
+  min-height: 17.0625rem;
 
   ${devices.mobile} {
     padding: 0;
@@ -19,13 +18,35 @@ export const RAVWrapper = styled.div`
     gap: 0;
     margin-top: 2.1875rem;
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 13.625rem;
+    height: 13.625rem;
+    background: #d4ff1e;
+    border-radius: 50%;
+    opacity: 0.25;
+    top: 160px;
+    right: -78px;
+    object-fit: contain;
+    -webkit-filter: blur(6.25rem);
+    filter: blur(6.25rem);
+    ${devices.mobile} {
+      display: none;
+    }
+  }
 `;
 
 export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
   display: ${(props) => (props.hide ? 'none' : 'block')};
+  section{
+    align-items: flex-end;
+  }
   section.stacked {
     flex-direction: column;
     gap: 0.1875rem;
+    align-items: flex-start;
     ${devices.mobile} {
       gap: 0.3125rem;
     }
@@ -42,7 +63,7 @@ export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
     }
     margin-top: 1.875rem;
     ${devices.mobile} {
-      margin-top: 1.625rem;
+      margin-top: 1.225rem;
     }
   }
   input[type='text'],
@@ -61,10 +82,9 @@ export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
       ${devices.mobile} {
         width: 12.5rem;
       }
-
     }
   }
-  span {
+  label {
     br {
       display: none;
       ${devices.mobile} {
@@ -104,7 +124,7 @@ export const BountySection = styled.section`
 
 export const InputAndDropdown = styled.div`
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   input {
     width: 26.0625rem;
   }

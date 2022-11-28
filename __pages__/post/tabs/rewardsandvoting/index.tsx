@@ -20,10 +20,10 @@ export default function RewardsAndVotingTab({
       <BountySection>
         <InputWrapper>
           <section>
-            <label>Bounty reward for each winner*</label>
-            <span>
-              Enter any description <br /> for this field
-            </span>
+            <label>
+              Bounty reward for <br /> each winner*
+            </label>
+            <span>Enter any description for this field</span>
           </section>
           <div className="inputanddropdown">
             <input
@@ -69,10 +69,8 @@ export default function RewardsAndVotingTab({
         </InputWrapper>
         <InputWrapper hide={!flowState.showVotingOptions}>
           <section>
-            <label>Voting Reward</label>
-            <span>
-              Enter any description <br /> for this feild
-            </span>
+            <label>Voting Reward*</label>
+            <span>Enter any description for this feild</span>
           </section>
           <div className="inputanddropdown">
             <input
@@ -83,17 +81,15 @@ export default function RewardsAndVotingTab({
               onChange={onFormStateChange}
             />
             <Dropdown
-              active={state.votingToken}
-              setActive={(val: string) => onValueChange('votingToken', val)}
+              active={state.rewardToken}
+              setActive={(val: string) => onValueChange('rewardToken', val)}
             />
           </div>
         </InputWrapper>
         <InputWrapper hide={!flowState.showVotingOptions}>
           <section>
             <label>Time alloted for Voting*</label>
-            <span>
-              Enter any description <br /> for this field
-            </span>
+            <span>Enter any description for this field</span>
           </section>
           <input
             placeholder="For e.g. 6 Days"

@@ -47,9 +47,6 @@ export const DropdownHeader = styled.div<{ active?: boolean; size?: string }>`
     mix-blend-mode: normal;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    ${devices.mobile} {
-      font-size: 0.625rem;
-    }
   }
   &::after {
     height: 0.375rem;
@@ -66,7 +63,8 @@ export const DropdownHeader = styled.div<{ active?: boolean; size?: string }>`
   ${devices.mobile} {
     width: 6.875rem;
     span {
-      font-size: 0.5625rem;
+      font-size: .75rem;
+      text-align: center;
       line-height: 1.25rem;
     }
   }

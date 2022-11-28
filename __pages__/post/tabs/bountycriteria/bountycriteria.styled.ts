@@ -19,12 +19,30 @@ export const BountyCriteriaWrapper = styled.div`
     gap: 0;
     margin-top: 2.1875rem;
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 13.625rem;
+    height: 13.625rem;
+    background: #d4ff1e;
+    border-radius: 50%;
+    opacity: 0.17;
+    bottom: 1.9375rem;
+    right: -2.875rem;
+    object-fit: contain;
+    -webkit-filter: blur(6.25rem);
+    filter: blur(6.25rem);
+    ${devices.mobile} {
+      display: none;
+    }
+  }
 `;
 
 export const UploadButton = styled.div`
   width: 6.375rem;
   height: 2.5rem;
-  border-radius: .1875rem;
+  border-radius: 0.1875rem;
   background: #d4ff1e;
   display: flex;
   justify-content: center;
@@ -37,15 +55,19 @@ export const UploadButton = styled.div`
   ${devices.mobile} {
     width: 5.2038rem;
     height: 2.5rem;
-    font-size: .75rem;
+    font-size: 0.75rem;
     line-height: 1.25rem;
   }
 `;
 
 export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
   display: ${(props) => (props.hide ? 'none' : 'block')};
+  section {
+    align-items: flex-end;
+  }
   section.stacked {
     flex-direction: column;
+    align-items: flex-start;
     gap: 0.1875rem;
     ${devices.mobile} {
       gap: 0.3125rem;
@@ -96,7 +118,7 @@ export const InputWrapper = styled(GlobalInputWrapper)<{ hide?: boolean }>`
       width: 100%;
     }
   }
-  span {
+  label {
     br {
       display: none;
       ${devices.mobile} {

@@ -72,8 +72,7 @@ export const REWARDS_AND_VOTING = {
   rewardAmount: '',
   rewardToken: '',
   solutionVoting: SOLUTION_VOTING_TYPES.NO,
-  votingAccesibility: VOTING_ACCESIBILITY.EVERYONE,
-  votingToken: '',
+  votingAccesibility: VOTING_ACCESIBILITY.SPECIFICS,
   votingAmount: '',
   votingTime: '',
 };
@@ -86,7 +85,7 @@ export const VOTING_ACCESIBILITY_OPTIONS = [
     name: 'votingAccesibility',
   },
   {
-    label: VOTING_ACCESIBILITY.EVERYONE,
+    label: VOTING_ACCESIBILITY.SPECIFICS,
     name: 'votingAccesibility',
   },
 ];

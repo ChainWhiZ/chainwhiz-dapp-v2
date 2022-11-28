@@ -39,7 +39,7 @@ export default function useRewardsAndVoting() {
       votingSolutionOff ||
       (votingSolutionOn &&
         state.votingAccesibility &&
-        state.votingToken &&
+        state.rewardToken &&
         state.votingAmount &&
         state.votingTime);
 
