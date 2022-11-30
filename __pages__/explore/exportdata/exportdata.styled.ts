@@ -18,18 +18,32 @@ export const DisplaySub = styled.div`
   align-items: center;
   padding-top: 1.25rem;
   padding-bottom: 1.188rem;
+  
 
   aside {
     padding-left: 1.875rem;
+
+    ${devices.mobile} {
+    width: 2.875rem;
+    height: 2.875rem;
+    }
   }
 
   main {
     margin-left: 1.438rem;
+
+    ${devices.mobile} {
+      margin-left: 0;
+    }
   }
 
   h4 {
     font-size: 1rem;
     font-weight: 400;
+
+    ${devices.mobile} {
+      font-size: 0.75rem;
+    }
   }
 
   p {
@@ -37,6 +51,10 @@ export const DisplaySub = styled.div`
     font-weight: 600;
     color: #898989;
     margin-top: 0.375rem;
+
+    ${devices.mobile} {
+      font-size: 0.875rem;
+    }
   }
 `;
 
@@ -47,14 +65,22 @@ export const PaginationContainer = styled.div`
   `;
   
   export const PaginationWrapper = styled.div`
-  display: block;
+  display: flex;
   align-items: center;
+
+  ${devices.mobile} {
+    display: flex;
+  }
   div {
     font-size: 1.125rem;
     color: #ffffff;
     margin: 0;
     padding: 0;
     display: block;
+
+    ${devices.mobile} {
+      font-size: 0.875rem;
+    }
   }
   p {
     font-weight: 700;
