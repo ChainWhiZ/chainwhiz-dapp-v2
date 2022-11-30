@@ -1,24 +1,24 @@
-import styled from "styled-components";
-import { GlobalInputWrapper } from "../post/tabs/tabs.styled";
-import { devices } from "theme";
+import styled from 'styled-components';
+import { GlobalInputWrapper } from '../post/tabs/tabs.styled';
+import { devices } from 'theme';
 
 export const ExploreBountiesWrapper = styled.div`
   box-sizing: border-box;
-  // background-image: url('/images/post/postbounty/postbountybg.png');
+  // background-image: url('/images/exportbounty/postbountybg.png');
   background-repeat: no-repeat;
-  background-position: center;
+  // background-position: center;
 
   position: relative;
   background-color: ${(props) => props.theme.colors.darkBlue};
   font-family: ${(props) => props.theme.fonts.primaryFont};
-  background-image: url("/images/landing/helixes/BG-Postbounty.png");
-  min-height: calc(100vh - 6.9376rem);
+  background-image: url('/images/landing/helixes/BG-Postbounty.png');
+  // min-height: calc(100vh - 6.9376rem);
   background-size: cover;
   padding-top: 4.688rem;
   padding-bottom: 4.688rem;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 10.5rem;
     height: 10.5rem;
@@ -31,17 +31,44 @@ export const ExploreBountiesWrapper = styled.div`
     object-fit: cover;
     // background-size: 100%;
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10.5rem;
+    height: 10.5rem;
+    top: -7.313rem;
+    right: 6rem;
+    background: #d4ff1e;
+    opacity: 0.4;
+    filter: blur(6.25rem);
+    border-radius: 50%;
+    object-fit: cover;
+    background-size: 100%;
+  }
 `;
 
 export const ExploreDisplay = styled.div`
   display: flex;
   justify-content: space-evenly;
-  // align-items: center;
   color: #ffffff;
-  // flex: 1;
 `;
 
 export const HackingWrapper = styled.div`
+&::after {
+    content: '';
+    background: #FFFFFF;
+    opacity: 0.1;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    width: 30.25rem;
+    height: 30.25rem;
+    top: 28rem;
+    left: -10rem;
+    filter: blur(6.25rem);
+    background-size: 100%;
+  }
   h3 {
     font-size: 2rem;
     font-weight: 600;
@@ -49,14 +76,30 @@ export const HackingWrapper = styled.div`
 `;
 
 export const SubmissionWrapper = styled.div`
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background: #FFFFFF;
+    opacity: 0.2;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 23.25rem;
+    height: 23.25rem;
+    top: 0;
+    left: -7rem;
+    filter: blur(6.25rem);
+    background-size: 100%;
+  }
   .span {
     color: #d4ff1e;
     font-size: 1.25rem;
+    // padding-top: 8.063rem;
 
     &::before {
-      content: "";
+      content: '';
       display: inline-block;
-      background-image: url("/images/exportbounty/clock.png");
+      background-image: url('/images/exportbounty/clock.png');
       background-size: 100%;
       width: 1.067rem;
       height: 1.333rem;
@@ -182,10 +225,10 @@ export const Reference = styled.div`
     margin-top: 0.438rem;
 
     &::before {
-      content: "";
+      content: '';
       background-size: 100%;
       display: inline-block;
-      background-image: url("/images/exportbounty/globe.png");
+      background-image: url('/images/exportbounty/globe.png');
       height: 1.25rem;
       width: 1.25rem;
       margin-right: 0.75rem;
@@ -240,6 +283,7 @@ export const RewardsMatic = styled.div`
   border-radius: 10px;
   margin-top: 1.25rem;
   padding-top: 2.813rem;
+  z-index; 999;
 
   hr {
     width: 22.563rem;
@@ -286,8 +330,8 @@ export const Rewards = styled.div`
     align-items: end;
 
     &::after {
-      content: "";
-      background-image: url("/images/exportbounty/bird.png");
+      content: '';
+      background-image: url('/images/exportbounty/bird.png');
       background-size: 100%;
       width: 9.799rem;
       height: 8.063rem;
@@ -303,19 +347,19 @@ export const Matic = styled.div`
   padding: 0 2.75rem;
   text-align: right;
 
-  p{
+  p {
     font-size: 1rem;
     font-weight: 600;
     margin-top: 2.688rem;
   }
 
-  h3{
+  h3 {
     font-size: 1.875;
     font-weight: 400;
     margin-top: 2rem;
   }
 
-  small{
+  small {
     font-size: 1.125rem;
     font-weight: 300;
   }
@@ -326,19 +370,19 @@ export const Bounty = styled.div`
   height: 14.063rem;
   background: #1e1c30;
   border-radius: 10px;
-  padding-left: 2.938rem;
   padding-top: 2.625rem;
   display: flex;
 
-  section{
+  section {
     margin-left: 1.563rem;
   }
 
-  p{
+  p {
     font-size: 1.375;
     font-weight: 600;
+    padding-left: 2.938rem;
 
-    &::after{
+    &::after {
       content: '';
       background-image: url('/images/exportbounty/zscore.png');
       width: 4.688rem;
@@ -349,18 +393,18 @@ export const Bounty = styled.div`
     }
   }
 
-  h3{
+  h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-top: 2.75rem;
   }
 
-  div{
+  div {
     display: flex;
     margin-top: 0.75rem;
     gap: 0.914rem;
-    
-    .fb{
+
+    .fb {
       width: 1.096rem;
       height: 1.096rem;
     }
@@ -370,14 +414,38 @@ export const Bounty = styled.div`
       height: 1.096rem;
     }
 
-    .twitter{
+    .twitter {
       width: 1.37rem;
       height: 1.188rem;
     }
   }
 
-  Image{
+  Image {
     background: yellow;
     background-size: 100%;
+  }
+`;
+
+export const Sublist = styled.div`
+  display: table;
+  margin: auto;
+
+  div {
+    max-width: 77.5rem;
+    display: flex;
+    gap: 1.875rem;
+    flex-wrap: wrap;
+  }
+  hr {
+    margin-top: 4.688rem;
+    width: 87.938rem;
+    opacity: 0.5;
+    background-color: #898989;
+  }
+  h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 5.875rem;
   }
 `;
