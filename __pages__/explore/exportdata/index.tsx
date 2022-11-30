@@ -14,7 +14,7 @@ export default function Submission({
     <SubmissionContainer>
       <DisplaySub>
         <aside>
-          <Image src={submission.image} width={60} height={60} />
+          <Image className="subimg" src={submission.image} width={60} height={60} />
         </aside>
         <main>
           <h4>{submission.time}</h4>
