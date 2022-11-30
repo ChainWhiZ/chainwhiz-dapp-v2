@@ -10,7 +10,8 @@
 
   .header {
       max-width: 93.625rem;
-      margin: auto;
+      margin: 1.875rem auto;
+      margin-top: 6.063rem;
       display: flex;
       justify-content: space-between;
       @include mobile-breakpoint {

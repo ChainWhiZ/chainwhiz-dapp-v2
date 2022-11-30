@@ -1,3 +1,4 @@
+import Category from './segments/category';
 import styles from './explore.module.scss';
 import Header from './segments/header';
 
@@ -8,6 +9,7 @@ export default function ExplorePage() {
   return (
     <div className={styles.explore}>
         <Header />
+        <Category />
     </div>
   );
 }
