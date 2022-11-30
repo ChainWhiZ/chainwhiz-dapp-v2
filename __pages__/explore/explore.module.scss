@@ -1,0 +1,43 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+// define a mixin for the highlight under each navbar
+@mixin highlight {
+  content: '';
+  filter: blur(100px);
+  position: absolute;
+  width: 10.5rem /* 168px -> 10.5rem */;
+  height: 10.5rem /* 168px -> 10.5rem */;
+  background: $neon-green;
+  opacity: 0.5;
+  transform: rotate(180deg);
+  z-index: 2;
+  top: 0;
+
+  @include mobile-breakpoint {
+    width: 168px /* 168px -> 8.75vw */;
+    height: 168px /* 168px -> 8.75vw */;
+    position: sticky;
+    top: 0;
+  }
+}
+
+.explore {
+  background-color: $home-background;
+  overflow-x: hidden;
+
+  &::after {
+    @include highlight;
+    right: 6.9063rem /* 110.5px -> 6.9063rem */;
+    @include mobile-breakpoint() {
+      display: none;
+    }
+  }
+  &::before {
+    @include highlight;
+    left: 9.5313rem /* 152.5px -> 9.5313rem */;
+    @include mobile-breakpoint() {
+      left: calc(50% - 84px); //center it to the screen. 84 = 168/2
+    }
+  }
+}
