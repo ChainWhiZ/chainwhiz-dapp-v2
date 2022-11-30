@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
-import React from "react";
+import { useRouter } from 'next/router';
+import React from 'react';
 import {
   ExploreBountiesWrapper,
   ExploreDisplay,
@@ -13,10 +13,14 @@ import {
   RewardsMatic,
   Rewards,
   Matic,
-  Bounty
-} from "./explorebounties.styled";
-import Checkbox from "components/checkbox";
-import RenderStyledImage from "components/image/renderstyledimage";
+  Bounty,
+  Sublist,
+} from './explorebounties.styled';
+import Checkbox from 'components/checkbox';
+import RenderStyledImage from 'components/image/renderstyledimage';
+import { EXPORT_BOUNTY } from 'data/export';
+import Submission from './exportdata';
+import Pagination from './pagination';
 
 export default function Explore() {
   const router = useRouter();
@@ -64,15 +68,15 @@ export default function Explore() {
           <Evaluation>
             <h4>Evaluation Criterias</h4>
             <div>
-              <Checkbox checked={true} label={""} onClick={() => "err"} />
+              <Checkbox checked={true} label={''} onClick={() => 'err'} />
               <p>Any instructions that needs to be processed</p>
             </div>
             <div>
-              <Checkbox checked={true} label={""} onClick={() => "err"} />
+              <Checkbox checked={true} label={''} onClick={() => 'err'} />
               <p>Find all neccessary resources from here</p>
             </div>
             <div>
-              <Checkbox checked={true} label={""} onClick={() => "err"} />
+              <Checkbox checked={true} label={''} onClick={() => 'err'} />
               <p>Any instructions that needs to be processed</p>
             </div>
           </Evaluation>
@@ -126,6 +130,16 @@ export default function Explore() {
           </Bounty>
         </SubmissionWrapper>
       </ExploreDisplay>
+      <Sublist>
+        <hr />
+        <h3>Submission(8)</h3>
+        <div>
+          {EXPORT_BOUNTY.map((oneSubmission, index) => (
+            <Submission key={index} submission={oneSubmission} />
+          ))}
+        </div>
+        <Pagination />
+      </Sublist>
     </ExploreBountiesWrapper>
   );
 }
