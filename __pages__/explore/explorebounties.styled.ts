@@ -91,6 +91,14 @@ export const HackingWrapper = styled.div`
     left: -10rem;
     filter: blur(6.25rem);
     background-size: 100%;
+
+    ${devices.mobile} {
+      top: 23rem;
+      width: 11.125rem;
+      height: 11.125rem;
+      left: -3rem;
+      opacity: 0.3;
+    }
   }
   h3 {
     font-size: 2rem;
@@ -114,11 +122,15 @@ export const SubmissionWrapper = styled.div`
     object-fit: cover;
     width: 23.25rem;
     height: 23.25rem;
-    top: 0;
-    left: -7rem;
+    top: 2.5rem;
+    left: -7.5rem;
     filter: blur(6.25rem);
-    background-size: 100%;
+
+    ${devices.mobile} {
+      display: none;
+    }
   }
+
   .span {
     color: #d4ff1e;
     font-size: 1.25rem;
@@ -305,8 +317,6 @@ export const Reference = styled.div`
   ${devices.mobile} {
     width: 20rem;
     height: 26.188rem;
-    // padding-left: 1.438rem;
-    // padding-right: 1.625rem;
     padding: 0 1.625rem;
   }
 
@@ -375,7 +385,13 @@ export const Evaluation = styled.div`
 
   ${devices.mobile} {
     width: 20rem;
-    height: 13.625;
+    height: 13.625rem;
+  }
+
+  .evaluate{
+    ${devices.mobile} {
+      margin: 0.625rem 0;
+    }
   }
 
   h4 {
@@ -414,7 +430,7 @@ export const RewardsMatic = styled.div`
   border-radius: 10px;
   margin-top: 1.25rem;
   padding-top: 2.813rem;
-  z-index; 999;
+  position: relative;
 
   ${devices.mobile} {
     width: 20.188rem;
