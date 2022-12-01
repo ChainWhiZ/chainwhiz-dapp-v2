@@ -73,7 +73,7 @@ export default function Explore() {
               <Checkbox checked={true} label={""} onClick={() => "err"} />
               <p>Any instructions that needs to be processed</p>
             </div>
-            <div>
+            <div className="evaluate">
               <Checkbox checked={true} label={""} onClick={() => "err"} />
               <p>Find all neccessary resources from here</p>
             </div>
