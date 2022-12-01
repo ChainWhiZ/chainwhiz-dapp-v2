@@ -113,6 +113,13 @@ export const HackingWrapper = styled.div`
 
 export const SubmissionWrapper = styled.div`
   position: relative;
+
+   ${devices.mobile} {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -134,7 +141,6 @@ export const SubmissionWrapper = styled.div`
   .span {
     color: #d4ff1e;
     font-size: 1.25rem;
-    // padding-top: 8.063rem;
 
     ${devices.mobile} {
       margin-top: 2.188rem;
@@ -167,18 +173,17 @@ export const SubmissionWrapper = styled.div`
     margin-top: 3.375rem;
     margin-bottom: 3.688rem;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border: 2px solid #D4FF1E;
 
     ${devices.mobile} {
-      width: 20.375rem;
+      width: 21.75rem;
       margin-top: 1.875rem;
       margin-bottom: 0;
+      font-size: 0.875rem;
+      height: 2.563rem;
     }
-  }
-
-  ${devices.mobile} {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 `;
 
@@ -317,7 +322,8 @@ export const Reference = styled.div`
   ${devices.mobile} {
     width: 20rem;
     height: 26.188rem;
-    padding: 0 1.625rem;
+    padding-left: 1.438rem;
+    padding-right: 1.625rem;
   }
 
   h4 {
@@ -386,6 +392,8 @@ export const Evaluation = styled.div`
   ${devices.mobile} {
     width: 20rem;
     height: 13.625rem;
+    padding-left: 1.563rem;
+    padding-right: 1.688rem;
   }
 
   .evaluate{
@@ -435,6 +443,8 @@ export const RewardsMatic = styled.div`
   ${devices.mobile} {
     width: 20.188rem;
     height: 17.75rem;
+    padding-left: 1.125rem;
+    padding-right: 1.25rem;
   }
 
   hr {
@@ -625,6 +635,7 @@ export const Bounty = styled.div`
 
   ${devices.mobile} {
     width: 20.375rem;
+    padding-right: 1.688rem;
   }
 `;
 
