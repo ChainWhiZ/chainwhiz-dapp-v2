@@ -2,6 +2,7 @@ import Category from './segments/category';
 import styles from './explore.module.scss';
 import Header from './segments/header';
 import Bounties from './segments/bounties';
+import Footer from './segments/footer';
 
 
 export default function ExplorePage() {
@@ -12,6 +13,7 @@ export default function ExplorePage() {
         <Header />
         <Category />
         <Bounties />
+        <Footer />
     </div>
   );
 }
