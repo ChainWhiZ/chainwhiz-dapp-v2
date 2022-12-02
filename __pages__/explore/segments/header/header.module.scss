@@ -4,7 +4,7 @@
 .header__wrapper {
   //margin-top: 22.25rem;
   @include mobile-breakpoint {
-    margin-top: 7.5625rem;
+    margin-top: 1.625rem;
     overflow: hidden;
 }
 
@@ -14,9 +14,10 @@
       margin-top: 6.063rem;
       display: flex;
       justify-content: space-between;
+
       @include mobile-breakpoint {
-      flex-direction: column;
-      gap: 4.3975rem;
+        flex-direction: column;
+        gap: 2rem;
       }
 
       .header__sec1 {
@@ -25,32 +26,30 @@
             justify-content: space-between;
             margin-bottom: 0.6rem;
 
+            @include mobile-breakpoint {
+              justify-content: center;
+              gap: 0.438rem;
+            }
+
             h1 {
                 font-weight: 400;
                 font-size: 2rem;
                 line-height: 3rem;
                 color: #FFFFFF;
+
+                @include mobile-breakpoint {
+                  font-size: 1.375rem;
+                  line-height: 2.063rem;
+                }
             }
 
             div {
                 align-self: center;
-
-                .header__title__btn {
-                    display: flex;
-                    gap: 0.5rem;
-                    
-                    div {
-                        position: relative;
-                        width: 0.2rem;
-                        height: 0.615rem;
-                        object-fit: contain;
-                        color: #FFFFFF;
-                    }
-                }
             }
 
             button {
               display: flex;
+              gap: 0.5rem;
               align-items: center;
               align-self: center;
               padding: 0.313rem 1.875rem;
@@ -60,6 +59,30 @@
               color: #FFFFFF;
               font-size: 1rem;
               line-height: 1.375rem;
+
+              @include mobile-breakpoint {
+                justify-content: center;
+                width: 1rem;
+                height: 1.375rem;
+                padding: 0.313rem 0.125rem;
+                font-size: 0.75rem;
+                line-height: 1.063rem;
+                border-radius: 0.313rem;
+              }
+
+              div {
+                  position: relative;
+                  width: 0.2rem;
+                  height: 0.615rem;
+                  object-fit: contain;
+                  color: #FFFFFF;
+              }
+
+              span {
+                @include mobile-breakpoint {
+                  display: none;
+                }
+              }
             }
         }
 
@@ -68,11 +91,11 @@
             font-size: 1.125rem;
             line-height: 1.688rem;
             color: #898989;
+
             @include mobile-breakpoint {
-            max-width: 19.5625rem;
-            font-size: .875rem;
-            line-height: 1.3125rem;
-            margin-bottom: 0;
+              font-size: 0.625rem;
+              line-height: 0.938rem;
+              text-align: center;
             }
 
             span {
@@ -84,6 +107,11 @@
       .header__sec2 {
         display: flex;
 
+        @include mobile-breakpoint {
+          justify-content: center;
+          gap: 0.5rem;
+        }
+
         .header__sec2__search {
             display: flex;
 
@@ -92,6 +120,11 @@
                 align-items: center;
                 border-radius: 1.25rem;
                 padding: 0rem 1.875rem;
+
+                @include mobile-breakpoint {
+                  padding: 0;
+                  border-radius: 0.313rem;
+                }
 
                 button {
                     width: 3rem;
@@ -102,6 +135,12 @@
                     border: #1E1C30;
                     border-radius: 0.625rem 0 0 0.625rem;
 
+                    @include mobile-breakpoint {
+                      width: 2.625rem;
+                      height: 2.75rem;
+                      border-radius: 0.313rem 0 0 0.313rem;
+                    }
+
                     div {
                         position: relative;
                         display: flex;
@@ -111,6 +150,11 @@
                         height: 1.163rem;
                         object-fit: contain;
                         color: #FFFFFF;
+
+                        @include mobile-breakpoint {
+                          width: 0.634rem;
+                          height: 0.634rem;
+                        }
                     }
                 }
 
@@ -124,6 +168,14 @@
                     font-size: 1rem;
                     line-height: 1.25rem;
                     border-radius: 0 0.625rem 0.625rem 0;
+
+                    @include mobile-breakpoint {
+                      width: 13.875rem;
+                      height: 2.75rem;
+                      font-size: 0.75rem;
+                      line-height: 0.938rem;
+                      border-radius: 0 0.313rem 0.313rem 0;
+                    }
 
                     &::placeholder {
                         color: #FFFFFF;
@@ -149,11 +201,22 @@
                 background-color: #1E1C30;
                 border-radius: 0.625rem;
 
+                @include mobile-breakpoint {
+                  width: 2.938rem;
+                  height: 2.75rem;
+                  border-radius: 0.313rem;
+                }
+
                 div {
                     position: relative;
                     width: 1.313em;
                     height: 1.125rem;
                     color: #FFFFFF;
+
+                    @include mobile-breakpoint {
+                      width: 0.938rem;
+                      height: 0.938rem;
+                    }
                 }
 
                 span {
@@ -165,6 +228,13 @@
                     height: 0.75rem;
                     background-color: #D4FF1E;
                     border-radius: 50%;
+
+                    @include mobile-breakpoint {
+                      top: -0.063rem;
+                      right: -0.063rem;
+                      width: 0.578rem;
+                      height: 0.578rem;
+                    }
                 }
             }
         }

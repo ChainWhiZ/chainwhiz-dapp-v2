@@ -18,7 +18,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.footer__sec2}>
-                    <h2>Reached the very end? Let&apos;s take a journey to the centre of the world!</h2>
+                    <span>Reached the very end? Let&apos;s take a journey to the centre of the world!</span>
                 </div>
             </div>
         </div>
