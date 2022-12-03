@@ -4,21 +4,23 @@ import { devices } from 'theme';
 
 export const ExploreBountiesWrapper = styled.div`
   box-sizing: border-box;
-  // background-image: url('/images/exportbounty/postbountybg.png');
+  background-image: url('/images/exportbounty/postbountybg.png');
   background-repeat: no-repeat;
-  // background-position: center;
+  background-position-y: 26rem;
 
   position: relative;
-  background-color: ${(props) => props.theme.colors.darkBlue};
+  background-color: #100C1A;
+  // background-color: ${(props) => props.theme.colors.darkBlue};
   font-family: ${(props) => props.theme.fonts.primaryFont};
-  background-image: url('/images/landing/helixes/BG-Postbounty.png');
+  // background-image: url('/images/landing/helixes/BG-Postbounty.png');
   // min-height: calc(100vh - 6.9376rem);
-  background-size: cover;
+  background-size: contain;
+  background-blend-mode: color-dodge;
   padding-top: 4.688rem;
   padding-bottom: 4.688rem;
 
   ${devices.mobile} {
-    // background-image: none;
+    background-image: none;
   }
 
   &::before {
