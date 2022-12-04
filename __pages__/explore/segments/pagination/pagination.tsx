@@ -3,7 +3,7 @@ import Image from 'next/image';
 import {
   PaginationWrapper,
   PaginationContainer,
-} from './exportdata/exportdata.styled';
+} from '../submission/submission.styled';
 
 export default function pagination() {
   return (

@@ -31,11 +31,6 @@ export const ExploreBountiesWrapper = styled.div`
     filter: blur(6.25rem);
     border-radius: 50%;
     object-fit: cover;
-    // background-size: 100%;
-
-    ${devices.mobile} {
-      left: 40%;
-    }
   }
 
   &::after {
@@ -138,23 +133,21 @@ export const SubmissionWrapper = styled.div`
     }
   }
 
-  .span {
+  .subnission_notify {
+    display: flex;
     color: #d4ff1e;
+    align-items: center;
     font-size: 1.25rem;
-
-    ${devices.mobile} {
-      margin-top: 2.188rem;
-      font-size: 0.75rem;
-    }
 
     &::before {
       content: '';
       display: inline-block;
-      background-image: url('/images/exportbounty/clock.png');
+      background-image: url('/images/exportbounty/clock.svg');
+      background-repeat: no-repeat;
       background-size: 100%;
-      width: 1.067rem;
-      height: 1.333rem;
-      margin-right: 1.092rem;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.625rem;
 
       ${devices.mobile} {
         width: 0.6rem;
@@ -169,20 +162,16 @@ export const SubmissionWrapper = styled.div`
     height: 4.375rem;
     background: #d4ff1e;
     border: 2px solid #d4ff1e;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     margin-top: 3.375rem;
     margin-bottom: 3.688rem;
     cursor: pointer;
     font-weight: 600;
     font-size: 1.25rem;
     border: 2px solid #d4ff1e;
-
-    ${devices.mobile} {
-      width: 21.75rem;
-      margin-top: 1.875rem;
-      margin-bottom: 0;
-      font-size: 0.875rem;
-      height: 2.563rem;
+    transition: ${(props) => props.theme.meta.fastTransitionSpeed};
+    &:hover {
+      opacity: 0.85;
     }
   }
 `;
@@ -216,17 +205,6 @@ export const GoBackButton = styled.button`
     background-image: url('/images/post/leftArrow.svg');
     height: 0.8125rem;
     width: 0.5019rem;
-
-    ${devices.mobile} {
-      margin-right: 0.687rem;
-    }
-  }
-
-  ${devices.mobile} {
-    margin-top: 1.25rem;
-    width: 23.938rem;
-    display: flex;
-    justify-content: flex-start;
   }
 `;
 
@@ -235,9 +213,6 @@ export const HeaderButtons = styled.div`
   gap: 0.75rem;
   margin-top: 11px;
 
-  ${devices.mobile} {
-    width: 23.938rem;
-  }
   div {
     width: 10.125rem;
     height: 2.625rem;
@@ -409,7 +384,7 @@ export const Reference = styled.div`
 export const Evaluation = styled.div`
   box-sizing: border-box;
   width: 46.125rem;
-  height: 14.75rem;
+  height: 15.55rem;
   border-radius: 10px;
   margin-top: 2.125rem;
   padding: 36px 53px 47px;
@@ -426,7 +401,7 @@ export const Evaluation = styled.div`
     }
   }
 
-  section{
+  section {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -455,14 +430,15 @@ export const Evaluation = styled.div`
   }
 `;
 
-export const RewardsMatic = styled.div`
-  width: 28.125rem;
-  height: 29.438rem;
-  background: #1e1c30;
-  border-radius: 10px;
-  margin-top: 1.25rem;
-  padding-top: 2.813rem;
+export const RewardsWrapper = styled.div`
+  box-sizing: border-box;
   position: relative;
+  background: ${(props) => props.theme.colors.blueFade};
+  border-radius: 0.625rem;
+  width: 28.125rem;
+  padding: 2.8125rem;
+  margin-top: 20px;
+  padding-bottom: 4.1875rem;
 
   ${devices.mobile} {
     width: 20.188rem;
@@ -470,55 +446,34 @@ export const RewardsMatic = styled.div`
     padding-left: 1.125rem;
     padding-right: 1.25rem;
   }
-
-  hr {
-    width: 22.563rem;
-    opacity: 0.5;
-    margin-top: 3rem;
-    background-color: #898989;
-
-    ${devices.mobile} {
-      width: 17.813rem;
-    }
-  }
 `;
 
-export const Rewards = styled.div`
+export const NFTRewards = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 0 2.75rem;
+  flex-direction: column;
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &.aligned {
+      align-items: center;
+    }
+  }
 
   h3 {
-    font-size: 1.375rem;
-    font-weight: 600;
     white-space: nowrap;
-
+    font-family: ${(props) => props.theme.fonts.primaryFontSemiBold};
+    font-size: 1.375rem;
+    span {
+      font-family: ${(props) => props.theme.fonts.primaryFontRegular};
+      display: inline-block;
+      font-size: 12px;
+      line-height: 18px;
+      margin-left: 10px;
+    }
     ${devices.mobile} {
       font-size: 0.563rem;
-      // margin-top: 1.75rem;
     }
-  }
-
-  small {
-    font-weight: 400;
-    opacity: 0.5;
-    font-weight: 1.125;
-  }
-
-  h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 3.438rem;
-
-    ${devices.mobile} {
-      margin-top: 1.625rem;
-    }
-  }
-
-  p {
-    margin-top: 0.188rem;
-    font-size: 1rem;
-    font-weight: 400;
   }
 
   i {
@@ -530,37 +485,44 @@ export const Rewards = styled.div`
 
     ${devices.mobile} {
       font-size: 0.75rem;
-      // margin-top: 1.938rem;
     }
+  }
 
-    &::after {
-      content: '';
-      background-image: url('/images/exportbounty/bird.png');
-      background-size: 100%;
-      width: 9.799rem;
-      height: 8.063rem;
-      margin-top: 3.063rem;
-      display: block;
+  section.nft {
+    padding-top: 55px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(137, 137, 137, 0.5);
 
-      ${devices.mobile} {
-        width: 6.576rem;
-        height: 4.98rem;
-        margin-top: 1.438rem;
-      }
+    h4 {
+      font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+      font-size: 16px;
+      line-height: 24px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      ${(props) => props.theme.fonts.primaryFontRegular};
     }
   }
 `;
 
-export const Matic = styled.div`
+export const NFTWrapper = styled.div`
+  width: 9.7988rem;
+  height: 8.0625rem;
+  position: relative;
+`;
+
+export const CryptoReward = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 2.75rem;
   text-align: right;
+  margin-top: 32px;
 
   p {
     font-size: 1rem;
-    font-weight: 600;
-    margin-top: 2.688rem;
+    line-height: 1.5rem;
+    font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+    text-transform: uppercase;
 
     ${devices.mobile} {
       font-size: 1rem;
@@ -569,9 +531,9 @@ export const Matic = styled.div`
   }
 
   h3 {
-    font-size: 1.875;
+    font-size: 1.875rem;
+    line-height: 45px;
     font-weight: 400;
-    margin-top: 2rem;
 
     ${devices.mobile} {
       font-size: 1.25rem;
@@ -579,9 +541,11 @@ export const Matic = styled.div`
     }
   }
 
-  small {
-    font-size: 1.125rem;
+  span {
+    font-style: italic;
     font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
 
     ${devices.mobile} {
       font-size: 0.875rem;
@@ -589,7 +553,7 @@ export const Matic = styled.div`
   }
 `;
 
-export const Bountyandbutton = styled.div`
+export const BountyWrapper = styled.div`
   ${devices.mobile} {
     display: flex;
     flex-direction: column-reverse;
@@ -598,68 +562,60 @@ export const Bountyandbutton = styled.div`
 `;
 
 export const Bounty = styled.div`
+  box-sizing: border-box;
   width: 28.125rem;
   height: 14.063rem;
   background: #1e1c30;
   border-radius: 10px;
-  padding-top: 2.625rem;
+  padding: 2.625rem 2.9375rem 3.0625rem;
   display: flex;
-
-  section {
-    margin-left: 1.563rem;
-  }
+  flex-direction: column;
 
   p {
-    font-size: 1.375;
+    font-size: 1.375rem;
     font-weight: 600;
-    padding-left: 2.938rem;
-
-    &::after {
-      content: '';
-      background-image: url('/images/exportbounty/zscore.png');
-      width: 4.688rem;
-      height: 4.688rem;
-      background-size: 100%;
-      display: block;
-      margin-top: 1.625rem;
-    }
+    font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
   }
 
-  h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 2.75rem;
+  .bounty__owner__image {
+    width: 4.6875rem;
+    height: 4.6875rem;
   }
 
-  div {
+  section {
     display: flex;
-    margin-top: 0.75rem;
-    gap: 0.914rem;
+    gap: 25px;
+    margin-top: 26px;
 
-    .fb {
-      width: 1.096rem;
-      height: 1.096rem;
+    & > div {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+        font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+      }
+
+      div {
+        display: flex;
+        gap: 0.914rem;
+
+        .social__image {
+          width: 21.46px;
+          height: 21.54px;
+          cursor: pointer;
+          &:first-of-type {
+            height: 17.54px;
+            width: 17.54px;
+          }
+          &:last-of-type {
+            width: 21.92px;
+            height: 19px;
+          }
+        }
+      }
     }
-
-    .discord {
-      width: 1.279rem;
-      height: 1.096rem;
-    }
-
-    .twitter {
-      width: 1.37rem;
-      height: 1.188rem;
-    }
-  }
-
-  Image {
-    background: yellow;
-    background-size: 100%;
-  }
-
-  ${devices.mobile} {
-    width: 20.375rem;
-    padding-right: 1.688rem;
   }
 `;
 

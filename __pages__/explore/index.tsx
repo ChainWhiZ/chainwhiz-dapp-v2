@@ -11,46 +11,44 @@ import {
   Overview,
   Reference,
   Evaluation,
-  RewardsMatic,
-  Rewards,
-  Matic,
-  Bountyandbutton,
+  RewardsWrapper,
+  NFTRewards,
+  CryptoReward,
+  BountyWrapper,
   Bounty,
+  NFTWrapper,
   SubBounty,
   Sublist
 } from "./explorebounties.styled";
 import Checkbox from "components/checkbox";
 import RenderStyledImage from "components/image/renderstyledimage";
-import { EXPORT_BOUNTY } from "data/export";
-import Submission from "./exportdata";
-import Pagination from "./pagination";
+import { SAMPLE_SUBMISSIONS } from "data/submissions";
+import Submission from "./segments/submission";
+import Pagination from "./segments/pagination/pagination";
+import { DEFAULT_CHECKBOX_PROPS, EVALUATION_CRITERIA } from "data/evaluation";
+import RenderImage from "components/image/renderimage";
 
-const DEFAULT_CHECKBOX_PROPS = {
-  checked: true,
-  label: '',
-  onClick: () => {true}
-};
-
-const EVALUATION_CRITERIA = [
-  "Any Instructions that needs to be processed",
-  "Find all neccessary resources from here.",
-  "Any Instructions that needs to be processed"
+const SOCIAL_IMAGES = [
+  "/images/landing/footer/fb.svg",
+  "/images/landing/footer/discord.svg",
+  "/images/landing/footer/twitter.svg"
 ];
 
 
 export default function Explore() {
   const router = useRouter();
+
+  const goBack = () => router.back();
   return (
     <ExploreBountiesWrapper>
       <ExploreDisplay>
 
         <HackingWrapper>
-          <GoBackButton onClick={() => router.back()}>
+          <GoBackButton onClick={goBack}>
             <span>Back</span>
           </GoBackButton>
 
           <h3>Hacking Challenge Mania</h3>
-
           <HeaderButtons>
             <div>Ethical Hacking</div>
             <div>Zeplin engine</div>
@@ -100,70 +98,81 @@ export default function Explore() {
               }
             </section>
           </Evaluation>
-
         </HackingWrapper>
 
         <SubmissionWrapper>
-          <span className="span">Submissions are open!</span>
-          <RewardsMatic>
-            <Rewards>
-              <div>
+          <span className="subnission_notify">Submissions are open!</span>
+          <RewardsWrapper>
+
+            <NFTRewards>
+              <section className="aligned">
                 <h3>
-                  Rewards<small>(NFT + Crypto)</small>
+                  Rewards<span>( NFT + Crypto )</span>
                 </h3>
-                <h4>NFT</h4>
-                <p>Nemesis</p>
-              </div>
-              <div>
-                <i>Devices</i>
-              </div>
-            </Rewards>
-            <hr />
-            <Matic>
+                <i>Details</i>
+              </section>
+              <section className="nft">
+                <div>
+                  <h4>NFT</h4>
+                  <p>Nemesis</p>
+                </div>
+                <NFTWrapper>
+                  <RenderImage src="/images/exportbounty/bird.png"/>
+                </NFTWrapper>
+              </section>
+            </NFTRewards>
+
+            <CryptoReward>
               <p>Crypto</p>
               <div>
                 <h3>0.025 MATIC</h3>
-                <small>$21 USD</small>
+                <span>$21 USD</span>
               </div>
-            </Matic>
-          </RewardsMatic>
-          <Bountyandbutton>
+            </CryptoReward>
+          </RewardsWrapper>
+
+          <BountyWrapper>
             <button>Submit Solution</button>
             <Bounty>
               <p>Bounty from</p>
               <section>
-                <h3>DAO Name</h3>
+                <RenderStyledImage
+                  className="bounty__owner__image"
+                  src="/images/exportbounty/zscore.png"
+                />
                 <div>
-                  <RenderStyledImage
-                    className="fb"
-                    src="/images/landing/footer/fb.svg"
-                  />
-                  <RenderStyledImage
-                    className="discord"
-                    src="/images/landing/footer/discord.svg"
-                  />
-                  <RenderStyledImage
-                    className="twitter"
-                    src="/images/landing/footer/twitter.svg"
-                  />
+                  <h3>DAO Name</h3>
+                  <div>
+                    {
+                      SOCIAL_IMAGES.map((url) => (
+                        <RenderStyledImage
+                          key={url}
+                          className="social__image"
+                          src="/images/landing/footer/fb.svg"
+                        />
+                      ))
+                    }
+                  </div>
+
                 </div>
               </section>
             </Bounty>
-          </Bountyandbutton>
+          </BountyWrapper>
         </SubmissionWrapper>
       </ExploreDisplay>
-      {/* <Sublist>
+
+      <Sublist>
         <SubBounty>
           <hr />
-          <h3>Submission(8)</h3>
+          <h3>Submission({SAMPLE_SUBMISSIONS.length})</h3>
           <div>
-            {EXPORT_BOUNTY.map((oneSubmission, index) => (
+            {SAMPLE_SUBMISSIONS.map((oneSubmission, index) => (
               <Submission key={index} submission={oneSubmission} />
             ))}
           </div>
         </SubBounty>
         <Pagination />
-      </Sublist> */}
+      </Sublist>
     </ExploreBountiesWrapper>
   );
 }

@@ -1,4 +1,4 @@
-export const EXPORT_BOUNTY = [
+export const SAMPLE_SUBMISSIONS = [
   {
     image: "/images/exportbounty/man.png",
     time: "9 hours ago",

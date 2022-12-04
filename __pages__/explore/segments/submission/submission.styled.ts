@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { GlobalInputWrapper } from '../../post/tabs/tabs.styled';
 import { devices } from 'theme';
 
 export const SubmissionContainer = styled.div`
@@ -7,8 +6,9 @@ export const SubmissionContainer = styled.div`
   display: flex;
 `;
 
-export const DisplaySub = styled.div`
+export const Submissions = styled.div`
   margin-top: 2.125rem;
+  box-sizing: border-box;
   cursor: pointer;
   width: 37.125rem;
   height: 6.188rem;
@@ -16,16 +16,15 @@ export const DisplaySub = styled.div`
   border-radius: 10px;
   display: flex;
   align-items: center;
-  padding-top: 1.25rem;
-  padding-bottom: 1.188rem;
-  
+  padding: 20px 30px;
 
   aside {
-    padding-left: 1.875rem;
-
+    position: relative;
+    height: 60px;
+    width: 60px;
     ${devices.mobile} {
-    width: 2.875rem;
-    height: 2.875rem;
+      width: 2.875rem;
+      height: 2.875rem;
     }
   }
 
@@ -59,12 +58,10 @@ export const DisplaySub = styled.div`
 `;
 
 export const PaginationContainer = styled.div`
-  // display: flex;
-  // align-items: center;
   margin-top: 3.688rem;
-  `;
-  
-  export const PaginationWrapper = styled.div`
+`;
+
+export const PaginationWrapper = styled.div`
   display: flex;
   align-items: center;
 
