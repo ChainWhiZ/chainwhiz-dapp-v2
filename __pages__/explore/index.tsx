@@ -16,9 +16,9 @@ export default function Explore() {
     <ExploreBountiesWrapper>
 
       <ExploreDisplay>
-        <BountyDetails />
-        {/* <BountySubmission /> */}
+        {/* <BountyDetails /> */}
         <div></div>
+        <BountySubmission />
       </ExploreDisplay>
 
       {/* <Sublist>

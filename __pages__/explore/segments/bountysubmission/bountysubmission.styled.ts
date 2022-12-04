@@ -27,46 +27,32 @@ export const SubmissionWrapper = styled.div`
       display: none;
     }
   }
+`;
 
-  .subnission_notify {
-    display: flex;
-    color: #d4ff1e;
-    align-items: center;
-    font-size: 1.25rem;
-
-    &::before {
-      content: '';
-      display: inline-block;
-      background-image: url('/images/exportbounty/clock.svg');
-      background-repeat: no-repeat;
-      background-size: 100%;
-      width: 2rem;
-      height: 2rem;
-      margin-right: 0.625rem;
-
-      ${devices.mobile} {
-        width: 0.6rem;
-        height: 0.75rem;
-        margin-right: 0.513rem;
-      }
-    }
+export const SubmissionsNotify = styled.div`
+  display: flex;
+  color: ${(props) => props.theme.colors.neonGreen};
+  align-items: center;
+  font-size: 1.25rem;
+  ${devices.mobile} {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
   }
 
-  button {
-    width: 28rem;
-    height: 4.375rem;
-    background: #d4ff1e;
-    border: 2px solid #d4ff1e;
-    border-radius: 0.625rem;
-    margin-top: 3.375rem;
-    margin-bottom: 3.688rem;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.25rem;
-    border: 2px solid #d4ff1e;
-    transition: ${(props) => props.theme.meta.fastTransitionSpeed};
-    &:hover {
-      opacity: 0.85;
+  &::before {
+    content: '';
+    display: inline-block;
+    background-image: url('/images/exportbounty/clock.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.625rem;
+
+    ${devices.mobile} {
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
     }
   }
 `;
@@ -83,9 +69,43 @@ export const RewardsWrapper = styled.div`
 
   ${devices.mobile} {
     width: 20.188rem;
-    height: 17.75rem;
-    padding-left: 1.125rem;
-    padding-right: 1.25rem;
+    height: fit-content;
+    padding: 28px 18px 28px;
+  }
+`;
+
+export const NFTRewardType = styled.h3`
+  white-space: nowrap;
+  font-family: ${(props) => props.theme.fonts.primaryFontSemiBold};
+  font-size: 1.375rem;
+  span {
+    font-family: ${(props) => props.theme.fonts.primaryFontRegular};
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 10px;
+  }
+  ${devices.mobile} {
+    font-size: 12px;
+    line-height: 18px;
+    span {
+      font-size: 9px;
+      line-height: 13.5px;
+      margin-left: 0;
+    }
+  }
+`;
+
+export const NFTDetails = styled.i`
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  ${devices.mobile} {
+    font-size: 12px;
+    line-height: 18px;
   }
 `;
 
@@ -101,48 +121,32 @@ export const NFTRewards = styled.div`
     }
   }
 
-  h3 {
-    white-space: nowrap;
-    font-family: ${(props) => props.theme.fonts.primaryFontSemiBold};
-    font-size: 1.375rem;
-    span {
-      font-family: ${(props) => props.theme.fonts.primaryFontRegular};
-      display: inline-block;
-      font-size: 12px;
-      line-height: 18px;
-      margin-left: 10px;
-    }
-    ${devices.mobile} {
-      font-size: 0.563rem;
-    }
-  }
-
-  i {
-    font-size: 1rem;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-
-    ${devices.mobile} {
-      font-size: 0.75rem;
-    }
-  }
-
   section.nft {
     padding-top: 55px;
     padding-bottom: 48px;
     border-bottom: 1px solid rgba(137, 137, 137, 0.5);
+    ${devices.mobile} {
+      padding-top: 25px;
+      padding-bottom: 33px;
+    }
 
     h4 {
       font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
       font-size: 16px;
       line-height: 24px;
+      ${devices.mobile} {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
     p {
+      font-family: ${(props) => props.theme.fonts.primaryFontRegular};
       font-size: 16px;
       line-height: 24px;
-      ${(props) => props.theme.fonts.primaryFontRegular};
+      ${devices.mobile} {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
   }
 `;
@@ -151,6 +155,10 @@ export const NFTWrapper = styled.div`
   width: 9.7988rem;
   height: 8.0625rem;
   position: relative;
+  ${devices.mobile} {
+    width: 105.22px;
+    height: 79.68px;
+  }
 `;
 
 export const CryptoReward = styled.div`
@@ -158,6 +166,9 @@ export const CryptoReward = styled.div`
   justify-content: space-between;
   text-align: right;
   margin-top: 32px;
+  ${devices.mobile} {
+    margin-top: 25px;
+  }
 
   p {
     font-size: 1rem;
@@ -166,8 +177,9 @@ export const CryptoReward = styled.div`
     text-transform: uppercase;
 
     ${devices.mobile} {
-      font-size: 1rem;
-      margin-top: 1.628rem;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: ${(props) => props.theme.fonts.primaryFont};
     }
   }
 
@@ -178,7 +190,8 @@ export const CryptoReward = styled.div`
 
     ${devices.mobile} {
       font-size: 1.25rem;
-      margin-top: 1.563rem;
+      line-height: 30px;
+      margin-top: 0;
     }
   }
 
@@ -202,58 +215,113 @@ export const BountyWrapper = styled.div`
   }
 `;
 
+export const SubmissionButton = styled.div`
+  display: flex;
+  color: black;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d4ff1e;
+  background: ${(props) => props.theme.colors.neonGreen};
+  transition: ${(props) => props.theme.meta.fastTransitionSpeed};
+  font-family: ${(props) => props.theme.fonts.primaryFontSemiBold};
+
+  width: 28rem;
+  height: 4.375rem;
+  border-radius: 0.625rem;
+  margin-top: 3.375rem;
+  margin-bottom: 3.688rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  &:hover {
+    opacity: 0.85;
+  }
+
+  ${devices.mobile} {
+    width: 326px;
+    height: 41px;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+`;
+
 export const Bounty = styled.div`
+  display: flex;
   box-sizing: border-box;
+  background: ${(props) => props.theme.colors.blueFade};
+  flex-direction: column;
   width: 28.125rem;
   height: 14.063rem;
-  background: #1e1c30;
   border-radius: 10px;
   padding: 2.625rem 2.9375rem 3.0625rem;
-  display: flex;
-  flex-direction: column;
+  ${devices.mobile} {
+    width: 326px;
+    height: 176px;
+    padding: 28px 26px 23px;
+  }
 
   p {
     font-size: 1.375rem;
     font-weight: 600;
     font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+    ${devices.mobile} {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   .bounty__owner__image {
     width: 4.6875rem;
     height: 4.6875rem;
+    ${devices.mobile} {
+      width: 75px;
+      height: 75px;
+    }
+  }
+`;
+
+export const BountyOwnerDetails = styled.section`
+  display: flex;
+  gap: 25px;
+  margin-top: 26px;
+
+  ${devices.mobile} {
+    margin-top: 23px;
   }
 
   section {
     display: flex;
-    gap: 25px;
-    margin-top: 26px;
+    flex-direction: column;
 
-    & > div {
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+      ${devices.mobile} {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    div {
       display: flex;
-      flex-direction: column;
-
-      h3 {
-        font-size: 1.25rem;
-        margin-bottom: 12px;
-        font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+      gap: 0.914rem;
+      ${devices.mobile} {
+        gap: 14.62px;
       }
 
-      div {
-        display: flex;
-        gap: 0.914rem;
-
-        .social__image {
-          width: 21.46px;
-          height: 21.54px;
-          cursor: pointer;
-          &:first-of-type {
-            height: 17.54px;
-            width: 17.54px;
-          }
-          &:last-of-type {
-            width: 21.92px;
-            height: 19px;
-          }
+      .social__image {
+        width: 21.46px;
+        height: 21.54px;
+        cursor: pointer;
+        &:first-of-type {
+          height: 17.54px;
+          width: 17.54px;
+        }
+        &:last-of-type {
+          width: 21.92px;
+          height: 19px;
         }
       }
     }

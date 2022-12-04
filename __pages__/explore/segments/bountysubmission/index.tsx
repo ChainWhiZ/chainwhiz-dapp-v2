@@ -6,9 +6,14 @@ import {
   RewardsWrapper,
   NFTRewards,
   NFTWrapper,
+  NFTDetails,
   CryptoReward,
+  NFTRewardType,
+  SubmissionButton,
   BountyWrapper,
-  Bounty
+  BountyOwnerDetails,
+  Bounty,
+  SubmissionsNotify,
 } from './bountysubmission.styled';
 
 const SOCIAL_IMAGES = [
@@ -20,14 +25,14 @@ const SOCIAL_IMAGES = [
 export default function BountySubmission() {
   return (
     <SubmissionWrapper>
-      <span className="subnission_notify">Submissions are open!</span>
+      <SubmissionsNotify>Submissions are open!</SubmissionsNotify>
       <RewardsWrapper>
         <NFTRewards>
           <section className="aligned">
-            <h3>
+            <NFTRewardType>
               Rewards<span>( NFT + Crypto )</span>
-            </h3>
-            <i>Details</i>
+            </NFTRewardType>
+            <NFTDetails>Details</NFTDetails>
           </section>
           <section className="nft">
             <div>
@@ -50,27 +55,27 @@ export default function BountySubmission() {
       </RewardsWrapper>
 
       <BountyWrapper>
-        <button>Submit Solution</button>
+        <SubmissionButton>Submit Solution</SubmissionButton>
         <Bounty>
           <p>Bounty from</p>
-          <section>
+          <BountyOwnerDetails>
             <RenderStyledImage
               className="bounty__owner__image"
               src="/images/exportbounty/zscore.png"
             />
-            <div>
+            <section>
               <h3>DAO Name</h3>
               <div>
                 {SOCIAL_IMAGES.map((url) => (
                   <RenderStyledImage
                     key={url}
                     className="social__image"
-                    src="/images/landing/footer/fb.svg"
+                    src={url}
                   />
                 ))}
               </div>
-            </div>
-          </section>
+            </section>
+          </BountyOwnerDetails>
         </Bounty>
       </BountyWrapper>
     </SubmissionWrapper>
