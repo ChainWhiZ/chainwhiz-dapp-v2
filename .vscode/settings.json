@@ -26,6 +26,6 @@
     "source.fixAll.eslint": true
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "bysabi.prettier-vscode-standard"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
