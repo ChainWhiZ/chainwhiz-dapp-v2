@@ -1,13 +1,14 @@
 import { useRouter } from "next/router";
 import React from "react";
+import { openNewWindow } from "utils/utilities";
 import {
   ExploreBountiesWrapper,
   ExploreDisplay,
   HackingWrapper,
   SubmissionWrapper,
   GoBackButton,
-  HaczepBtn,
-  DaysDisplay,
+  HeaderButtons,
+  Overview,
   Reference,
   Evaluation,
   RewardsMatic,
@@ -24,64 +25,82 @@ import { EXPORT_BOUNTY } from "data/export";
 import Submission from "./exportdata";
 import Pagination from "./pagination";
 
+const DEFAULT_CHECKBOX_PROPS = {
+  checked: true,
+  label: '',
+  onClick: () => {true}
+};
+
+const EVALUATION_CRITERIA = [
+  "Any Instructions that needs to be processed",
+  "Find all neccessary resources from here.",
+  "Any Instructions that needs to be processed"
+];
+
+
 export default function Explore() {
   const router = useRouter();
   return (
     <ExploreBountiesWrapper>
       <ExploreDisplay>
+
         <HackingWrapper>
           <GoBackButton onClick={() => router.back()}>
             <span>Back</span>
           </GoBackButton>
+
           <h3>Hacking Challenge Mania</h3>
-          <HaczepBtn>
-            <p>Ethical Hacking</p>
-            <p>Zeplin engine</p>
-          </HaczepBtn>
-          <DaysDisplay>
+
+          <HeaderButtons>
+            <div>Ethical Hacking</div>
+            <div>Zeplin engine</div>
+          </HeaderButtons>
+
+          <Overview>
             <div>
               <span>6</span>
               <p>Prices</p>
             </div>
-            <hr />
             <div>
               <span>100 Days</span>
               <p>Deadline</p>
             </div>
-            <hr />
             <div>
               <span>258</span>
               <p>Contributions</p>
             </div>
-          </DaysDisplay>
+          </Overview>
+
           <Reference>
-            <h4>Reference URL</h4>
-            <span>https://www.ninjabrothers.com/rdp/admin-sys</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum odio ex, vehicula at venenatis in, ullamcorper non
-              neque. Fusce ut efficitur libero. Phasellus tempus ex a gravida
-              ullamcorper. Phasellus facilisis urna non leo tincidunt tempor.
-              Orci varius natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus.
-            </p>
-            <small>See more...</small>
+            <div>
+              <h4>Reference URL</h4>
+              <span onClick={() => openNewWindow("refrenceURL") }> https://www.ninjabrothers.com/rdp/admin-sys</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum odio ex, vehicula at venenatis in, ullamcorper non
+                neque. Fusce ut efficitur libero. Phasellus tempus ex a gravida
+                ullamcorper. Phasellus facilisis urna non leo tincidunt tempor.
+                Orci varius natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus.
+              </p>
+              <small>See more...</small>
+            </div>
           </Reference>
+
           <Evaluation>
             <h4>Evaluation Criterias</h4>
-            <div>
-              <Checkbox checked={true} label={""} onClick={() => "err"} />
-              <p>Any instructions that needs to be processed</p>
-            </div>
-            <div className="evaluate">
-              <Checkbox checked={true} label={""} onClick={() => "err"} />
-              <p>Find all neccessary resources from here</p>
-            </div>
-            <div>
-              <Checkbox checked={true} label={""} onClick={() => "err"} />
-              <p>Any instructions that needs to be processed</p>
-            </div>
+            <section>
+              {
+                EVALUATION_CRITERIA.map((ec:string, index:number) => (
+                  <div key={index}>
+                    <Checkbox {...DEFAULT_CHECKBOX_PROPS}/>
+                    <p>{ec}</p>
+                  </div>
+                ))
+              }
+            </section>
           </Evaluation>
+
         </HackingWrapper>
 
         <SubmissionWrapper>
@@ -133,7 +152,7 @@ export default function Explore() {
           </Bountyandbutton>
         </SubmissionWrapper>
       </ExploreDisplay>
-      <Sublist>
+      {/* <Sublist>
         <SubBounty>
           <hr />
           <h3>Submission(8)</h3>
@@ -144,7 +163,7 @@ export default function Explore() {
           </div>
         </SubBounty>
         <Pagination />
-      </Sublist>
+      </Sublist> */}
     </ExploreBountiesWrapper>
   );
 }

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { GlobalInputWrapper } from '../post/tabs/tabs.styled';
 import { devices } from 'theme';
 
 export const ExploreBountiesWrapper = styled.div`
@@ -9,15 +8,12 @@ export const ExploreBountiesWrapper = styled.div`
   background-position-y: 26rem;
 
   position: relative;
-  background-color: #100C1A;
-  // background-color: ${(props) => props.theme.colors.darkBlue};
+  background-color: #100c1a;
   font-family: ${(props) => props.theme.fonts.primaryFont};
-  // background-image: url('/images/landing/helixes/BG-Postbounty.png');
-  // min-height: calc(100vh - 6.9376rem);
   background-size: contain;
   background-blend-mode: color-dodge;
-  padding-top: 4.688rem;
-  padding-bottom: 4.688rem;
+  padding-top: 132px;
+  padding-bottom: 94px;
 
   ${devices.mobile} {
     background-image: none;
@@ -75,11 +71,17 @@ export const ExploreDisplay = styled.div`
 `;
 
 export const HackingWrapper = styled.div`
-  ${devices.mobile} {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: -9px;
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+
+    ${devices.mobile} {
+      width: 23.938rem;
+      white-space: nowrap;
+    }
   }
+
   &::after {
     content: '';
     background: #ffffff;
@@ -90,7 +92,7 @@ export const HackingWrapper = styled.div`
     width: 30.25rem;
     height: 30.25rem;
     top: 28rem;
-    left: -10rem;
+    left: -16rem;
     filter: blur(6.25rem);
     background-size: 100%;
 
@@ -102,21 +104,17 @@ export const HackingWrapper = styled.div`
       opacity: 0.3;
     }
   }
-  h3 {
-    font-size: 2rem;
-    font-weight: 600;
-
-    ${devices.mobile} {
-      width: 23.938rem;
-      white-space: nowrap;
-    }
+  ${devices.mobile} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
 export const SubmissionWrapper = styled.div`
   position: relative;
 
-   ${devices.mobile} {
+  ${devices.mobile} {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -159,10 +157,10 @@ export const SubmissionWrapper = styled.div`
       margin-right: 1.092rem;
 
       ${devices.mobile} {
-      width: 0.6rem;
-      height: 0.75rem;
-      margin-right: 0.513rem;
-    }
+        width: 0.6rem;
+        height: 0.75rem;
+        margin-right: 0.513rem;
+      }
     }
   }
 
@@ -177,7 +175,7 @@ export const SubmissionWrapper = styled.div`
     cursor: pointer;
     font-weight: 600;
     font-size: 1.25rem;
-    border: 2px solid #D4FF1E;
+    border: 2px solid #d4ff1e;
 
     ${devices.mobile} {
       width: 21.75rem;
@@ -190,46 +188,49 @@ export const SubmissionWrapper = styled.div`
 `;
 
 export const GoBackButton = styled.button`
-  // background: ${(props) => props.theme.colors.blueFade};
-  transition: ${(props) => props.theme.meta.fastTransitionSpeed};
   color: white;
-  cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  cursor: pointer;
   align-items: center;
-  border: 0;
-  gap: 1.25rem;
-  height: 3.125rem;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
-  border-radius: 0.625rem;
   background: transparent;
+  justify-content: space-between;
+  position: absolute;
+  transition: ${(props) => props.theme.meta.fastTransitionSpeed};
+  border: 0;
+  top: 75px;
+  gap: 1.25rem;
+  border-radius: 0.625rem;
+  &:hover {
+    opacity: 0.85;
+  }
+
+  span {
+    font-size: 1.25rem;
+    font-family: ${(props) => props.theme.fonts.primaryFontMedium};
+  }
 
   &::before {
-    content: "";
+    content: '';
     background-size: 100%;
     display: inline-block;
-    background-image: url("/images/post/leftArrow.svg");
+    background-image: url('/images/post/leftArrow.svg');
     height: 0.8125rem;
     width: 0.5019rem;
 
-     ${devices.mobile} {
-        margin-right: 0.687rem;
-     }
+    ${devices.mobile} {
+      margin-right: 0.687rem;
+    }
   }
 
-  &:hover {
-    opacity: 0.8;
-  }
   ${devices.mobile} {
     margin-top: 1.25rem;
     width: 23.938rem;
     display: flex;
-    justify-content: flex-start
+    justify-content: flex-start;
   }
 `;
 
-export const HaczepBtn = styled.div`
+export const HeaderButtons = styled.div`
   display: flex;
   gap: 0.75rem;
   margin-top: 11px;
@@ -237,7 +238,7 @@ export const HaczepBtn = styled.div`
   ${devices.mobile} {
     width: 23.938rem;
   }
-  p {
+  div {
     width: 10.125rem;
     height: 2.625rem;
     background: #1e1c30;
@@ -251,18 +252,35 @@ export const HaczepBtn = styled.div`
   }
 `;
 
-export const DaysDisplay = styled.div`
+export const Overview = styled.div`
   display: flex;
-  width: 45.75rem;
-  height: 7.625rem;
-  background: #1e1c30;
-  border-radius: 10px;
   align-items: center;
-  margin-top: 2rem;
-  padding-top: 1.313rem;
-  padding-left: 3.688rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #1e1c30;
+
+  width: 46.125rem;
+  height: 7.625rem;
+  border-radius: 0.625rem;
+  margin-top: 1.9375rem;
+  padding: 24px 56px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:nth-of-type(2) {
+      padding: 0 81px;
+      border-left: 1px solid rgba(137, 137, 137, 0.2);
+      border-right: 1px solid rgba(137, 137, 137, 0.2);
+    }
+    ${devices.mobile} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   ${devices.mobile} {
     width: 20rem;
@@ -272,8 +290,9 @@ export const DaysDisplay = styled.div`
   }
 
   span {
-    font-size: 2rem;
-    color: #d4ff1e;
+    font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+    color: ${(props) => props.theme.colors.neonGreen};
+    font-size: 1.9375rem;
 
     ${devices.mobile} {
       font-size: 1.079rem;
@@ -297,29 +316,18 @@ export const DaysDisplay = styled.div`
       gap: 0.944rem;
     }
   }
-
-  div {
-    ${devices.mobile} {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
 `;
 
 export const Reference = styled.div`
-  width: 46.125rem;
-  height: 21.938rem;
-  background: #1e1c30;
-  border-radius: 10px;
-  margin-top: 1.938rem;
   display: flex;
-  flex-direction: column;
-  align-item: center;
   justify-content: center;
-  padding-left: 3.313rem;
-  padding-top: 2.375rem;
-  padding-bottom: 2.688rem;
+  box-sizing: border-box;
+  background: ${(props) => props.theme.colors.blueFade};
+  width: 46.125rem;
+  border-radius: 0.625rem;
+  padding-top: 38px;
+  padding-bottom: 43px;
+  margin-top: 1.938rem;
 
   ${devices.mobile} {
     width: 20rem;
@@ -328,108 +336,122 @@ export const Reference = styled.div`
     padding-right: 1.625rem;
   }
 
-  h4 {
-    font-size: 1.375rem;
+  div {
+    h4 {
+      font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
+      line-height: 33px;
+      margin-bottom: 7px;
+      font-size: 1.375rem;
 
-    ${devices.mobile} {
+      ${devices.mobile} {
+        margin-top: 1.75rem;
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.125rem;
+      color: ${(props) => props.theme.colors.neonGreen};
+      transition: ${(props) => props.theme.meta.fastTransitionSpeed};
+      &:hover {
+        opacity: 0.85;
+      }
+
+      &::before {
+        content: '';
+        background-size: 100%;
+        display: inline-block;
+        background-image: url('/images/exportbounty/globe.png');
+        height: 1.25rem;
+        width: 1.25rem;
+        margin-right: 0.75rem;
+      }
+
+      ${devices.mobile} {
+        font-size: 0.75rem;
+        white-space: break-spaces;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      max-width: 39.625rem;
       margin-top: 1.75rem;
-    }
-  }
+      margin-bottom: 0.8125rem;
+      font-size: 1.125rem;
+      line-height: 27px;
 
-  span {
-    font-size: 1.125rem;
-    color: #d4ff1e;
-    display: flex;
-    align-items: center;
-    margin-top: 0.438rem;
-
-    &::before {
-      content: '';
-      background-size: 100%;
-      display: inline-block;
-      background-image: url('/images/exportbounty/globe.png');
-      height: 1.25rem;
-      width: 1.25rem;
-      margin-right: 0.75rem;
+      ${devices.mobile} {
+        font-size: 0.875rem;
+      }
     }
 
-    ${devices.mobile} {
-      font-size: 0.75rem;
-      white-space: break-spaces;
-    }
-  }
+    small {
+      cursor: pointer;
+      color: ${(props) => props.theme.colors.neonGreen};
+      transition: ${(props) => props.theme.meta.fastTransitionSpeed};
+      font-size: 1.125rem;
+      margin-top: 0.813rem;
 
-  p {
-    max-width: 39.625rem;
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 27px;
-    margin-top: 1.75rem;
+      &:hover {
+        opacity: 0.85;
+      }
 
-    ${devices.mobile} {
-      font-size: 0.875rem;
-    }
-  }
-
-  small {
-    font-size: 1.125rem;
-    color: #d4ff1e;
-    margin-top: 0.813rem;
-
-    ${devices.mobile} {
-      margin-bottom: 2.375rem;
+      ${devices.mobile} {
+        margin-bottom: 2.375rem;
+      }
     }
   }
 `;
 
 export const Evaluation = styled.div`
+  box-sizing: border-box;
   width: 46.125rem;
   height: 14.75rem;
-  background: #1e1c30;
   border-radius: 10px;
   margin-top: 2.125rem;
-  padding-top: 2.25rem;
-  padding-left: 3.313rem;
-
-  ${devices.mobile} {
-    width: 20rem;
-    height: 13.625rem;
-    padding-left: 1.563rem;
-    padding-right: 1.688rem;
-  }
-
-  .evaluate{
-    ${devices.mobile} {
-      margin: 0.625rem 0;
-    }
-  }
+  padding: 36px 53px 47px;
+  background: ${(props) => props.theme.colors.blueFade};
 
   h4 {
-    font-weight: 600;
     font-size: 1.375rem;
-    margin-bottom: 1.375rem;
+    font-family: ${(props) => props.theme.fonts.primaryFontSemiBold};
+    line-height: 2.0625rem;
+    margin-bottom: 1.25rem;
 
     ${devices.mobile} {
       font-size: 1.125rem;
     }
   }
 
+  section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
   div {
     display: flex;
-
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-left: 0.438rem;
+      ${devices.mobile} {
+        font-size: 0.75rem;
+      }
+    }
     ${devices.mobile} {
       line-height: 1.25rem;
     }
   }
 
-  p {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-left: 0.438rem;
-
-    ${devices.mobile} {
-      font-size: 0.75rem;
-    }
+  ${devices.mobile} {
+    width: 20rem;
+    height: 236px;
+    padding-left: 1.563rem;
+    padding-right: 1.688rem;
   }
 `;
 
@@ -456,7 +478,7 @@ export const RewardsMatic = styled.div`
     background-color: #898989;
 
     ${devices.mobile} {
-    width: 17.813rem;
+      width: 17.813rem;
     }
   }
 `;
@@ -568,12 +590,12 @@ export const Matic = styled.div`
 `;
 
 export const Bountyandbutton = styled.div`
-  ${devices.mobile}{
+  ${devices.mobile} {
     display: flex;
     flex-direction: column-reverse;
     margin-top: 1.438rem;
   }
-`
+`;
 
 export const Bounty = styled.div`
   width: 28.125rem;
@@ -642,16 +664,16 @@ export const Bounty = styled.div`
 `;
 
 export const SubBounty = styled.div`
-   div{
+  div {
     max-width: 77.5rem;
     display: flex;
     gap: 1.875rem;
     flex-wrap: wrap;
-     ${devices.mobile} {
+    ${devices.mobile} {
       width: 19.5rem;
       gap: 0.938rem;
     }
-   }
+  }
 `;
 
 export const Sublist = styled.div`
