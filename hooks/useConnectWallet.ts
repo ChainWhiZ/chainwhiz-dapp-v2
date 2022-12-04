@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { injected } from 'utils';
 import { IS_DEV } from 'utils/utilities';
-import useEagerConnect from './useEagerConnect';
-import { useInactiveListener } from './useInactiveListener';
+import useEagerConnect from './useeagerconnect';
+import { useInactiveListener } from './useinactivelistener';
 import { logError } from 'utils/logger';
 
 export default function useConnectWallet() {
@@ -18,10 +18,10 @@ export default function useConnectWallet() {
       setActivatingConnector(undefined);
     }
   }, [activatingConnector, connector]);
-
+  // comment
   useEffect(() => {
     if (!error) return;
-    let message = "";
+    let message = '';
     if (error.name === 'UnsupportedChainIdError') {
       message = `Unsupported network, please connect to the ${
         IS_DEV ? 'polygon test' : 'polygon'
