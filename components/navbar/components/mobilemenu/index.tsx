@@ -1,13 +1,14 @@
 import { useWeb3React } from "@web3-react/core";
 import RenderStyledImage from "components/image/renderstyledimage";
-import useConnectWallet from "hooks/useConnectWallet";
+import useConnectWallet from "hooks/useconnectwallet";
 import React, { useState } from "react";
 import { formatAddress } from "utils";
+import Link from 'next/link';
 import { CloseIcon, HamBurgerMenu, MobileBellIcon } from "./assets";
 import styles from "./mobilemenu.module.scss";
 
-const OPEN_ICON = "/images/nav/plus.svg";
-const CLOSE_ICON = "/images/nav/minus.svg";
+const OPEN_ICON = '/images/nav/plus.svg';
+const CLOSE_ICON = '/images/nav/minus.svg';
 const ICONS = [OPEN_ICON, CLOSE_ICON];
 
 export default function MobileMenu() {
@@ -45,7 +46,7 @@ export default function MobileMenu() {
                 {menuOpen && (
                   <>
                     <p>Your Bounties</p>
-                    <p>Post a Bounty</p>
+                    <Link href='/post'><p>Post a Bounty</p></Link>
                     <p>Explore Bounties</p>
                   </>
                 )}

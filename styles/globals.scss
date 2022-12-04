@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: $primary-font;
   overflow-x: hidden;
+  box-sizing: border-box;
 
   @media (min-width: $mobile-breakpoint) and (max-width: $max-breakpoint) {
     font-size: 0.8333vw /* 16px -> .8333vw */;
@@ -26,4 +27,18 @@ h6,
 p {
   margin: 0;
   padding: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
