@@ -36,7 +36,7 @@ export const ExploreWrapper = styled.div`
         top: 0;
         left: 9.5313rem /* 152.5px -> 9.5313rem */;
         ${devices.mobile} {
-            left: calc(50% - 84px); //center it to the screen. 84 = 168/2
+            display: none;
         }
     }
 `

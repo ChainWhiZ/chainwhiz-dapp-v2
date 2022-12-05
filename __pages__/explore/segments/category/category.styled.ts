@@ -11,6 +11,11 @@ export const CategoryContent = styled.div`
     margin: 3.375rem auto;
     display: flex;
     justify-content: space-between;
+
+    ${devices.mobile} {
+        margin: 3.375rem 1.25rem;
+        gap: 1.25rem;
+    }
 `
 
 export const CategoryText = styled.div`
@@ -23,7 +28,6 @@ export const CategoryText = styled.div`
     ${devices.mobile} {
         font-size: 1rem;
         line-height: 1.5rem;
-        padding: 0.625rem 1.25rem;
     }
 `
 
