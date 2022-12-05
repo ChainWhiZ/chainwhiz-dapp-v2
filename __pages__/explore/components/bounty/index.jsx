@@ -1,30 +1,30 @@
 import RenderGroupImages from 'components/image/rendergroupedimage';
 import RenderImage from 'components/image/renderimage';
 import RenderStyledImage from 'components/image/renderstyledimage';
-import styles from './bounty.module.scss';
+import { BountyBorder, BountyContent, BountyHeader, BountyMeta, BountyStatus, BountyText, BountyWrapper } from './bounty.styled';
 
 export default function Bounty({ bounty }) {
     return (
-        <div className={styles.bounty__wrapper}>
-            <div className={styles.bounty}>
+        <BountyWrapper>
+            <BountyContent>
 
-                <div className={styles.bounty__header}>
+                <BountyHeader>
                     <div>
                         <RenderStyledImage
                         src="/images/landing/polygon.svg"
-                        className={styles.bounty__chain}
+                        className={"bounty__chain"}
                         />
                     </div>
 
-                    <div className={styles.bounty__status}>
+                    <BountyStatus>
                         <div><RenderImage src="/images/explore/status.svg" alt='' /></div>
 
                         <span>Voting Active</span>
-                    </div>
-                </div>
+                    </BountyStatus>
+                </BountyHeader>
 
 
-                <div className={styles.bounty__meta}>
+                <BountyMeta>
                     <div>
                         <h4>{bounty.title}</h4>
                         <p>{bounty.description}</p>
@@ -34,22 +34,22 @@ export default function Bounty({ bounty }) {
                         <RenderGroupImages
                         images={bounty.userImages}
                         displayCount={4}
-                        imageClassName={styles.bounty__meta__avatar}
+                        imageClassName={"bounty__meta__avatar"}
                         />
                     </div>
-                </div>
+                </BountyMeta>
 
-                <div className={styles.bounty__border}></div>
+                <BountyBorder></BountyBorder>
 
-                <div className={styles.bounty__text}>
+                <BountyText>
                     <span>{bounty.daysLeft} days left</span>
 
                     <div>
                         <h4>{bounty.amount} matic</h4>
                         <p>$12 USD</p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </BountyText>
+            </BountyContent>
+        </BountyWrapper>
     )
 }

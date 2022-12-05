@@ -1,19 +1,19 @@
 import Category from './segments/category';
-import styles from './explore.module.scss';
 import Header from './segments/header';
 import Bounties from './segments/bounties';
 import Footer from './segments/footer';
+import { ExploreWrapper } from './explore.styled';
 
 
 export default function ExplorePage() {
   //perform component level transformations and pass th eprops to the sample view
 
   return (
-    <div className={styles.explore}>
+    <ExploreWrapper>
         <Header />
         <Category />
         <Bounties />
         <Footer />
-    </div>
+    </ExploreWrapper>
   );
 }

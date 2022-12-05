@@ -1,46 +1,46 @@
 import RenderImage from 'components/image/renderimage';
-import styles from './header.module.scss';
+import { HeaderContent, HeaderDescription, HeaderFilter, HeaderSearch, HeaderSearchBar, HeaderSection1, HeaderSection2, HeaderTitle, HeaderWrapper } from './header.styled';
 
 export default function Header() {
     return (
-        <div className={styles.header__wrapper}>
-            <div className={styles.header}>
-                <div className={styles.header__sec1}>
-                    <div className={styles.header__title}>
+        <HeaderWrapper>
+            <HeaderContent>
+                <HeaderSection1>
+                    <HeaderTitle>
                         <h1>Explore Bounties</h1>
 
                         <div>
-                            <button className={styles.header__title__btn}>
+                            <button>
                                 <span>Active</span>
                                 <div>
                                     <RenderImage src="/images/explore/menu.svg" alt="" />
                                 </div>
                             </button>
                         </div>
-                    </div>
+                    </HeaderTitle>
 
-                    <div className={styles.header__description}>Immerse yourself into the world of <span>bounties</span></div>
-                </div>
+                    <HeaderDescription>Immerse yourself into the world of <span>bounties</span></HeaderDescription>
+                </HeaderSection1>
 
-                <div className={styles.header__sec2}>
-                    <div className={styles.header__sec2__search}>
+                <HeaderSection2>
+                    <HeaderSearch>
 
                         <form>
-                            <button className={styles.search__image}>
+                            <button>
                                 <div><RenderImage src="/images/explore/search.svg" alt="" /></div>
                             </button>
-                            <input className={styles.search__bar} type="text" placeholder="Search your favorite bounties" />
+                            <HeaderSearchBar type="text" placeholder="Search your favorite bounties" />
                         </form>
-                    </div>
+                    </HeaderSearch>
 
-                    <div className={styles.header__sec2__filter}>
+                    <HeaderFilter>
                         <div>
                             <div><RenderImage src="/images/explore/filter.svg" alt="" /></div>
                             <span></span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </HeaderFilter>
+                </HeaderSection2>
+            </HeaderContent>
+        </HeaderWrapper>
     )
 }
