@@ -72,6 +72,7 @@ position: relative;
 
 export const LogoImgOne = styled.div`
   margin-right: 2.688rem;
+  margin-top: -2.05rem;
   .ball {
     width: 6.188rem;
     height: 3.875rem;
@@ -80,6 +81,9 @@ export const LogoImgOne = styled.div`
   .left__wave {
     width: 6.491rem;
     height: 2.262rem;
+    margin-left: -2.25rem;
+    padding: 0;
+    margin-top: 0.748rem;
   }
 `;
 
