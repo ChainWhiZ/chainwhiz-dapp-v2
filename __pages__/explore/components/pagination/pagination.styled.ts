@@ -13,15 +13,15 @@ export const PaginationContainer = styled.div`
 export const PaginationContent = styled.p`
   display: inline-block;
   color: white;
-  margin: 0 15px;
-  font-size: 18px;
+  margin: 0 .9375rem;
+  font-size: 1.125rem;
 
   span {
     font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
   }
   ${devices.mobile} {
-    font-size: 14px;
-    line-height: 21px;
+    font-size: .875rem;
+    line-height: 1.3125rem;
   }
 `;
 
@@ -33,8 +33,8 @@ export const PaginationButton = styled.div<{ icon: string }>`
   justify-content: center;
   cursor: pointer;
   box-sizing: border-box;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: .3125rem;
+  padding: .3125rem;
   width: 1.625rem;
   height: 1.625rem;
 
@@ -53,7 +53,7 @@ export const PaginationButton = styled.div<{ icon: string }>`
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
   }
 `;

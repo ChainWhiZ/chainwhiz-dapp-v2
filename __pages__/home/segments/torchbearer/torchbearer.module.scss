@@ -22,11 +22,11 @@
     top: 1.5625rem /* 25px -> 1.5625rem */;
 
     @include mobile-breakpoint {
-      width: 170px;
-      height: 170px;
+      width: 10.625rem;
+      height: 10.625rem;
       opacity: 0.4;
       left: calc(50% - 5.3125rem /* 85px -> 5.3125rem */);
-      top: 120px;
+      top: 7.5rem;
     }
   }
 
@@ -36,7 +36,7 @@
   box-sizing: border-box;
 
   @include mobile-breakpoint {
-    padding-top: 118px;
+    padding-top: 7.375rem;
     padding-bottom: 0;
     background: $home-background;
   }
@@ -119,8 +119,8 @@
         line-height: 1.875rem /* 30px -> 1.875rem */;
         font-family: $primary-font-regular;
         @include mobile-breakpoint {
-          font-size: 14px;
-          line-height: 30px;
+          font-size: .875rem;
+          line-height: 1.875rem;
         }
       }
     }

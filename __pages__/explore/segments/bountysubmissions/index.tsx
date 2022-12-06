@@ -1,4 +1,3 @@
-import { SAMPLE_SUBMISSIONS } from 'data/submissions';
 import React from 'react';
 import Submission from '../../components/submission';
 import {
@@ -7,17 +6,19 @@ import {
   SubmissionsContainer,
 } from './bountysubmissions.styled';
 
-export default function Submissions() {
+//eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Submissions({ submissions = [] }: { submissions: any }) {
   return (
     <SubBounty>
-      <SubmissionsTitle>
-        Submission({SAMPLE_SUBMISSIONS.length})
-      </SubmissionsTitle>
+      <SubmissionsTitle>Submission({submissions.length})</SubmissionsTitle>
 
       <SubmissionsContainer>
-        {SAMPLE_SUBMISSIONS.map((oneSubmission, index) => (
-          <Submission key={index} submission={oneSubmission} />
-        ))}
+        {
+          //eslint-disable-next-line @typescript-eslint/no-explicit-any
+          submissions.map((oneSubmission: any, index: number) => (
+            <Submission key={index} submission={oneSubmission} />
+          ))
+        }
       </SubmissionsContainer>
     </SubBounty>
   );

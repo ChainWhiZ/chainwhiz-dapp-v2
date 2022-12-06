@@ -9,25 +9,25 @@ export const Submissions = styled.div`
   box-sizing: border-box;
   width: 37.125rem;
   height: 6.188rem;
-  border-radius: 10px;
+  border-radius: .625rem;
   display: flex;
   align-items: center;
-  padding: 20px 30px;
-  gap: 23px;
+  padding: 1.25rem 1.875rem;
+  gap: 1.4375rem;
 
   ${devices.mobile} {
-    width: 312px;
-    height: 99px;
-    gap: 30px;
-    padding: 25px 14px 28px 35px;
+    width: 19.5rem;
+    height: 6.1875rem;
+    gap: 1.875rem;
+    padding: 1.5625rem .875rem 1.75rem 2.1875rem;
   }
 `;
 
 
 export const AvatarWrapper = styled.div`
   position: relative;
-  height: 60px;
-  width: 60px;
+  height: 3.75rem;
+  width: 3.75rem;
   ${devices.mobile} {
     width: 2.875rem;
     height: 2.875rem;

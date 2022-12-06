@@ -11,8 +11,9 @@ const colors = {
   postActionBlack: "rgba(138, 153, 168, 0.25)",
 };
 
+export const MOBILE_BREAKPOINT = 800;
 const breakpoints = {
-  mobile: '800px',
+  mobile: `${MOBILE_BREAKPOINT}px`,
   tab: '1200px',
   max: '2000px',
 };

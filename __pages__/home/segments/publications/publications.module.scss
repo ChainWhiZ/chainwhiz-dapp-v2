@@ -62,7 +62,7 @@
     filter: blur(100px);
     content: '';
     position: absolute;
-    top: 250px;
+    top: 15.625rem;
     left: -8.25rem;
     @include mobile-breakpoint {
       width: 12rem;
@@ -81,7 +81,7 @@
     position: absolute;
     content: '';
     top: 0;
-    right: -100px;
+    right: -6.25rem;
     @include mobile-breakpoint {
       display: none;
     }

@@ -32,7 +32,7 @@ export const HackingWrapper = styled.div`
   ${WHITE_GLOW};
   ${devices.mobile} {
     margin: 0;
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 `;
 
@@ -62,16 +62,16 @@ export const GoBackButton = styled.button`
     height: 0.8125rem;
     width: 0.5019rem;
     ${devices.mobile} {
-      height: 9.67px;
-      width: 5.97px;
+      height: .6044rem;
+      width: .3731rem;
       background-size: contain;
       background-repeat: no-repeat;
     }
   }
   ${devices.mobile} {
-    top: 88px;
-    gap: 10px;
-    font-size: 12px;
+    top: 5.5rem;
+    gap: .625rem;
+    font-size: .75rem;
     font-family: ${(props) => props.theme.fonts.primaryFontLight};
   }
 `;
@@ -82,8 +82,8 @@ export const BountyTitle = styled.h3`
   line-height: 3rem;
 
   ${devices.mobile} {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 `;
 
@@ -105,15 +105,15 @@ export const BountyCategories = styled.div`
     font-size: 1rem;
 
     ${devices.mobile} {
-      width: 116px;
-      height: 32px;
-      font-size: 10px;
+      width: 7.25rem;
+      height: 2rem;
+      font-size: .625rem;
     }
   }
 
   ${devices.mobile} {
-    gap: 5px;
-    margin-top: 7px;
+    gap: .3125rem;
+    margin-top: .4375rem;
   }
 `;
 
@@ -128,13 +128,13 @@ export const Overview = styled.div`
   height: 7.625rem;
   border-radius: 0.625rem;
   margin-top: 1.9375rem;
-  padding: 24px 56px;
+  padding: 1.5rem 3.5rem;
   ${devices.mobile} {
-    width: 320px;
-    height: 66px;
-    border-radius: 5px;
-    margin-top: 28px;
-    padding: 13px 21px;
+    width: 20rem;
+    height: 4.125rem;
+    border-radius: .3125rem;
+    margin-top: 1.75rem;
+    padding: .8125rem 1.3125rem;
   }
 `;
 
@@ -145,10 +145,10 @@ export const OverviewTab = styled.div`
   align-items: center;
   &:nth-of-type(2) {
     padding: 0 5.0625rem;
-    border-left: 1px solid rgba(137, 137, 137, 0.2);
-    border-right: 1px solid rgba(137, 137, 137, 0.2);
+    border-left: .0625rem solid rgba(137, 137, 137, 0.2);
+    border-right: .0625rem solid rgba(137, 137, 137, 0.2);
     ${devices.mobile} {
-      padding: 0 31px;
+      padding: 0 1.9375rem;
     }
   }
 `;
@@ -156,7 +156,7 @@ export const OverviewTab = styled.div`
 export const OverviewTitle = styled.p`
   font-size: 1.125rem;
   ${devices.mobile} {
-    font-size: 9.71486px;
+    font-size: .6072rem;
   }
 `;
 
@@ -165,8 +165,8 @@ export const OverviewValue = styled.span`
   color: ${(props) => props.theme.colors.neonGreen};
   font-size: 1.9375rem;
   ${devices.mobile} {
-    font-size: 17.2709px;
-    line-height: 26px;
+    font-size: 1.0794rem;
+    line-height: 1.625rem;
   }
 `;
 
@@ -178,14 +178,14 @@ export const ReferenceWrapper = styled.div`
 
   width: 46.125rem;
   border-radius: 0.625rem;
-  padding: 2.375rem 24px 2.6875rem;
+  padding: 2.375rem 1.5rem 2.6875rem;
   margin-top: 1.938rem;
   ${devices.mobile} {
-    width: 320px;
-    border-radius: 5px;
-    padding-top: 28px;
-    padding-bottom: 38px;
-    margin-top: 28px;
+    width: 20rem;
+    border-radius: .3125rem;
+    padding-top: 1.75rem;
+    padding-bottom: 2.375rem;
+    margin-top: 1.75rem;
   }
 `;
 
@@ -202,8 +202,8 @@ export const Reference = styled.div`
       opacity: 0.85;
     }
     ${devices.mobile} {
-      font-size: 14px;
-      line-height: 21px;
+      font-size: .875rem;
+      line-height: 1.3125rem;
     }
   }
 `;
@@ -214,9 +214,9 @@ export const ReferenceHeader = styled.h4`
   font-size: 1.375rem;
   line-height: 2.0625rem;
   ${devices.mobile} {
-    margin-bottom: 13px;
-    font-size: 18px;
-    line-height: 27px;
+    margin-bottom: .8125rem;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
   }
 `;
 
@@ -240,12 +240,12 @@ export const ReferenceURL = styled.div`
   ${devices.mobile} {
     display: flex;
     align-items: flex-start;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: .75rem;
+    line-height: 1.125rem;
     p {
       overflow-wrap: break-word;
-      gap: 12px;
-      max-width: 190px;
+      gap: .75rem;
+      max-width: 11.875rem;
     }
   }
 `;
@@ -258,11 +258,11 @@ export const ReferenceText = styled.p`
   font-size: 1.125rem;
   line-height: 1.6875rem;
   ${devices.mobile} {
-    max-width: 271px;
-    margin-top: 22px;
-    margin-bottom: 14px;
-    font-size: 14px;
-    line-height: 22px;
+    max-width: 16.9375rem;
+    margin-top: 1.375rem;
+    margin-bottom: .875rem;
+    font-size: .875rem;
+    line-height: 1.375rem;
   }
 `;
 
@@ -283,16 +283,16 @@ export const EvaluationWrapper = styled.div`
 
     ${devices.mobile} {
       font-size: 1.125rem;
-      line-height: 27px;
-      margin-bottom: 17px;
+      line-height: 1.6875rem;
+      margin-bottom: 1.0625rem;
     }
   }
 
   ${devices.mobile} {
-    width: 320px;
-    height: 218px;
-    margin-top: 21px;
-    padding: 25px 23px 30px;
+    width: 20rem;
+    height: 13.625rem;
+    margin-top: 1.3125rem;
+    padding: 1.5625rem 1.4375rem 1.875rem;
   }
 `;
 
@@ -301,7 +301,7 @@ export const EvaluationCriteriaWrapper = styled.section`
   flex-direction: column;
   gap: 0.9375rem;
   ${devices.mobile} {
-    gap: 10px;
+    gap: .625rem;
   }
 `;
 

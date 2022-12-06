@@ -6,7 +6,7 @@ export const SubmissionWrapper = styled.div`
 
   ${devices.mobile} {
     display: flex;
-    margin-top: 35px;
+    margin-top: 2.1875rem;
     flex-direction: column;
     align-items: baseline;
   }
@@ -51,9 +51,9 @@ export const SubmissionsNotify = styled.div`
     margin-right: 0.625rem;
 
     ${devices.mobile} {
-      width: 18px;
-      height: 18px;
-      margin-right: 4px;
+      width: 1.125rem;
+      height: 1.125rem;
+      margin-right: .25rem;
     }
   }
 `;
@@ -65,13 +65,13 @@ export const RewardsWrapper = styled.div`
   border-radius: 0.625rem;
   width: 28.125rem;
   padding: 2.8125rem;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   padding-bottom: 4.1875rem;
 
   ${devices.mobile} {
     width: 20.188rem;
     height: fit-content;
-    padding: 28px 18px 28px;
+    padding: 1.75rem 1.125rem 1.75rem;
   }
 `;
 
@@ -82,16 +82,16 @@ export const NFTRewardType = styled.h3`
   span {
     font-family: ${(props) => props.theme.fonts.primaryFontRegular};
     display: inline-block;
-    font-size: 12px;
-    line-height: 18px;
-    margin-left: 10px;
+    font-size: .75rem;
+    line-height: 1.125rem;
+    margin-left: .625rem;
   }
   ${devices.mobile} {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: .75rem;
+    line-height: 1.125rem;
     span {
-      font-size: 9px;
-      line-height: 13.5px;
+      font-size: .5625rem;
+      line-height: .8438rem;
       margin-left: 0;
     }
   }
@@ -105,8 +105,8 @@ export const NFTDetails = styled.i`
   align-items: end;
 
   ${devices.mobile} {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: .75rem;
+    line-height: 1.125rem;
   }
 `;
 
@@ -123,30 +123,30 @@ export const NFTRewards = styled.div`
   }
 
   section.nft {
-    padding-top: 55px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid rgba(137, 137, 137, 0.5);
+    padding-top: 3.4375rem;
+    padding-bottom: 3rem;
+    border-bottom: .0625rem solid rgba(137, 137, 137, 0.5);
     ${devices.mobile} {
-      padding-top: 25px;
-      padding-bottom: 33px;
+      padding-top: 1.5625rem;
+      padding-bottom: 2.0625rem;
     }
 
     h4 {
       font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.5rem;
       ${devices.mobile} {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 1rem;
+        line-height: 1.5rem;
       }
     }
     p {
       font-family: ${(props) => props.theme.fonts.primaryFontRegular};
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.5rem;
       ${devices.mobile} {
-        font-size: 12px;
-        line-height: 18px;
+        font-size: .75rem;
+        line-height: 1.125rem;
       }
     }
   }
@@ -157,8 +157,8 @@ export const NFTWrapper = styled.div`
   height: 8.0625rem;
   position: relative;
   ${devices.mobile} {
-    width: 105.22px;
-    height: 79.68px;
+    width: 6.5762rem;
+    height: 4.98rem;
   }
 `;
 
@@ -166,9 +166,9 @@ export const CryptoReward = styled.div`
   display: flex;
   justify-content: space-between;
   text-align: right;
-  margin-top: 32px;
+  margin-top: 2rem;
   ${devices.mobile} {
-    margin-top: 25px;
+    margin-top: 1.5625rem;
   }
 
   p {
@@ -178,20 +178,20 @@ export const CryptoReward = styled.div`
     text-transform: uppercase;
 
     ${devices.mobile} {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.5rem;
       font-family: ${(props) => props.theme.fonts.primaryFont};
     }
   }
 
   h3 {
     font-size: 1.875rem;
-    line-height: 45px;
+    line-height: 2.8125rem;
     font-weight: 400;
 
     ${devices.mobile} {
       font-size: 1.25rem;
-      line-height: 30px;
+      line-height: 1.875rem;
       margin-top: 0;
     }
   }
@@ -239,10 +239,10 @@ export const SubmissionButton = styled.div`
   }
 
   ${devices.mobile} {
-    width: 326px;
-    height: 41px;
-    font-size: 14px;
-    margin-top: 30px;
+    width: 20.375rem;
+    height: 2.5625rem;
+    font-size: .875rem;
+    margin-top: 1.875rem;
     margin-bottom: 0;
   }
 `;
@@ -254,12 +254,12 @@ export const Bounty = styled.div`
   flex-direction: column;
   width: 28.125rem;
   height: 14.063rem;
-  border-radius: 10px;
+  border-radius: .625rem;
   padding: 2.625rem 2.9375rem 3.0625rem;
   ${devices.mobile} {
-    width: 326px;
-    height: 176px;
-    padding: 28px 26px 23px;
+    width: 20.375rem;
+    height: 11rem;
+    padding: 1.75rem 1.625rem 1.4375rem;
   }
 
   p {
@@ -267,8 +267,8 @@ export const Bounty = styled.div`
     font-weight: 600;
     font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
     ${devices.mobile} {
-      font-size: 18px;
-      line-height: 27px;
+      font-size: 1.125rem;
+      line-height: 1.6875rem;
     }
   }
 
@@ -276,19 +276,19 @@ export const Bounty = styled.div`
     width: 4.6875rem;
     height: 4.6875rem;
     ${devices.mobile} {
-      width: 75px;
-      height: 75px;
+      width: 4.6875rem;
+      height: 4.6875rem;
     }
   }
 `;
 
 export const BountyOwnerDetails = styled.section`
   display: flex;
-  gap: 25px;
-  margin-top: 26px;
+  gap: 1.5625rem;
+  margin-top: 1.625rem;
 
   ${devices.mobile} {
-    margin-top: 23px;
+    margin-top: 1.4375rem;
   }
 
   section {
@@ -297,11 +297,11 @@ export const BountyOwnerDetails = styled.section`
 
     h3 {
       font-size: 1.25rem;
-      margin-bottom: 12px;
+      margin-bottom: .75rem;
       font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
       ${devices.mobile} {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
       }
     }
 
@@ -309,20 +309,20 @@ export const BountyOwnerDetails = styled.section`
       display: flex;
       gap: 0.914rem;
       ${devices.mobile} {
-        gap: 14.62px;
+        gap: .9137rem;
       }
 
       .social__image {
-        width: 21.46px;
-        height: 21.54px;
+        width: 1.3413rem;
+        height: 1.3462rem;
         cursor: pointer;
         &:first-of-type {
-          height: 17.54px;
-          width: 17.54px;
+          height: 1.0962rem;
+          width: 1.0962rem;
         }
         &:last-of-type {
-          width: 21.92px;
-          height: 19px;
+          width: 1.37rem;
+          height: 1.1875rem;
         }
       }
     }

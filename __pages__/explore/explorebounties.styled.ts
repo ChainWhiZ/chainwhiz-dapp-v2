@@ -12,8 +12,8 @@ export const ExploreBountiesWrapper = styled.div`
   font-family: ${(props) => props.theme.fonts.primaryFont};
   background-size: contain;
   background-blend-mode: color-dodge;
-  padding-top: 132px;
-  padding-bottom: 94px;
+  padding-top: 8.25rem;
+  padding-bottom: 5.875rem;
 
   ${devices.mobile} {
     background-image: none;
