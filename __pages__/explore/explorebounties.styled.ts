@@ -65,37 +65,7 @@ export const ExploreDisplay = styled.div`
   }
 `;
 
-export const SubBounty = styled.div`
-  div {
-    max-width: 77.5rem;
-    display: flex;
-    gap: 1.875rem;
-    flex-wrap: wrap;
-    ${devices.mobile} {
-      width: 19.5rem;
-      gap: 0.938rem;
-    }
-  }
-`;
-
-export const Sublist = styled.div`
-  display: table;
+export const SubmissionsWrapper = styled.div`
   margin: auto;
-
-  hr {
-    margin-top: 4.688rem;
-    width: 87.938rem;
-    opacity: 0.5;
-    background-color: #898989;
-
-    ${devices.mobile} {
-      width: 20rem;
-    }
-  }
-  h3 {
-    font-size: 1.375rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-top: 5.875rem;
-  }
+  width: fit-content;
 `;

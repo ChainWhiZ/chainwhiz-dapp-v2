@@ -3,37 +3,29 @@ import {
   ExploreBountiesWrapper,
   ExploreDisplay,
   SubBounty,
-  Sublist,
+  SubmissionsWrapper,
 } from './explorebounties.styled';
 import { SAMPLE_SUBMISSIONS } from 'data/submissions';
-import Submission from './segments/submission';
-import Pagination from './segments/pagination/pagination';
+
+// import segments
+import Pagination from './components/pagination/pagination';
 import BountyDetails from './segments/bountydetails';
-import BountySubmission from './segments/bountysubmission';
+import BountySubmission from './segments/bountysubmit';
+import Submissions from './segments/bountysubmissions';
 
 export default function Explore() {
   return (
     <ExploreBountiesWrapper>
-
       <ExploreDisplay>
-        {/* <BountyDetails /> */}
-        <div></div>
+        <BountyDetails />
         <BountySubmission />
       </ExploreDisplay>
 
-      {/* <Sublist>
-        <SubBounty>
-          <hr />
-          <h3>Submission({SAMPLE_SUBMISSIONS.length})</h3>
-          <div>
-            {SAMPLE_SUBMISSIONS.map((oneSubmission, index) => (
-              <Submission key={index} submission={oneSubmission} />
-            ))}
-          </div>
-        </SubBounty>
-        <Pagination />
-      </Sublist> */}
+      <SubmissionsWrapper>
+        <Submissions /> 
 
+        <Pagination />
+      </SubmissionsWrapper>
     </ExploreBountiesWrapper>
   );
 }

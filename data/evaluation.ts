@@ -1,5 +1,6 @@
 export const DEFAULT_CHECKBOX_PROPS = {
   checked: true,
+  readonly: true,
   label: '',
   onClick: () => {
     true;

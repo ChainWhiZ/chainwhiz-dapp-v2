@@ -6,6 +6,7 @@ export const SubmissionWrapper = styled.div`
 
   ${devices.mobile} {
     display: flex;
+    margin-top: 35px;
     flex-direction: column;
     align-items: baseline;
   }

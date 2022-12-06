@@ -14,7 +14,7 @@ import {
   BountyOwnerDetails,
   Bounty,
   SubmissionsNotify,
-} from './bountysubmission.styled';
+} from './bountysubmit.styled';
 
 const SOCIAL_IMAGES = [
   '/images/landing/footer/fb.svg',

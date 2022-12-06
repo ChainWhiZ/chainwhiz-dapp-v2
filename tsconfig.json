@@ -20,7 +20,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "__pages__/explore/segments/submission/submission.styled.ts"
+    "__pages__/explore/components/submission/submission.styled.ts"
   ],
   "exclude": ["node_modules"]
 }
