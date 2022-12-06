@@ -11,6 +11,7 @@ import styles from './navbar.module.scss';
 import { useRef, useState } from 'react';
 import RenderStyledImage from 'components/image/renderstyledimage';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Navbar({ extraStyles = '' }) {
   const { connectWalletPressed } = useConnectWallet();
@@ -44,7 +45,7 @@ export default function Navbar({ extraStyles = '' }) {
               />
               <div className={styles.open_menu}>{menuOpen && <Dropdown />}</div>
             </span>
-            <span id={styles.leaderboard}>Leaderboard</span>
+            <Link href="/leaderboard"><span id={styles.leaderboard}>Leaderboard</span></Link>
             <span id={styles.notifications}>
               <RenderStyledImage
                 className={styles.bell__icon}
