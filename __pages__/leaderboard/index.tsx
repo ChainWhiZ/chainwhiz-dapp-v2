@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import RenderStyledImage from 'components/image/renderstyledimage';
 import UserDetails from './segments/userdetails';
 import {
@@ -11,10 +12,17 @@ import {
   Search,
   SearchAndFilter,
   Filter,
+  Dropdown,
   UserdetailsWrapper,
 } from './leaderboard.styled';
+import FilterDropdown from './segments/userdetails/filterDropdown';
 
 const Leaderboard = () => {
+  const [open, setOpen] = useState(false);
+
+  const Clicked = () => {
+    setOpen(!open);
+  };
   return (
     <LeaderboardContainer>
       <LeaderboardWrapper>
@@ -46,11 +54,16 @@ const Leaderboard = () => {
             />
             <input type="text" placeholder="Search your favourite contestant" />
           </Search>
-          <Filter>
+          <Filter onClick={Clicked}>
             <RenderStyledImage
               className="filter"
               src="/images/leaderboard/filter.png"
             />
+            {open ? (
+              <Dropdown>
+                <FilterDropdown />
+              </Dropdown>
+            ) : null}
           </Filter>
         </SearchAndFilter>
         <UserdetailsWrapper>

@@ -30,14 +30,30 @@ export const TableHeading = styled.div`
 
 export const UserText = styled.div`
   margin-left: 1.563rem;
+  display: flex;
+  align-items: center;
+
+  .polygon{
+    width: 0.875rem;
+    height: 0.688rem;
+    margin-left: 0.375rem;
+  }
 `;
 
 export const DetailsText = styled.div`
-  margin-left: 5.875rem;
+  margin-left: 6.875rem;
 `;
 
 export const RankText = styled.div`
-  margin-left: 34.875rem;
+  margin-left: 31.875rem;
+  display: flex;
+  align-items: center;
+
+  .polygonTwo{
+    width: 0.875rem;
+    height: 0.688rem;
+    margin-left: 0.313rem;
+  }
 `;
 
 export const TotalText = styled.div`
@@ -50,8 +66,8 @@ export const TableBody = styled.div`
   `;
 
 export const TableContents = styled.div`
-width: 91.875rem;
-height: 6.188rem;
+  width: 91.875rem;
+  height: 6.188rem;
   background-color: #1f1e2b;
   display: flex;
   align-items: center;

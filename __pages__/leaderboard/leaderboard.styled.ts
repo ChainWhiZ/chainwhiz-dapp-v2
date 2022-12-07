@@ -150,6 +150,7 @@ export const Search = styled.div`
 `;
 
 export const Filter = styled.div`
+  cursor: pointer;
   position: relative;
   display: flex;
   justify-content: center;
@@ -182,3 +183,9 @@ export const Filter = styled.div`
 export const UserdetailsWrapper = styled.div`
   margin-top: 2.313rem;
 `;
+
+export const Dropdown = styled.div`
+  position: absolute;
+  top: 3.525rem;
+  z-index: 1;
+`

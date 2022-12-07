@@ -1,6 +1,5 @@
 import RenderStyledImage from 'components/image/renderstyledimage';
 import { USER_DETAILS } from 'data/userdetails';
-import React from 'react';
 import {
   UserdetailsContainer,
   TableHeading,
@@ -19,12 +18,25 @@ import {
 } from './userdetails.styled';
 
 const UserDetails = () => {
+
   return (
     <UserdetailsContainer>
       <TableHeading>
-        <UserText>User Rank</UserText>
+        <UserText>
+          <p>User Rank</p>
+          <RenderStyledImage
+            className="polygon"
+            src="/images/leaderboard/upsidetriangle.png"
+          />
+        </UserText>
         <DetailsText>Details</DetailsText>
-        <RankText>Rank</RankText>
+        <RankText>
+          <p>Rank</p>
+          <RenderStyledImage
+            className="polygonTwo"
+            src="/images/leaderboard/upsidetriangle.png"
+          />
+        </RankText>
         <TotalText>TotalXP</TotalText>
       </TableHeading>
       <TableBody>
@@ -33,10 +45,7 @@ const UserDetails = () => {
             <User>{user.numbers}</User>
             <DetailsandImage>
               <UserImg>
-                <RenderStyledImage
-                  className="user__img"
-                  src={user.image}
-                />
+                <RenderStyledImage className="user__img" src={user.image} />
               </UserImg>
               <Details>{user.details}</Details>
             </DetailsandImage>
