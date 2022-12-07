@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SAMPLE_SUBMISSIONS } from 'data/submissions';
 import {
   ExploreBountiesWrapper,
@@ -16,7 +16,14 @@ import { createBreakpoint } from 'react-use';
 const useBreakpoint = createBreakpoint();
 export default function Explore() {
   const breakpoint = useBreakpoint();
-  const pageSize = breakpoint === 'tablet' ? 4 : 8;
+  const [pageSize, setPageSize] = useState(0);
+
+  //@dev  add use effect to prevent running into hydration error
+  useEffect(() => {
+    if (!breakpoint) return;
+    const _pageSize = breakpoint === 'tablet' ? 4 : 8;
+    setPageSize(_pageSize);
+  }, [breakpoint]);
 
   return (
     <ExploreBountiesWrapper>
