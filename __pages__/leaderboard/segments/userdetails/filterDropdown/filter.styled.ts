@@ -20,3 +20,23 @@ export const Xp = styled.div`
   padding-top: 1.438rem;
   padding-left: 1.625rem;
 `;
+
+export const Reactslider = styled.div`
+  .horizontal-slider{
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 8.126rem;
+    border: 0.05rem solid #FFFFFF;
+    left: 1.09rem;
+    margin-top: 0.675rem;
+  }
+
+  /* .example-thumb{
+    background-color: #D4FF1E;
+    color: #FFFFFF;
+
+    border-radius: 50%;
+    width: 0.496rem;
+    height: 0.496rem;
+  } */
+`

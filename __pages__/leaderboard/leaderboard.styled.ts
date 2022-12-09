@@ -23,6 +23,14 @@ export const LeaderboardContainer = styled.div`
     height: 15.25rem;
     top: 24.5rem;
     left: -8.5rem;
+
+    ${devices.mobile}{
+      width: 6.5rem;
+      height: 6.5rem;
+      opacity: 0.8;
+      top: 15rem;
+      left: -4rem;
+    }
   }
 
   &::after{
@@ -38,6 +46,21 @@ export const LeaderboardContainer = styled.div`
     height: 11.25rem;
     right: -5rem;
     top: 24.5rem;
+
+    ${devices.mobile}{
+      display: none;
+    }
+  }
+
+  ${devices.mobile}{
+    background-image: url('/images/leaderboard/leaderboardmobilebg.png');
+    background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-position-y: 5.625rem;
+    background-color: #100c1a;
+    overflow-x: hidden;
+    background-size: contain;
+    padding-top: 3.438rem;
   }
 `;
 
@@ -48,12 +71,12 @@ export const LeaderboardWrapper = styled.div`
 `;
 
 export const LeaderBoardLogo = styled.div`
-position: relative;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding-top: 2.688rem;
+  margin-top: 2.688rem;
 
   &::before{
     content: '';
@@ -76,6 +99,12 @@ export const LogoImgOne = styled.div`
   .ball {
     width: 6.188rem;
     height: 3.875rem;
+
+    ${devices.mobile}{
+      width: 2.188rem;
+      height: 1.5rem;
+      top: 0.75rem;
+    }
   }
 
   .left__wave {
@@ -84,12 +113,22 @@ export const LogoImgOne = styled.div`
     margin-left: -2.25rem;
     padding: 0;
     margin-top: 0.748rem;
+
+    ${devices.mobile}{
+      width: 2.369rem;
+      height: 0.826rem;
+      top: 1.938rem;
+    }
   }
 `;
 
 export const LogoText = styled.div`
   color: #d4ff1e;
   font-size: 3.75rem;
+
+  ${devices.mobile}{
+    font-size: 1.25rem;
+  }
 `;
 
 export const LogoImgTwo = styled.div`
@@ -98,6 +137,13 @@ export const LogoImgTwo = styled.div`
     height: 3.813rem;
     margin-left: 0.563rem;
     margin-top: -4.05rem;
+
+    ${devices.mobile}{
+      width: 2.563rem;
+      height: 1.438rem;
+      margin-left: 2.813rem;
+      top: 3.438rem;
+    }
   }
 `;
 
@@ -108,12 +154,20 @@ export const Subheading = styled.div`
 
   font-size: 1.875rem;
   margin-top: 0.313rem;
+
+  ${devices.mobile}{
+    font-size: 0.875rem;
+  }
 `;
 
 export const SearchAndFilter = styled.div`
   display: flex;
   align-items: center;
   margin-top: 3.188rem;
+
+  ${devices.mobile}{
+    margin-top: 2.813rem;
+  }
 `;
 
 export const Search = styled.div`
@@ -128,9 +182,15 @@ export const Search = styled.div`
     width: 1.163rem;
     height: 1.163rem;
     margin-left: 1.274rem;
+
+    ${devices.mobile}{
+      width: 1.043rem;
+      height: 1.043rem;
+      margin-left: 1.142rem;
+    }
   }
 
-  input {
+  .input {
     outline: none;
     border: none;
     background-color: transparent;
@@ -145,7 +205,16 @@ export const Search = styled.div`
       color: #ffffff;
       font-weight: 400;
       font-size: 1rem;
+
+      ${devices.mobile}{
+        font-size: 0.673rem;
+      }
     }
+
+  }
+  ${devices.mobile}{
+    width: 16.082rem;
+    height: 3.25rem;
   }
 `;
 
@@ -165,6 +234,11 @@ export const Filter = styled.div`
   .filter {
     width: 1.313rem;
     height: 1.125rem;
+
+    ${devices.mobile}{
+      width: 1.177rem;
+      height: 1.009rem;
+    }
   }
 
   &::after {
@@ -177,11 +251,28 @@ export const Filter = styled.div`
     right: -0.15rem;
     width: 0.75rem;
     height: 0.75rem;
+
+    ${devices.mobile}{
+      width: 0.313rem;
+      height: 0.313rem;
+      top: 0.04rem;
+      right: 0.2rem;
+    }
+  }
+
+  ${devices.mobile}{
+    width: 3.418rem;
+    height: 3.25rem;
+    margin-left: 0.504rem;
   }
 `;
 
 export const UserdetailsWrapper = styled.div`
   margin-top: 2.313rem;
+
+  ${devices.mobile}{
+    margin-top: 2.188rem;
+  }
 `;
 
 export const Dropdown = styled.div`

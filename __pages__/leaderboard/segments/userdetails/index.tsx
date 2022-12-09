@@ -12,6 +12,7 @@ import {
   User,
   DetailsandImage,
   Details,
+  Copy,
   UserImg,
   Rank,
   Total,
@@ -23,7 +24,8 @@ const UserDetails = () => {
     <UserdetailsContainer>
       <TableHeading>
         <UserText>
-          <p>User Rank</p>
+          <p className='lptext'>User Rank</p>
+          <p className="mbtext">U.R</p>
           <RenderStyledImage
             className="polygon"
             src="/images/leaderboard/upsidetriangle.png"
@@ -39,6 +41,7 @@ const UserDetails = () => {
         </RankText>
         <TotalText>TotalXP</TotalText>
       </TableHeading>
+
       <TableBody>
         {USER_DETAILS.map((user) => (
           <TableContents>
@@ -48,6 +51,9 @@ const UserDetails = () => {
                 <RenderStyledImage className="user__img" src={user.image} />
               </UserImg>
               <Details>{user.details}</Details>
+              <Copy>
+              <RenderStyledImage className="copy" src={user.image_two} />
+              </Copy>
             </DetailsandImage>
             <Rank>{user.rank}</Rank>
             <Total>{user.totalxp}</Total>

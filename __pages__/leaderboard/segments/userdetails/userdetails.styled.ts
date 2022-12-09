@@ -12,6 +12,10 @@ export const UserdetailsContainer = styled.div`
   width: 99.5rem;
   /* height: 64.125rem; */
   padding-bottom: 1.25rem;
+
+  ${devices.mobile} {
+    background-color: transparent;
+  }
 `;
 
 export const TableHeading = styled.div`
@@ -26,6 +30,14 @@ export const TableHeading = styled.div`
   margin-top: 3.75rem;
   width: 92rem;
   height: 4.125rem;
+
+  ${devices.mobile} {
+    width: 20rem;
+    white-space: nowrap;
+    height: 2.688rem;
+    font-size: 0.75rem;
+    margin-top: 0;
+  }
 `;
 
 export const UserText = styled.div`
@@ -33,15 +45,43 @@ export const UserText = styled.div`
   display: flex;
   align-items: center;
 
-  .polygon{
+  .mbtext{
+    display: none;
+
+    ${devices.mobile}{
+      display: flex;
+    }
+  }
+
+  .lptext{
+    ${devices.mobile}{
+      display: none;
+    }
+  }
+
+  .polygon {
     width: 0.875rem;
     height: 0.688rem;
     margin-left: 0.375rem;
+
+    ${devices.mobile} {
+      width: 0.5rem;
+      height: 0.438rem;
+      margin-left: 0.313rem;
+    }
+  }
+
+  ${devices.mobile} {
+    margin-left: 0.75rem;
   }
 `;
 
 export const DetailsText = styled.div`
   margin-left: 6.875rem;
+
+  ${devices.mobile} {
+    margin-left: 2.563rem;
+  }
 `;
 
 export const RankText = styled.div`
@@ -49,21 +89,34 @@ export const RankText = styled.div`
   display: flex;
   align-items: center;
 
-  .polygonTwo{
+  .polygonTwo {
     width: 0.875rem;
     height: 0.688rem;
     margin-left: 0.313rem;
+
+    ${devices.mobile} {
+      width: 0.5rem;
+      height: 0.438rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  ${devices.mobile} {
+    margin-left: 3.438rem;
   }
 `;
 
 export const TotalText = styled.div`
   margin-left: 15.188rem;
+
+  ${devices.mobile} {
+    margin-left: 1.813rem;
+  }
 `;
 
 export const TableBody = styled.div`
   color: #ffffff;
-
-  `;
+`;
 
 export const TableContents = styled.div`
   width: 91.875rem;
@@ -74,6 +127,11 @@ export const TableContents = styled.div`
 
   border-radius: 0.625rem;
   margin-top: 1.313rem;
+
+  ${devices.mobile} {
+    width: 20rem;
+    height: 3.188rem;
+  }
 `;
 
 export const User = styled.div`
@@ -86,12 +144,22 @@ export const User = styled.div`
 
   &::after {
     content: '';
-    /* position: absolute; */
     background-image: url('/images/leaderboard/crown.png');
     background-size: 100%;
     width: 2.375rem;
     height: 1.438rem;
     margin-left: 1.156rem;
+
+    ${devices.mobile} {
+      width: 1rem;
+      height: 0.625rem;
+      margin-left: 0.406rem;
+    }
+  }
+
+  ${devices.mobile} {
+    font-size: 1.25rem;
+    margin-left: 0.906rem;
   }
 `;
 
@@ -104,15 +172,26 @@ export const Details = styled.div`
   font-size: 1.25rem;
   margin-left: 1.188rem;
 
-  &::after {
-    content: '';
-    position: absolute;
-    background-image: url('/images/leaderboard/copy.png');
-    background-size: 100%;
+  ${devices.mobile} {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 0.75rem;
+    max-width: 3.125rem;
+    margin-left: 0.375rem;
+  }
+`;
+
+export const Copy = styled.div`
+  .copy {
     width: 1rem;
     height: 1.25rem;
     margin-left: 0.813rem;
-    margin-top: 0.2rem;
+
+    ${devices.mobile} {
+      width: 0.417rem;
+      height: 0.521rem;
+      margin-left: 0.333rem;
+    }
   }
 `;
 
@@ -123,6 +202,12 @@ export const UserImg = styled.div`
     border-radius: 50%;
 
     margin-left: 7.438rem;
+
+    ${devices.mobile} {
+      width: 1.125rem;
+      height: 1.125rem;
+      margin-left: 1.563rem;
+    }
   }
 `;
 
@@ -131,6 +216,11 @@ export const Rank = styled.div`
   font-size: 1.25rem;
 
   margin-left: 12.875rem;
+
+  ${devices.mobile} {
+    font-size: 0.625rem;
+    margin-left: 1.417rem;
+  }
 `;
 
 export const Total = styled.div`
@@ -139,4 +229,9 @@ export const Total = styled.div`
   font-size: 1.875rem;
   font-weight: 600;
   margin-left: 13.375rem;
+
+  ${devices.mobile} {
+    font-size: 0.875rem;
+    margin-left: 1.75rem;
+  }
 `;

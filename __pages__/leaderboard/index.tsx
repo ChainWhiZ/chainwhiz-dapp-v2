@@ -45,6 +45,7 @@ const Leaderboard = () => {
             />
           </LogoImgTwo>
         </LeaderBoardLogo>
+
         <Subheading>Find our top-gainers of the year</Subheading>
         <SearchAndFilter>
           <Search>
@@ -52,7 +53,7 @@ const Leaderboard = () => {
               className="search"
               src="/images/leaderboard/search.png"
             />
-            <input type="text" placeholder="Search your favourite contestant" />
+            <input type="text" className='input' placeholder="Search your favourite contestant" />
           </Search>
           <Filter onClick={Clicked}>
             <RenderStyledImage
@@ -66,9 +67,11 @@ const Leaderboard = () => {
             ) : null}
           </Filter>
         </SearchAndFilter>
+
         <UserdetailsWrapper>
           <UserDetails />
         </UserdetailsWrapper>
+
       </LeaderboardWrapper>
     </LeaderboardContainer>
   );
