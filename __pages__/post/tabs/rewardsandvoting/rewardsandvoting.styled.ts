@@ -27,8 +27,8 @@ export const RAVWrapper = styled.div`
     background: #d4ff1e;
     border-radius: 50%;
     opacity: 0.25;
-    top: 160px;
-    right: -78px;
+    top: 10rem;
+    right: -4.875rem;
     object-fit: contain;
     -webkit-filter: blur(6.25rem);
     filter: blur(6.25rem);

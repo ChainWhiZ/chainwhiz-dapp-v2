@@ -8,7 +8,7 @@ export default function Dropdown() {
       <div className={styles.menu}>
         <p>Your Bounties</p>
         <Link href='/post'><p>Post a Bounty</p></Link>
-        <p>Explore Bounties</p>
+        <Link href='/explore'><p>Explore Bounties</p></Link>
       </div>
     </div>
   );

@@ -55,16 +55,16 @@ export const ErrorImageWrapper = styled.span`
   position: absolute;
   margin: 0 auto;
   opacity: 0.3;
-  top: -35px;
+  top: -2.1875rem;
   left: -8.75rem;
-  height: 156px;
-  width: 156px;
+  height: 9.75rem;
+  width: 9.75rem;
 
   ${devices.mobile} {
     width: 2.5rem;
     height: 2.5rem;
-    top: -6px;
-    left: -33px;
+    top: -0.375rem;
+    left: -2.0625rem;
   }
 `;
 
@@ -102,7 +102,7 @@ export const ErrorPageDescription = styled.div`
   text-align: center;
   color: #898989;
   margin: 3.5rem auto 3.6875rem;
-  max-width: 929px;
+  max-width: 58.0625rem;
   font-weight: 400;
   font-size: 1.875rem;
   line-height: 2.813rem;
@@ -119,13 +119,13 @@ export const ErrorPageButton = styled.button`
   background-color: #d4ff1e;
   border: 0.125rem solid #d4ff1e;
   padding: 1.25rem 2.5rem;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   cursor: pointer;
   transition: ${(props) => props.theme.meta.fastTransitionSpeed};
 
   ${devices.mobile} {
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-radius: .625rem;
+    padding: .625rem 1.25rem;
   }
   &:hover {
     opacity: 0.85;

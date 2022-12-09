@@ -5,7 +5,7 @@
   align-items: center;
   gap: 0.2083vw /* 4px -> .2083vw */;
   @include mobile-breakpoint {
-    gap: 4px;
+    gap: .25rem;
   }
   span {
     font-weight: 400;
@@ -18,7 +18,7 @@
     & > div {
       margin-left: -0.3125vw /* -6px -> -0.3125vw */;
       @include mobile-breakpoint {
-        margin-left: -6px;
+        margin-left: -0.375rem;
       }
     }
   }

@@ -9,7 +9,7 @@
     width: 100%;
     z-index: 2;
     &::-webkit-scrollbar {
-      width: 0px;
+      width: 0;
       background: transparent;
     }
   }
@@ -28,8 +28,8 @@
     width: 100%;
     height: 6.9376rem /* 111.001px -> 6.9376rem */;
     @include mobile-breakpoint() {
-      height: 68px;
-      padding: 0 20px;
+      height: 4.25rem;
+      padding: 0 1.25rem;
     }
 
     // the first section containing the logo
@@ -39,8 +39,8 @@
       width: 17.5625rem /* 280.9997px -> 17.5625rem */;
       height: 3.75rem /* 60px -> 3.75rem */;
       @include mobile-breakpoint() {
-        width: 126.41px;
-        height: 27px;
+        width: 7.9006rem;
+        height: 1.6875rem;
       }
       cursor: pointer;
     }

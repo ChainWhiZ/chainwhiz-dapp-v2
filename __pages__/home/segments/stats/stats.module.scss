@@ -3,7 +3,7 @@
 
 .stats {
   padding-top: 10.3125rem /* 165px -> 10.3125rem */;
-  padding-bottom: 165px; //todo remove later
+  padding-bottom: 10.3125rem; //todo remove later
   position: relative;
 
   @include mobile-breakpoint {
@@ -48,7 +48,7 @@
     right: 18.75rem /* 300px -> 18.75rem */;
     
     @include mobile-breakpoint {
-      bottom: 82px;
+      bottom: 5.125rem;
       left: 28%;
     }
   }
@@ -74,10 +74,10 @@
       top: 0;
       left: -11.1875rem /* -179px -> -11.1875rem */;
       @include mobile-breakpoint {
-        width: 75px;
-        height: 26.3px;
+        width: 4.6875rem;
+        height: 1.6438rem;
         left: 0;
-        top: -39px;
+        top: -2.4375rem;
       }
     }
     &::after {
@@ -91,10 +91,10 @@
       top: 0;
       right: -16.625rem /* -266px -> -16.625rem */;
       @include mobile-breakpoint {
-        width: 75px;
-        height: 26.3px;
+        width: 4.6875rem;
+        height: 1.6438rem;
         right: 0;
-        top: -39px;
+        top: -2.4375rem;
       }
     }
 
@@ -107,9 +107,9 @@
       text-align: center;
       margin-bottom: 1.125rem /* 18px -> 1.125rem */;
       @include mobile-breakpoint {
-        font-size: 30px;
-        line-height: 37px;
-        margin-bottom: 16px;
+        font-size: 1.875rem;
+        line-height: 2.3125rem;
+        margin-bottom: 1rem;
       }
     }
     p {
@@ -121,10 +121,10 @@
       max-width: 51.25rem /* 820px -> 51.25rem */;
       margin-bottom: 6.8125rem /* 109px -> 6.8125rem */;
       @include mobile-breakpoint {
-        max-width: 302px;
-        font-size: 12px;
-        line-height: 18px;
-        margin-bottom: 53px;
+        max-width: 18.875rem;
+        font-size: .75rem;
+        line-height: 1.125rem;
+        margin-bottom: 3.3125rem;
       }
     }
   }
@@ -163,10 +163,10 @@
           border: 0;
           border-top: 0.0625rem /* 1px -> .0625rem */ solid #464646;
           border-bottom: 0.0625rem /* 1px -> .0625rem */ solid #464646;
-          padding-top: 59px;
-          padding-bottom: 79px;
-          margin-left: 40px;
-          margin-right: 40px;
+          padding-top: 3.6875rem;
+          padding-bottom: 4.9375rem;
+          margin-left: 2.5rem;
+          margin-right: 2.5rem;
         }
       }
 
@@ -178,8 +178,8 @@
         font-family: 'Cabinet Grotesk';
         border-radius: 50%;
         @include mobile-breakpoint {
-          font-size: 80px;
-          line-height: 99px;
+          font-size: 5rem;
+          line-height: 6.1875rem;
         }
       }
       h5 {
@@ -190,10 +190,10 @@
         color: white;
         font-family: $primary-font-regular;
         @include mobile-breakpoint {
-          font-size: 80px;
-          line-height: 99px;
-          font-size: 20px;
-          line-height: 30px;
+          font-size: 5rem;
+          line-height: 6.1875rem;
+          font-size: 1.25rem;
+          line-height: 1.875rem;
         }
       }
     }

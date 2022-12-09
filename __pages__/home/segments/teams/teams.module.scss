@@ -52,8 +52,8 @@
     filter: blur(100px);
     position: absolute;
     content: '';
-    right: -160px;
-    top: 240px;
+    right: -10rem;
+    top: 15rem;
     z-index: 2;
     @include mobile-breakpoint {
       display: none;
@@ -84,10 +84,6 @@
 .teams__carousel {
   max-width: 80%;
   margin: auto;
-
-  @include mobile-breakpoint {
-    // padding-bottom: 164px;
-  }
 }
 
 .team__member {
@@ -107,9 +103,9 @@
       transform: scale(1.1);
     }
     @include mobile-breakpoint {
-      width: 196px;
-      height: 196px;
-      margin-bottom: 20px;
+      width: 12.25rem;
+      height: 12.25rem;
+      margin-bottom: 1.25rem;
     }
   }
 
@@ -123,9 +119,9 @@
     display: none;
     font-weight: 500;
     @include mobile-breakpoint {
-      font-size: 20px;
-      line-height: 30px;
-      margin-bottom: 7px;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+      margin-bottom: .4375rem;
       display: initial;
     }
   }
@@ -139,9 +135,9 @@
     display: none;
     font-weight: 400;
     @include mobile-breakpoint {
-      margin-bottom: 36px;
-      font-size: 16px;
-      line-height: 30px;
+      margin-bottom: 2.25rem;
+      font-size: 1rem;
+      line-height: 1.875rem;
       display: initial;
     }
   }
@@ -151,8 +147,8 @@
       width: 12.125rem;
       height: 12.125rem;
       @include mobile-breakpoint {
-        width: 196px;
-        height: 196px;
+        width: 12.25rem;
+        height: 12.25rem;
       }
     }
   }
@@ -167,8 +163,8 @@
       width: 20.375rem;
       height: 20.375rem;
       @include mobile-breakpoint {
-        width: 196px;
-        height: 196px;
+        width: 12.25rem;
+        height: 12.25rem;
       }
     }
     h4,
