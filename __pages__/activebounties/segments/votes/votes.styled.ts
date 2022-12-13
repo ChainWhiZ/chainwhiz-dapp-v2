@@ -7,14 +7,12 @@ export const VoteContainer = styled.div`
   border-radius: 1.25rem;
   width: 36.125rem;
   height: 13.813rem;
-`;
 
-// .hr {
-//   background-color: #898989;
-//   width: 32.563rem;
-//   /* height: 0.03rem; */
-//   margin-top: 1.438rem;
-// }
+  ${devices.mobile} {
+    width: 20rem;
+    height: 11.063rem;
+  }
+`;
 
 export const VoteTopDisplay = styled.div`
   display: flex;
@@ -35,6 +33,10 @@ export const VoteHr = styled.div`
     height: 0.03rem;
     margin-top: 1.438rem;
     margin-left: 2.188rem;
+
+    ${devices.mobile} {
+      width: 18.063rem;
+    }
   }
 `;
 
@@ -50,6 +52,12 @@ export const TopLeft = styled.div`
     width: 4.875rem;
     height: 1.063rem;
     margin-top: 1.688rem;
+
+    ${devices.mobile} {
+      width: 4.875rem;
+      height: 1.063rem;
+      margin-top: 1.25rem;
+    }
   }
 `;
 
@@ -66,6 +74,11 @@ export const TopRight = styled.div`
     height: 1.375rem;
     border-radius: 50%;
     margin-top: 1.125rem;
+
+    ${devices.mobile} {
+      width: 1.207rem;
+      height: 1.207rem;
+    }
   }
 `;
 
@@ -76,14 +89,24 @@ export const DownRight = styled.div`
 `;
 
 export const VoteHeading = styled.div`
+  white-space: nowrap;
   font-size: 1.125rem;
   margin-top: 0.625rem;
+
+  ${devices.mobile} {
+    font-size: 0.875rem;
+  }
 `;
 
 export const VoteDesc = styled.div`
+  white-space: nowrap;
   color: #898989;
   margin-top: 0.375rem;
   font-size: 0.875rem;
+
+  ${devices.mobile} {
+    font-size: 0.75rem;
+  }
 `;
 
 export const VotingImage = styled.div`
@@ -107,19 +130,34 @@ export const VoteText = styled.div`
 `;
 
 export const VoteDays = styled.div`
+  white-space: nowrap;
   font-weight: 300;
   font-size: 1rem;
   margin-top: 1.25rem;
+
+  ${devices.mobile} {
+    font-size: 0.625rem;
+  }
 `;
 
 export const VoteMatic = styled.div`
+  white-space: nowrap;
   font-size: 1.125rem;
   margin-top: 1.313rem;
+
+  ${devices.mobile} {
+    font-size: 0.75rem;
+  }
 `;
 
 export const Usd = styled.div`
+  white-space: nowrap;
   color: #898989;
   font-weight: 400;
   font-size: 0.75rem;
   margin-top: 0.313rem;
+
+  ${devices.mobile} {
+    font-size: 0.625rem;
+  }
 `;

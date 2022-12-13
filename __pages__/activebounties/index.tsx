@@ -76,8 +76,13 @@ const ActiveBounty = () => {
       </VotesBox>
 
       <Doodle>
-        <RenderStyledImage src='/images/active/fly.png' className='doodle_logo' />
-        <DoodleText>Reached the very end? Let's take a journey to the center of the world!</DoodleText>
+        <RenderStyledImage
+          src="/images/active/fly.png"
+          className="doodle_logo"
+        />
+        <DoodleText>
+          Reached the very end? Let's take a journey to the center of the world!
+        </DoodleText>
       </Doodle>
     </ActiveBountiesContainer>
   );
