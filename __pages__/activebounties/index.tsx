@@ -11,9 +11,13 @@ import {
   ActiveInput,
   ActiveFilter,
   TopBounties,
+  VotesBox,
+  Doodle,
+  DoodleText,
   // All,
 } from './Activebounties.styled';
 import RenderStyledImage from 'components/image/renderstyledimage';
+import ActiveVoteComponent from './segments/activevotes';
 
 const ActiveBounty = () => {
   return (
@@ -66,6 +70,15 @@ const ActiveBounty = () => {
         <div>UI/UX Design</div>
         <div>data Entry</div>
       </TopBounties>
+
+      <VotesBox>
+        <ActiveVoteComponent active={undefined} />
+      </VotesBox>
+
+      <Doodle>
+        <RenderStyledImage src='/images/active/fly.png' className='doodle_logo' />
+        <DoodleText>Reached the very end? Let's take a journey to the center of the world!</DoodleText>
+      </Doodle>
     </ActiveBountiesContainer>
   );
 };

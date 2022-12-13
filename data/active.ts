@@ -3,7 +3,7 @@ export const ACTIVE_BOUNTIES = {
   title: 'Hacking Challenge mania screening',
   description: 'Bounty description within 10-12 words',
   vote: 'Voting Active',
-  daysLeft: 6,
+  daysLeft: '6 Days left',
   amount: 0.25,
   usd: '$12',
   activeImage: [
@@ -14,3 +14,12 @@ export const ACTIVE_BOUNTIES = {
   ],
   elipseImg: '/images/active/elipsse.png',
   };
+
+  export const ACTIVE_VOTES = [
+    ACTIVE_BOUNTIES,
+    ACTIVE_BOUNTIES,
+    ACTIVE_BOUNTIES,
+    ACTIVE_BOUNTIES,
+    ACTIVE_BOUNTIES,
+    ACTIVE_BOUNTIES,
+  ]
