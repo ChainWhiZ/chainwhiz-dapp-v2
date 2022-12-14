@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ActiveBountiesContainer,
   ActiveHeading,
@@ -15,23 +15,37 @@ import {
   Doodle,
   DoodleText,
   // All,
-} from './Activebounties.styled';
+} from './activebounties.styled';
 import RenderStyledImage from 'components/image/renderstyledimage';
 import ActiveVoteComponent from './segments/activevotes';
+import SearchFilter from './segments/menu&filter/ActiveFilter';
+import ActiveVoteMenu from './segments/menu&filter/menu';
 
 const ActiveBounty = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openFilter, setOpenFilter] = useState(false);
+
+  const clickmenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
+  const clickfilter = () => {
+    setOpenFilter(!openFilter);
+  };
+
   return (
     <ActiveBountiesContainer>
       <ActiveTop>
         <ActiveHeading>
           <ActiveMenu>
             <Heading>Explore Bounties </Heading>
-            <Active>
+            <Active onClick={clickmenu}>
               <p>Active</p>
               <RenderStyledImage
                 src="/images/active/menu.png"
                 className="active__img"
               />
+              {openMenu && <ActiveVoteMenu />}
             </Active>
           </ActiveMenu>
           <Immerse>
@@ -52,7 +66,8 @@ const ActiveBounty = () => {
             />
           </ActiveInput>
 
-          <ActiveFilter>
+          <ActiveFilter onClick={clickfilter}>
+            {openFilter && <SearchFilter />}
             <RenderStyledImage
               src="/images/active/filter.png"
               className="active__filter"

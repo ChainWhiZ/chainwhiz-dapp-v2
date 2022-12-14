@@ -69,6 +69,7 @@ export const ActiveTop = styled.div`
 `;
 
 export const ActiveMenu = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -110,7 +111,7 @@ export const Active = styled.div`
     margin-left: 0.418rem;
     background-size: 100%;
 
-    ${devices.mobile}{
+    ${devices.mobile} {
       margin-left: 0;
     }
   }
@@ -191,8 +192,8 @@ export const ActiveInput = styled.div`
 `;
 
 export const ActiveFilter = styled.div`
-  cursor: pointer;
   position: relative;
+  cursor: pointer;
   background-color: #1e1c30;
   display: flex;
   justify-content: center;
@@ -239,6 +240,7 @@ export const ActiveFilter = styled.div`
 export const TopBounties = styled.div`
   display: flex;
   align-items: center;
+  white-space: nowrap;
   font-weight: 400;
   gap: 1.875rem;
   font-size: 1.375rem;
@@ -246,6 +248,7 @@ export const TopBounties = styled.div`
 
   ${devices.mobile} {
     font-size: 1rem;
+    /* margin-left: 1.5rem; */
   }
 `;
 
