@@ -13,7 +13,7 @@ import {
   VoteHeading,
   VoteDesc,
   VotingImage,
-  // VoteLogo,
+  GroupImages,
   VoteText,
   VoteDays,
   VoteMatic,
@@ -36,10 +36,12 @@ const Votes = ({ vote }: any) => {
               <RenderStyledImage src={vote.elipseImg} className="vote_logo" />
               <VoteText>{vote.vote}</VoteText>
             </VotingImage>
+            <GroupImages>
             <RenderGroupImages
               images={vote.activeImage}
               imageClassName="active__images"
             />
+            </GroupImages>
           </TopRight>
         </VoteTopDisplay>
       </VoteHr>

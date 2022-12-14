@@ -9,6 +9,7 @@ export const VoteContainer = styled.div`
   height: 13.813rem;
 
   ${devices.mobile} {
+    position: relative;
     width: 20rem;
     height: 11.063rem;
   }
@@ -19,6 +20,10 @@ export const VoteTopDisplay = styled.div`
   align-items: center;
   padding-left: 2.188rem;
   padding-right: 1.375rem;
+
+  ${devices.mobile}{
+    padding-left: 1.063rem;
+  }
 `;
 
 export const VoteHr = styled.div`
@@ -36,6 +41,7 @@ export const VoteHr = styled.div`
 
     ${devices.mobile} {
       width: 18.063rem;
+      margin-left: 1.063rem;
     }
   }
 `;
@@ -45,6 +51,12 @@ export const VoteDownDisplay = styled.div`
   align-items: center;
   padding-left: 2.125rem;
   padding-right: 1.313rem;
+
+  ${devices.mobile}{
+    align-items: baseline;
+    padding-top: 0.75rem;
+    padding-left: 1.25rem;
+  }
 `;
 
 export const TopLeft = styled.div`
@@ -73,19 +85,44 @@ export const TopRight = styled.div`
     width: 1.375rem;
     height: 1.375rem;
     border-radius: 50%;
-    margin-top: 1.125rem;
-
+    
     ${devices.mobile} {
       width: 1.207rem;
       height: 1.207rem;
+      /* left: 3.313rem; */
     }
+  }
+  
+  ${devices.mobile}{
+    position: absolute;
+    margin-left: 0;
+    top: 1.125rem;
+    right: 0.875rem;
   }
 `;
 
-export const DownLeft = styled.div``;
+export const GroupImages = styled.div`
+    margin-top: 1.125rem;
+    
+    ${devices.mobile} {
+      position: absolute;
+      top: 5.85rem;
+      right: 1rem;
+      /* left: 3.313rem; */
+  }
+`;
+
+export const DownLeft = styled.div`
+`;
 
 export const DownRight = styled.div`
+  text-align: right;
   margin-left: 20.375rem;
+
+  ${devices.mobile}{
+    text-align: center;
+    margin-left: 3.313rem;
+  }
 `;
 
 export const VoteHeading = styled.div`
@@ -118,6 +155,10 @@ export const VotingImage = styled.div`
     width: 0.625rem;
     height: 0.625rem;
   }
+
+  ${devices.mobile}{
+    margin-top: 0;
+  }
 `;
 
 // export const VoteLogo = styled.div``;
@@ -127,6 +168,7 @@ export const VoteText = styled.div`
   font-weight: 400;
   font-size: 0.625rem;
   margin-left: 0.5rem;
+  white-space: nowrap;
 `;
 
 export const VoteDays = styled.div`
@@ -137,6 +179,7 @@ export const VoteDays = styled.div`
 
   ${devices.mobile} {
     font-size: 0.625rem;
+    margin-top: 0;
   }
 `;
 
@@ -147,6 +190,7 @@ export const VoteMatic = styled.div`
 
   ${devices.mobile} {
     font-size: 0.75rem;
+    margin-top: 0;
   }
 `;
 

@@ -4,8 +4,8 @@ export const ACTIVE_BOUNTIES = {
   description: 'Bounty description within 10-12 words',
   vote: 'Voting Active',
   daysLeft: '6 Days left',
-  amount: 0.25,
-  usd: '$12',
+  amount: '0.25 MATIC',
+  usd: '$12 USD',
   activeImage: [
     '/images/active/black.png',
     '/images/active/asian.png',

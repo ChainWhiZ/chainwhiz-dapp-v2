@@ -109,6 +109,10 @@ export const Active = styled.div`
     height: 0.615rem;
     margin-left: 0.418rem;
     background-size: 100%;
+
+    ${devices.mobile}{
+      margin-left: 0;
+    }
   }
 
   p {
@@ -294,5 +298,6 @@ export const DoodleText = styled.div`
     font-size: 0.75rem;
     margin-top: 0.697rem;
     width: 16.375rem;
+    text-align: center;
   }
 `;
