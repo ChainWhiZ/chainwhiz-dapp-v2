@@ -18,8 +18,8 @@ import {
 } from './activebounties.styled';
 import RenderStyledImage from 'components/image/renderstyledimage';
 import ActiveVoteComponent from './segments/activevotes';
-import SearchFilter from './segments/menu&filter/ActiveFilter';
-import ActiveVoteMenu from './segments/menu&filter/menu';
+import SearchFilter from './segments/activefilter/activeFilter';
+import ActiveVoteMenu from './segments/menu/menu';
 
 const ActiveBounty = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -80,10 +80,10 @@ const ActiveBounty = () => {
         <div>All</div>
         <div>Graphics design</div>
         <div>Animation</div>
-        <div>SQL Development</div>
-        <div>DBMS Strutures</div>
-        <div>UI/UX Design</div>
-        <div>data Entry</div>
+        <div id='mobilenone'>SQL Development</div>
+        <div id='mobilenone'>DBMS Strutures</div>
+        <div id='mobilenone'>UI/UX Design</div>
+        <div id='mobilenone'>data Entry</div>
       </TopBounties>
 
       <VotesBox>

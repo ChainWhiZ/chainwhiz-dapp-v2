@@ -123,9 +123,6 @@ export const Active = styled.div`
   }
 
   ${devices.mobile} {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     width: 1rem;
     height: 1.375rem;
   }
@@ -175,7 +172,8 @@ export const ActiveInput = styled.div`
     }
   }
 
-  input::placeholder {
+  .active__input::placeholder {
+    font-family: 'Poppins';
     color: #ffffff;
     font-weight: 400;
     font-size: 1rem;
@@ -246,14 +244,34 @@ export const TopBounties = styled.div`
   font-size: 1.375rem;
   margin-top: 4.375rem;
 
+  div{
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1E1C30;
+      color: #D4FF1E;
+      border-radius: 0.625rem;
+      width: fit-content;
+      font-size: 1rem;
+      padding: 0.625rem 1.25rem;
+    }
+  }
+
+  #mobilenone {
+    ${devices.mobile} {
+      display: none;
+    }
+  }
+
   ${devices.mobile} {
     font-size: 1rem;
-    /* margin-left: 1.5rem; */
   }
 `;
 
 export const VotesBox = styled.div`
-  /* display: flex; */
   margin-top: 3.375rem;
 `;
 

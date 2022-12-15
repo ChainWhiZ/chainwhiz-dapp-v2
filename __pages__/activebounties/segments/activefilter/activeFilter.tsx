@@ -25,7 +25,7 @@ import {
   BitcoinBtn,
   Bazuka,
   Input,
-} from './menu.styled';
+} from './filter.styled';
 import ReactSlider from 'react-slider';
 
 const ActiveFilter = () => {
@@ -34,7 +34,7 @@ const ActiveFilter = () => {
       <Options>Filter Options</Options>
       <DeadlineSlider>
         <DeadlineText>
-          <div className="dealine">Deadline</div>
+          <div className="deadline">Deadline</div>
           <Deadline>No. of days</Deadline>
         </DeadlineText>
         <DeadlineFilter>
@@ -63,7 +63,7 @@ const ActiveFilter = () => {
             className="reward-horizontal-slider"
             thumbClassName="menu-example-thumb"
             trackClassName="menu-example-track"
-            defaultValue={[0 - 1, 1 - 5, 5 - 10]}
+            defaultValue={[0, 5, 10]}
             ariaLabel={['Leftmost thumb', 'Middle thumb', 'Rightmost thumb']}
             renderThumb={(props: any, state: any) => (
               <div {...props}>{state.valueNow}</div>
@@ -75,7 +75,9 @@ const ActiveFilter = () => {
       </RewardSlider>
 
       <Upskill>
-        <input type="checkbox" className="active-checkbox" />
+        <Input>
+          <input type="checkbox" className="active-checkbox" />
+        </Input>
         <UpskillText>Show only upskilling bounties</UpskillText>
       </Upskill>
 
