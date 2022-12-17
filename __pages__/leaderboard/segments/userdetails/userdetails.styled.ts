@@ -10,8 +10,7 @@ export const UserdetailsContainer = styled.div`
 
   border-radius: 1.25rem;
   width: 99.5rem;
-  /* height: 64.125rem; */
-  padding-bottom: 1.25rem;
+  padding-bottom: 3.75rem;
 
   ${devices.mobile} {
     background-color: transparent;
@@ -19,10 +18,12 @@ export const UserdetailsContainer = styled.div`
 `;
 
 export const TableHeading = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 224px 558px 273px 0px;
   align-items: center;
   background-color: #131313;
   color: #d4ff1e;
+  font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   border-radius: 0.625rem;
   font-size: 1.25rem;
@@ -41,20 +42,21 @@ export const TableHeading = styled.div`
 `;
 
 export const UserText = styled.div`
-  margin-left: 1.563rem;
+  /* margin-left: 1.563rem; */
+  margin-left: 25px;
   display: flex;
   align-items: center;
+  font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
-  .mbtext{
+  .mbtext {
     display: none;
-
-    ${devices.mobile}{
+    ${devices.mobile} {
       display: flex;
     }
   }
 
-  .lptext{
-    ${devices.mobile}{
+  .lptext {
+    ${devices.mobile} {
       display: none;
     }
   }
@@ -77,7 +79,8 @@ export const UserText = styled.div`
 `;
 
 export const DetailsText = styled.div`
-  margin-left: 6.875rem;
+  /* margin-left: 6.875rem; */
+  font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   ${devices.mobile} {
     margin-left: 2.563rem;
@@ -85,9 +88,10 @@ export const DetailsText = styled.div`
 `;
 
 export const RankText = styled.div`
-  margin-left: 31.875rem;
+  /* margin-left: 33.9375rem; */
   display: flex;
   align-items: center;
+  font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   .polygonTwo {
     width: 0.875rem;
@@ -107,7 +111,8 @@ export const RankText = styled.div`
 `;
 
 export const TotalText = styled.div`
-  margin-left: 15.188rem;
+  /* margin-left: 14.5625rem; */
+  font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   ${devices.mobile} {
     margin-left: 1.813rem;
@@ -122,11 +127,13 @@ export const TableContents = styled.div`
   width: 91.875rem;
   height: 6.188rem;
   background-color: #1f1e2b;
-  display: flex;
   align-items: center;
-
+  
   border-radius: 0.625rem;
   margin-top: 1.313rem;
+  
+  display: grid;
+  grid-template-columns: 224px 558px 273px 0px;
 
   ${devices.mobile} {
     width: 20rem;
@@ -134,15 +141,16 @@ export const TableContents = styled.div`
   }
 `;
 
-export const User = styled.div`
+export const User = styled.div<{ rank: number }>`
   display: flex;
   align-items: center;
   font-weight: 700;
 
   font-size: 1.875rem;
-  margin-left: 4.156rem;
+  margin-left: 48px;
 
   &::after {
+    opacity: ${(props) => (props.rank <= 3 ? 1 : 0)};
     content: '';
     background-image: url('/images/leaderboard/crown.png');
     background-size: 100%;
@@ -163,7 +171,7 @@ export const User = styled.div`
   }
 `;
 
-export const DetailsandImage = styled.div`
+export const UserInformation = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -181,7 +189,17 @@ export const Details = styled.div`
   }
 `;
 
-export const Copy = styled.div`
+export const CopyAddress = styled.div`
+  cursor: pointer;
+  transition: ${(props) => props.theme.meta.fastTransitionSpeed};
+
+  &:hover {
+    transform: scale(0.97);
+  }
+
+  &:active {
+    transform: scale(1.03);
+  }
   .copy {
     width: 1rem;
     height: 1.25rem;
@@ -201,7 +219,7 @@ export const UserImg = styled.div`
     height: 3rem;
     border-radius: 50%;
 
-    margin-left: 7.438rem;
+    /* margin-left: 7.438rem; */
 
     ${devices.mobile} {
       width: 1.125rem;
@@ -215,7 +233,7 @@ export const Rank = styled.div`
   font-weight: 600;
   font-size: 1.25rem;
 
-  margin-left: 12.875rem;
+  /* margin-left: 12.875rem; */
 
   ${devices.mobile} {
     font-size: 0.625rem;
@@ -224,11 +242,11 @@ export const Rank = styled.div`
 `;
 
 export const Total = styled.div`
-  color: #d4ff1e;
+  color: ${(props) => props.theme.colors.neonGreen};
 
   font-size: 1.875rem;
   font-weight: 600;
-  margin-left: 13.375rem;
+  /* margin-left: 13.375rem; */
 
   ${devices.mobile} {
     font-size: 0.875rem;

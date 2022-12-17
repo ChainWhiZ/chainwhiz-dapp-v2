@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import RenderStyledImage from 'components/image/renderstyledimage';
 import UserDetails from './segments/userdetails';
 import {
@@ -14,15 +14,19 @@ import {
   Filter,
   Dropdown,
   UserdetailsWrapper,
+  FilterWrapper,
 } from './leaderboard.styled';
 import FilterDropdown from './segments/userdetails/filterDropdown';
+import { useClickAway } from 'react-use';
 
 const Leaderboard = () => {
   const [open, setOpen] = useState(false);
+  const ddRef = useRef(null);
 
-  const Clicked = () => {
-    setOpen(!open);
-  };
+  useClickAway(ddRef, () => {
+    setOpen(false);
+  });
+
   return (
     <LeaderboardContainer>
       <LeaderboardWrapper>
@@ -53,25 +57,28 @@ const Leaderboard = () => {
               className="search"
               src="/images/leaderboard/search.png"
             />
-            <input type="text" className='input' placeholder="Search your favourite contestant" />
-          </Search>
-          <Filter onClick={Clicked}>
-            <RenderStyledImage
-              className="filter"
-              src="/images/leaderboard/filter.png"
+            <input
+              type="text"
+              className="input"
+              placeholder="Search your favourite contestant"
             />
-            {open ? (
-              <Dropdown>
-                <FilterDropdown />
-              </Dropdown>
-            ) : null}
-          </Filter>
+          </Search>
+          <FilterWrapper>
+            <Filter onClick={() => setOpen(true)}>
+              <RenderStyledImage
+                className="filter"
+                src="/images/leaderboard/filter.png"
+              />
+            </Filter>
+            <Dropdown ref={ddRef} open={open}>
+              <FilterDropdown />
+            </Dropdown>
+          </FilterWrapper>
         </SearchAndFilter>
 
         <UserdetailsWrapper>
           <UserDetails />
         </UserdetailsWrapper>
-
       </LeaderboardWrapper>
     </LeaderboardContainer>
   );

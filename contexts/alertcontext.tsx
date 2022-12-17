@@ -2,7 +2,7 @@ import Alert from 'components/alerts';
 import { TOAST_DURATION } from 'constants/index';
 import React, { useState, createContext, useContext, useRef } from 'react';
 
-type AlertValues = {
+export type AlertValues = {
   title: string;
   subTitle: string;
   size: 'small' | 'large';
