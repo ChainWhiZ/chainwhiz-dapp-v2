@@ -19,10 +19,11 @@ export const UserdetailsContainer = styled.div`
 
 export const TableHeading = styled.div`
   display: grid;
-  grid-template-columns: 224px 558px 273px 0px;
+  grid-template-columns: 15.25rem 40.3125rem 19.5625rem 0rem;
   align-items: center;
   background-color: #131313;
   color: #d4ff1e;
+  z-index: 1;
   font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   border-radius: 0.625rem;
@@ -38,16 +39,16 @@ export const TableHeading = styled.div`
     height: 2.688rem;
     font-size: 0.75rem;
     margin-top: 0;
+    grid-template-columns: 5.3125rem 6.0625rem 4.5rem 0rem;
   }
 `;
 
-export const UserText = styled.div`
-  /* margin-left: 1.563rem; */
-  margin-left: 25px;
+export const UserHeading = styled.div`
+  margin-left: 1.5625rem;
   display: flex;
+  gap: 0.375rem;
   align-items: center;
   font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
-
   .mbtext {
     display: none;
     ${devices.mobile} {
@@ -75,20 +76,19 @@ export const UserText = styled.div`
 
   ${devices.mobile} {
     margin-left: 0.75rem;
+    gap: 0.3125rem;
   }
 `;
 
-export const DetailsText = styled.div`
-  /* margin-left: 6.875rem; */
+export const DetailsHeading = styled.div`
   font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   ${devices.mobile} {
-    margin-left: 2.563rem;
+    margin-left: 0;
   }
 `;
 
-export const RankText = styled.div`
-  /* margin-left: 33.9375rem; */
+export const RankHeading = styled.div`
   display: flex;
   align-items: center;
   font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
@@ -106,21 +106,21 @@ export const RankText = styled.div`
   }
 
   ${devices.mobile} {
-    margin-left: 3.438rem;
+    margin-left: 0;
   }
 `;
 
-export const TotalText = styled.div`
-  /* margin-left: 14.5625rem; */
+export const TotalHeading = styled.div`
   font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   ${devices.mobile} {
-    margin-left: 1.813rem;
+    margin-left: 0;
   }
 `;
 
 export const TableBody = styled.div`
-  color: #ffffff;
+  z-index: 1;
+  color: ${(props) => props.theme.colors.white};
 `;
 
 export const TableContents = styled.div`
@@ -128,26 +128,27 @@ export const TableContents = styled.div`
   height: 6.188rem;
   background-color: #1f1e2b;
   align-items: center;
-  
+
   border-radius: 0.625rem;
   margin-top: 1.313rem;
-  
+
   display: grid;
-  grid-template-columns: 224px 558px 273px 0px;
+  grid-template-columns: 15.25rem 40.3125rem 19.5625rem 0rem;
 
   ${devices.mobile} {
     width: 20rem;
     height: 3.188rem;
+    grid-template-columns: 5.3125rem 6.0625rem 4.5rem 0rem;
   }
 `;
 
-export const User = styled.div<{ rank: number }>`
+export const UserRank = styled.div<{ rank: number }>`
   display: flex;
   align-items: center;
+  font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
   font-weight: 700;
-
   font-size: 1.875rem;
-  margin-left: 48px;
+  margin-left: 4.1563rem;
 
   &::after {
     opacity: ${(props) => (props.rank <= 3 ? 1 : 0)};
@@ -179,6 +180,7 @@ export const UserInformation = styled.div`
 export const Details = styled.div`
   font-size: 1.25rem;
   margin-left: 1.188rem;
+  font-family: ${(props) => props.theme.fonts.primaryFontMedium};
 
   ${devices.mobile} {
     text-overflow: ellipsis;
@@ -200,7 +202,7 @@ export const CopyAddress = styled.div`
   &:active {
     transform: scale(1.03);
   }
-  .copy {
+  .leaderboard__copy {
     width: 1rem;
     height: 1.25rem;
     margin-left: 0.813rem;
@@ -219,25 +221,21 @@ export const UserImg = styled.div`
     height: 3rem;
     border-radius: 50%;
 
-    /* margin-left: 7.438rem; */
-
     ${devices.mobile} {
       width: 1.125rem;
       height: 1.125rem;
-      margin-left: 1.563rem;
+      margin-left: 0;
     }
   }
 `;
 
 export const Rank = styled.div`
-  font-weight: 600;
+  font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
   font-size: 1.25rem;
-
-  /* margin-left: 12.875rem; */
 
   ${devices.mobile} {
     font-size: 0.625rem;
-    margin-left: 1.417rem;
+    margin-left: 0;
   }
 `;
 
@@ -245,11 +243,10 @@ export const Total = styled.div`
   color: ${(props) => props.theme.colors.neonGreen};
 
   font-size: 1.875rem;
-  font-weight: 600;
-  /* margin-left: 13.375rem; */
+  font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   ${devices.mobile} {
     font-size: 0.875rem;
-    margin-left: 1.75rem;
+    margin-left: 0;
   }
 `;

@@ -5,11 +5,11 @@ import {
   TableHeading,
   TableBody,
   TableContents,
-  UserText,
-  TotalText,
-  DetailsText,
-  RankText,
-  User,
+  UserHeading,
+  TotalHeading,
+  DetailsHeading,
+  RankHeading,
+  UserRank,
   UserInformation,
   Details,
   CopyAddress,
@@ -22,24 +22,25 @@ import { copyToClipboard } from 'utils';
 const UserDetails = () => {
   return (
     <UserdetailsContainer>
+
       <TableHeading>
-        <UserText>
+        <UserHeading>
           <p className="lptext">User Rank</p>
           <p className="mbtext">U.R</p>
           <RenderStyledImage
             className="polygon"
             src="/images/leaderboard/upsidetriangle.png"
           />
-        </UserText>
-        <DetailsText>Details</DetailsText>
-        <RankText>
+        </UserHeading>
+        <DetailsHeading>Details</DetailsHeading>
+        <RankHeading>
           <p>Rank</p>
           <RenderStyledImage
             className="polygonTwo"
             src="/images/leaderboard/upsidetriangle.png"
           />
-        </RankText>
-        <TotalText>TotalXP</TotalText>
+        </RankHeading>
+        <TotalHeading>TotalXP</TotalHeading>
       </TableHeading>
 
       <TableBody>
@@ -53,20 +54,17 @@ const UserDetails = () => {
 
 //eslint-disable-next-line @typescript-eslint/no-explicit-any
 function LeaderboardItem({ user, rank }: { user: any; rank: number }) {
-
   return (
     <TableContents>
-      <User rank={rank}>{user.position}</User>
+      <UserRank rank={rank}>{user.position}</UserRank>
       <UserInformation>
         <UserImg>
           <RenderStyledImage className="user__img" src={user.image} />
         </UserImg>
         <Details>{user.address}</Details>
-        <CopyAddress
-          onClick={() => copyToClipboard(user.address)}
-        >
+        <CopyAddress onClick={() => copyToClipboard(user.address)}>
           <RenderStyledImage
-            className="copy"
+            className="leaderboard__copy"
             src="/images/leaderboard/copy.png"
           />
         </CopyAddress>

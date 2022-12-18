@@ -54,7 +54,7 @@ const Leaderboard = () => {
         <SearchAndFilter>
           <Search>
             <RenderStyledImage
-              className="search"
+              className="leaderboard__search"
               src="/images/leaderboard/search.png"
             />
             <input

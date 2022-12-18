@@ -9,13 +9,13 @@ export const LeaderboardContainer = styled.div`
   background-position: center;
   box-sizing: border-box;
   width: 100%;
+  position: relative;
 
   &::before {
     content: '';
     position: fixed;
     background-color: #ffffff;
     background-size: 100%;
-
     filter: blur(6.25rem);
     border-radius: 50%;
     opacity: 0.5;
@@ -25,11 +25,11 @@ export const LeaderboardContainer = styled.div`
     left: -8.5rem;
 
     ${devices.mobile} {
-      width: 6.5rem;
-      height: 6.5rem;
-      opacity: 0.8;
-      top: 15rem;
-      left: -4rem;
+      width: 13.5rem;
+      height: 8.5rem;
+      opacity: 1;
+      top: 11rem;
+      left: -11rem;
     }
   }
 
@@ -78,6 +78,9 @@ export const LeaderBoardLogo = styled.div`
   align-items: center;
 
   margin-top: 2.688rem;
+  ${devices.mobile} {
+    margin-top: 3.4375rem;
+  }
 
   &::before {
     content: '';
@@ -91,6 +94,10 @@ export const LeaderBoardLogo = styled.div`
     width: 13.25rem;
     height: 13.25rem;
     top: 3.75rem;
+
+    ${devices.mobile} {
+      display: none;
+    }
   }
 `;
 
@@ -104,7 +111,8 @@ export const LogoImgOne = styled.div`
     ${devices.mobile} {
       width: 2.188rem;
       height: 1.5rem;
-      top: 0.75rem;
+      top: 1.1875rem;
+      left: 1.25rem;
     }
   }
 
@@ -119,6 +127,7 @@ export const LogoImgOne = styled.div`
       width: 2.369rem;
       height: 0.826rem;
       top: 1.938rem;
+      left: 0.8125rem;
     }
   }
 `;
@@ -130,6 +139,19 @@ export const LogoText = styled.div`
 
   ${devices.mobile} {
     font-size: 1.25rem;
+    position: relative;
+
+    &::after {
+      width: 4.75rem;
+      height: 4.75rem;
+      filter: blur(6.25rem);
+      position: absolute;
+      color: ${(props) => props.theme.colors.neonGreen};
+      opacity: 1;
+      content: '';
+      top: 0;
+      left: 2.5rem;
+    }
   }
 `;
 
@@ -166,6 +188,7 @@ export const SearchAndFilter = styled.div`
   display: flex;
   align-items: center;
   margin-top: 3.188rem;
+  z-index: 1;
 
   ${devices.mobile} {
     margin-top: 2.813rem;
@@ -180,14 +203,17 @@ export const Search = styled.div`
   display: flex;
   align-items: center;
 
-  .search {
+  .leaderboard__search {
     width: 1.163rem;
     height: 1.163rem;
     margin-left: 1.274rem;
+    img {
+      object-fit: contain;
+    }
 
     ${devices.mobile} {
-      width: 1.043rem;
-      height: 1.043rem;
+      width: 3.92rem;
+      height: 1.2325rem;
       margin-left: 1.142rem;
     }
   }
@@ -195,16 +221,16 @@ export const Search = styled.div`
   .input {
     outline: none;
     border: none;
-    background-color: transparent;
     border-radius: 0.625rem;
+    padding-right: 1.875rem;
+    background-color: transparent;
     color: ${(props) => props.theme.colors.white};
-    padding-right: 30px;
     font-family: ${(props) => props.theme.fonts.primaryFontRegular};
 
     margin-left: 0.751rem;
     width: 34.813rem;
     height: 2.65rem;
-
+    z-index: 1;
     &::placeholder {
       color: ${(props) => props.theme.colors.white};
       font-weight: 400;
@@ -234,15 +260,13 @@ export const Filter = styled.div`
   cursor: pointer;
   transition: ${(props) => props.theme.meta.fastTransitionSpeed};
   opacity: 1;
-  &:hover{
+  &:hover {
     opacity: 0.85;
   }
 
   width: 3.813rem;
   height: 3.625rem;
   margin-left: 0.938rem;
-
-
 
   .filter {
     width: 1.313rem;
@@ -283,6 +307,7 @@ export const Filter = styled.div`
 export const UserdetailsWrapper = styled.div`
   margin-top: 2.313rem;
   margin-bottom: 2.313rem;
+  z-index: 1;
 
   ${devices.mobile} {
     margin-top: 2.188rem;
