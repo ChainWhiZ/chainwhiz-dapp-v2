@@ -1,11 +1,12 @@
-import { useWeb3React } from "@web3-react/core";
-import RenderStyledImage from "components/image/renderstyledimage";
-import useConnectWallet from "hooks/useconnectwallet";
-import React, { useState } from "react";
-import { formatAddress } from "utils";
+import { useWeb3React } from '@web3-react/core';
+import RenderStyledImage from 'components/image/renderstyledimage';
+import useConnectWallet from 'hooks/useconnectwallet';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
+import { formatAddress } from 'utils';
 import Link from 'next/link';
-import { CloseIcon, HamBurgerMenu, MobileBellIcon } from "./assets";
-import styles from "./mobilemenu.module.scss";
+import { CloseIcon, HamBurgerMenu, MobileBellIcon } from './assets';
+import styles from './mobilemenu.module.scss';
 
 const OPEN_ICON = '/images/nav/plus.svg';
 const CLOSE_ICON = '/images/nav/minus.svg';
@@ -21,6 +22,7 @@ export default function MobileMenu() {
   const toggleOpen = () => setOpen((o) => !o);
   const toggleMenuOpen = () => setMenuOpen((o) => !o);
 
+  const router = useRouter();
   return (
     <>
       <section id={styles.mobilemenu}>
@@ -46,18 +48,20 @@ export default function MobileMenu() {
                 {menuOpen && (
                   <>
                     <p>Your Bounties</p>
-                    <Link href='/post'><p>Post a Bounty</p></Link>
+                    <Link href="/post">
+                      <p>Post a Bounty</p>
+                    </Link>
                     <p>Explore Bounties</p>
                   </>
                 )}
-                <h2>LeaderBoard</h2>
+                <h2 onClick={() => router.push('/leaderboard')}>LeaderBoard</h2>
               </section>
               <section className={styles.sub__items}>
                 <h5>Linked Wallet</h5>
                 <button onClick={connectWalletPressed}>
                   {active && account
                     ? formatAddress(account)
-                    : "Connect wallet"}
+                    : 'Connect wallet'}
                 </button>
               </section>
             </div>
