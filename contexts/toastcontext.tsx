@@ -7,7 +7,7 @@ const DEFAULT_TOAST_VALUES = {
   subTitle: '',
   onAction: null,
 };
-type ToastValues = {
+export type ToastValues = {
   title: string;
   subTitle: string;
   //eslint-disable-next-line @typescript-eslint/no-explicit-any
