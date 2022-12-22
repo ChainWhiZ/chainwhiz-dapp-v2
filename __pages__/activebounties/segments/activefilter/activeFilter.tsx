@@ -40,8 +40,8 @@ const ActiveFilter = () => {
         <DeadlineFilter>
           <ReactSlider
             className="deadline-horizontal-slider"
-            thumbClassName="menu-example-thumb"
-            trackClassName="menu-example-track"
+            thumbClassName="deadline-example-thumb"
+            trackClassName="deadline-example-track"
             defaultValue={[30, 60, 90, 120]}
             ariaLabel={['Leftmost thumb', 'Middle thumb', 'Rightmost thumb']}
             renderThumb={(props: any, state: any) => (
@@ -61,8 +61,8 @@ const ActiveFilter = () => {
         <RewardFilter>
           <ReactSlider
             className="reward-horizontal-slider"
-            thumbClassName="menu-example-thumb"
-            trackClassName="menu-example-track"
+            thumbClassName="reward-example-thumb"
+            trackClassName="reward-example-track"
             defaultValue={[0, 5, 10]}
             ariaLabel={['Leftmost thumb', 'Middle thumb', 'Rightmost thumb']}
             renderThumb={(props: any, state: any) => (

@@ -38,7 +38,7 @@ export const DeadlineSlider = styled.div``;
 
 export const DeadlineText = styled.div`
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   margin-top: 1.974rem;
   margin-left: 1.61rem;
@@ -72,12 +72,14 @@ export const DeadlineFilter = styled.div`
     }
   }
 
-  .menu-example-thumb {
+  .deadline-example-thumb {
     color: #898989;
     font-weight: 400;
     font-size: 0.847rem;
-
+    margin-top: 0.763rem;
+    
     ${devices.mobile} {
+      margin-top: 0.563rem;
       font-size: 0.625rem;
     }
   }
@@ -130,13 +132,15 @@ export const RewardFilter = styled.div`
     }
   }
 
-  .menu-example-thumb {
+  .reward-example-thumb {
     color: #898989;
     font-weight: 400;
     font-size: 0.847rem;
+    margin-top: 0.848rem;
 
     ${devices.mobile} {
       font-size: 0.625rem;
+      margin-top: 0.625rem;
     }
   }
 `;

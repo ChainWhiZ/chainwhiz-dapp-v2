@@ -5,6 +5,9 @@ export const ACTIVE_BOUNTIES = {
   vote: 'Voting Active',
   daysLeft: '6 Days left',
   amount: '0.25 MATIC',
+  nft: 'NFT',
+  reward: 'REWARD',
+  upskill: 'UPSKILL',
   usd: '$12 USD',
   activeImage: [
     '/images/active/black.png',
