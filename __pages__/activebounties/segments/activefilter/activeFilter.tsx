@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ActiveFilterContainer,
   Options,
@@ -26,9 +26,62 @@ import {
   Bazuka,
   Input,
 } from './filter.styled';
-import ReactSlider from 'react-slider';
+import Slider from 'rc-slider';
+
+// const MARKS = {
+//   0: '0-1K',
+//   50: '1k-5k',
+//   100: '5k-10k',
+// };
+
+// const FilterDropdown = () => {
+//   const [sliderValue, setSliderValue] = useState([0]);
+
+//   //eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   function log(value: any) {
+//     console.log(value);
+//     setSliderValue(value);
+//   }
+//   return (
+//     <FilterDropdownWrapper>
+//       <Options>Filter options</Options>
+//       <Xp>XP points</Xp>
+//       <SliderWrapper>
+//         <Slider
+//           range
+//           allowCross={false}
+//           onChange={log}
+//           marks={MARKS}
+//           className="leaderboard__filteroptions"
+//           value={sliderValue}
+//           step={50}
+//         />
+//       </SliderWrapper>
+//     </FilterDropdownWrapper>
+//   );
+// };
+
+const DEADLINE = {
+  30: '30',
+  60: '60',
+  90: '90',
+  120: '120',
+};
+
+const REWARD = {
+  0: '0-1k',
+  5: '1-5k',
+  10: '5-10k',
+};
 
 const ActiveFilter = () => {
+  const [sliderValue, setSliderValue] = useState([0]);
+
+  //eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function log(value: any) {
+    console.log(value);
+    setSliderValue(value);
+  }
   return (
     <ActiveFilterContainer>
       <Options>Filter Options</Options>
@@ -38,17 +91,14 @@ const ActiveFilter = () => {
           <Deadline>No. of days</Deadline>
         </DeadlineText>
         <DeadlineFilter>
-          <ReactSlider
+          <Slider
             className="deadline-horizontal-slider"
-            thumbClassName="deadline-example-thumb"
-            trackClassName="deadline-example-track"
-            defaultValue={[30, 60, 90, 120]}
-            ariaLabel={['Leftmost thumb', 'Middle thumb', 'Rightmost thumb']}
-            renderThumb={(props: any, state: any) => (
-              <div {...props}>{state.valueNow}</div>
-            )}
-            pearling
-            minDistance={10}
+            marks={DEADLINE}
+            range
+            allowCross={false}
+            onChange={log}
+            value={sliderValue}
+            step={10}
           />
         </DeadlineFilter>
       </DeadlineSlider>
@@ -59,17 +109,14 @@ const ActiveFilter = () => {
           <Amount>Amount(in USD)</Amount>
         </RewardText>
         <RewardFilter>
-          <ReactSlider
+          <Slider
             className="reward-horizontal-slider"
-            thumbClassName="reward-example-thumb"
-            trackClassName="reward-example-track"
-            defaultValue={[0, 5, 10]}
-            ariaLabel={['Leftmost thumb', 'Middle thumb', 'Rightmost thumb']}
-            renderThumb={(props: any, state: any) => (
-              <div {...props}>{state.valueNow}</div>
-            )}
-            pearling
-            minDistance={10}
+            range
+            allowCross={false}
+            onChange={log}
+            marks={REWARD}
+            value={sliderValue}
+            step={50}
           />
         </RewardFilter>
       </RewardSlider>

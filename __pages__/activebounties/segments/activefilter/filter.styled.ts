@@ -71,18 +71,6 @@ export const DeadlineFilter = styled.div`
       margin-left: 1.375rem;
     }
   }
-
-  .deadline-example-thumb {
-    color: #898989;
-    font-weight: 400;
-    font-size: 0.847rem;
-    margin-top: 0.763rem;
-    
-    ${devices.mobile} {
-      margin-top: 0.563rem;
-      font-size: 0.625rem;
-    }
-  }
 `;
 
 export const Deadline = styled.div`
@@ -129,18 +117,6 @@ export const RewardFilter = styled.div`
       width: 10.25rem;
       margin-top: 0.875rem;
       margin-left: 1.375rem;
-    }
-  }
-
-  .reward-example-thumb {
-    color: #898989;
-    font-weight: 400;
-    font-size: 0.847rem;
-    margin-top: 0.848rem;
-
-    ${devices.mobile} {
-      font-size: 0.625rem;
-      margin-top: 0.625rem;
     }
   }
 `;
