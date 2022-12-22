@@ -23,7 +23,7 @@ export const TableHeading = styled.div`
   align-items: center;
   background-color: #131313;
   color: #d4ff1e;
-  z-index: 1;
+  /* z-index: 1; */
   font-family: ${(props) => props.theme.fonts.primaryFontSemibold};
 
   border-radius: 0.625rem;
@@ -119,7 +119,7 @@ export const TotalHeading = styled.div`
 `;
 
 export const TableBody = styled.div`
-  z-index: 1;
+  /* z-index: 1; */
   color: ${(props) => props.theme.colors.white};
 `;
 

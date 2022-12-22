@@ -307,7 +307,7 @@ export const Filter = styled.div`
 export const UserdetailsWrapper = styled.div`
   margin-top: 2.313rem;
   margin-bottom: 2.313rem;
-  z-index: 1;
+  /* z-index: 1; */
 
   ${devices.mobile} {
     margin-top: 2.188rem;
